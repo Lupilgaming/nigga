@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowGarden | Financial Progress & Live Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">🌱 GrowGarden Quant Platform</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Financial Overview</a>
+            <a href="backtests.html">Backtest Matrix</a>
+            <a href="assessments.html">Reliance & Contention Audits</a>
+        </nav>
+        <div class="badge-live">LIVE SYSTEM</div>
+    </header>
+
+    <main class="container">
+        <div class="header-banner">
+            <div>
+                <h1>Executive Financial Progress</h1>
+                <p class="subtitle">Multi-Horizon Portfolio & Realized Capital Utilization | Updated: 19-Sep-2026 15:39:10 IST</p>
+            </div>
+            <div class="regime-tag">
+                SYSTEM REGIME: <strong>BULLISH_MOMENTUM</strong>
+            </div>
+        </div>
+
+        <!-- Metric KPI Cards -->
+        <div class="kpi-grid">
+            <div class="card kpi-card">
+                <div class="kpi-title">Friday Net Realized PnL</div>
+                <div class="kpi-val positive">+₹1,100.00</div>
+                <div class="kpi-sub">HUDCO: +₹1,605.00 (85.7% WR) | NMDC: -₹505.00</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Cumulative Realized PnL</div>
+                <div class="kpi-val positive">₹+496.00</div>
+                <div class="kpi-sub">Friday +₹1,100.00 | Thursday -₹604.00 (ASHOKLEY)</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Contention Capital Protected</div>
+                <div class="kpi-val positive">+₹50.00</div>
+                <div class="kpi-sub">100.0% Accuracy (2 Collision Blocks)</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Active Strategy Families</div>
+                <div class="kpi-val">8 Strats</div>
+                <div class="kpi-sub">2 Intraday (MIS) | 2 Swing (CNC) | 4 Long-Term</div>
+            </div>
+        </div>
+
+        <!-- Session Comparison Callout -->
+        <div class="card section-card highlight-card">
+            <h2>Session Comparison: Mono-Direction Edge</h2>
+            <div class="comparison-grid">
+                <div class="comp-box green-box">
+                    <h3>Friday (18-Sep): Mono-Directional Long Breakout</h3>
+                    <p class="comp-stat positive">+₹1,100.00 Net Profit (66.7% Portfolio WR)</p>
+                    <p class="comp-desc">
+                        HUDCO delivered <strong>+₹1,605.00 net (85.7% Win Rate)</strong> with 3 greedy runners (+₹535, +₹783, +₹555) and 2 breakeven locks. NMDC hit max daily loss circuit breaker at -₹505, stopping further losses.
+                    </p>
+                </div>
+                <div class="comp-box yellow-box">
+                    <h3>Thursday (17-Sep): Bidirectional Intraday (ASHOKLEY)</h3>
+                    <p class="comp-stat negative">₹-604.00 Net PnL (25.0% Win Rate)</p>
+                    <p class="comp-desc">
+                        Choppy intraday price action resulted in whipsaw stops when shorting at local bottoms. This exact finding motivated the upgrade to <strong>Mono-Directional Bullish Breakout filtering</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Trade Execution History Table -->
+        <div class="card section-card">
+            <h2>Actual Executed Live Trade Log (Thursday & Friday)</h2>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Every fill, trailing exit, stop loss, and breakeven lock recorded by the live strategy runner.
+            </p>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Date & Time</th>
+                        <th>Symbol</th>
+                        <th>Side</th>
+                        <th>Quantity</th>
+                        <th>Entry Price</th>
+                        <th>Exit Price</th>
+                        <th>Hold Time</th>
+                        <th>Exit Reason</th>
+                        <th>Gross PnL</th>
+                        <th>Net PnL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+        <tr>
+            <td><code>2026-09-18 13:59:05</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹175.22</td>
+            <td>₹175.35</td>
+            <td>55.0m</td>
+            <td><code>MANUAL_PROFIT_LOCK_EARLY_CLOSE</code></td>
+            <td>₹+52.00</td>
+            <td class="positive"><strong>₹+27.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 12:50:01</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹174.68</td>
+            <td>₹174.79</td>
+            <td>3.9m</td>
+            <td><code>BREAKEVEN_PLUS_LOCK</code></td>
+            <td>₹+44.00</td>
+            <td class="positive"><strong>₹+19.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 12:46:06</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹173.00</td>
+            <td>₹174.45</td>
+            <td>31.8m</td>
+            <td><code>GREEDY_TRAIL_EXIT</code></td>
+            <td>₹+580.00</td>
+            <td class="positive"><strong>₹+555.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 11:54:05</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹170.98</td>
+            <td>₹173.00</td>
+            <td>51.2m</td>
+            <td><code>GREEDY_TRAIL_EXIT</code></td>
+            <td>₹+808.00</td>
+            <td class="positive"><strong>₹+783.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 11:35:57</code></td>
+            <td><strong>NMDC</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>500 sh</td>
+            <td>₹80.71</td>
+            <td>₹80.45</td>
+            <td>42.0m</td>
+            <td><code>MAX_DAILY_LOSS_BREACH</code></td>
+            <td>₹-130.00</td>
+            <td class="negative"><strong>₹-155.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 10:26:19</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹171.33</td>
+            <td>₹171.44</td>
+            <td>69.2m</td>
+            <td><code>BREAKEVEN_PLUS_LOCK</code></td>
+            <td>₹+44.00</td>
+            <td class="positive"><strong>₹+19.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 10:16:43</code></td>
+            <td><strong>NMDC</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>500 sh</td>
+            <td>₹81.30</td>
+            <td>₹80.65</td>
+            <td>61.7m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td>₹-325.00</td>
+            <td class="negative"><strong>₹-350.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 09:16:55</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹172.10</td>
+            <td>₹171.33</td>
+            <td>1.2m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td>₹-308.00</td>
+            <td class="negative"><strong>₹-333.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18 09:15:35</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹170.01</td>
+            <td>₹171.41</td>
+            <td>0.5m</td>
+            <td><code>GREEDY_TRAIL_EXIT</code></td>
+            <td>₹+560.00</td>
+            <td class="positive"><strong>₹+535.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-17 15:10:17</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge both">SELL</span></td>
+            <td>400 sh</td>
+            <td>₹158.82</td>
+            <td>₹159.05</td>
+            <td>76.7m</td>
+            <td><code>EOD_SQUARE_OFF</code></td>
+            <td>₹-92.00</td>
+            <td class="negative"><strong>₹-117.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-17 12:57:41</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹158.62</td>
+            <td>₹159.10</td>
+            <td>61.0m</td>
+            <td><code>STAGNATION_PROFIT_SETTLE_60m</code></td>
+            <td>₹+192.00</td>
+            <td class="positive"><strong>₹+167.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-17 11:56:40</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge both">SELL</span></td>
+            <td>400 sh</td>
+            <td>₹157.87</td>
+            <td>₹158.63</td>
+            <td>93.3m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td>₹-304.00</td>
+            <td class="negative"><strong>₹-329.00</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-17 10:23:24</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹158.60</td>
+            <td>₹157.85</td>
+            <td>47.6m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td>₹-300.00</td>
+            <td class="negative"><strong>₹-325.00</strong></td>
+        </tr>
+        
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Strategy Family Allocations -->
+        <div class="card section-card">
+            <h2>Strategy Family Allocations & Leeway</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Horizon</th>
+                        <th>Product</th>
+                        <th>Allocated Margin</th>
+                        <th>Directional Bias</th>
+                        <th>Execution Mode</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Squeeze Momentum + VWAP</strong></td>
+                        <td>Intraday (1m)</td>
+                        <td><code>MIS</code></td>
+                        <td>₹15,000</td>
+                        <td><span class="badge long">LONG_ONLY</span></td>
+                        <td><span class="badge live">LIVE CAPITAL</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Adaptive ATR VWAP Mean-Reversion</strong></td>
+                        <td>Intraday (1m-5m)</td>
+                        <td><code>MIS</code></td>
+                        <td>₹15,000</td>
+                        <td><span class="badge both">BOTH</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Triangular Bollinger (15, 1.5) + RSI</strong></td>
+                        <td>Swing (15m-1h)</td>
+                        <td><code>CNC</code></td>
+                        <td>₹25,000</td>
+                        <td><span class="badge both">BOTH</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sector Stat-Arb & ML Classifier</strong></td>
+                        <td>Swing (Daily)</td>
+                        <td><code>CNC</code></td>
+                        <td>₹25,000</td>
+                        <td><span class="badge both">BOTH</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>GARP + Gemini Fundamental Value</strong></td>
+                        <td>Long-Term</td>
+                        <td><code>CNC</code></td>
+                        <td>₹10,000</td>
+                        <td><span class="badge long">LONG_ONLY</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dual-Momentum 52W Trend</strong></td>
+                        <td>Long-Term</td>
+                        <td><code>CNC</code></td>
+                        <td>₹10,000</td>
+                        <td><span class="badge long">LONG_ONLY</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stage-2 Growth Breakout</strong></td>
+                        <td>Long-Term</td>
+                        <td><code>CNC</code></td>
+                        <td>₹10,000</td>
+                        <td><span class="badge long">LONG_ONLY</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Low-Beta High-RoCE Compounder</strong></td>
+                        <td>Long-Term</td>
+                        <td><code>CNC</code></td>
+                        <td>₹10,000</td>
+                        <td><span class="badge long">LONG_ONLY</span></td>
+                        <td><span class="badge paper">PAPER TRADING</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
