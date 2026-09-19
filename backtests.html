@@ -22,7 +22,7 @@
         <div class="header-banner">
             <div>
                 <h1>Multi-Horizon Strategy Backtest Matrix</h1>
-                <p class="subtitle">Empirical Expectancy, Drawdown Profiles & Always-Profitable Horizons Categorized by Strategy Family | Matrix Date: 19-Sep-2026 20:57:41 IST</p>
+                <p class="subtitle">Empirical Expectancy, Drawdown Profiles & Always-Profitable Horizons Categorized by Strategy Family | Matrix Date: 19-Sep-2026 21:23:36 IST</p>
             </div>
             <div class="regime-tag">
                 SYSTEM CALIBRATION: <strong>MULTI-HORIZON ALPHA DIVERSIFICATION</strong>
@@ -313,35 +313,40 @@
                 </div>
             </div>
 
-            <!-- Subsection 1D: Automated Directional Bias & Daily "Chill Out" Protocol -->
+            <!-- Subsection 1D: Two-Tiered Intraday Hedging Vault ("Rule 1 Trumps Rule 2") -->
             <div class="card highlight-card" style="border-color: #38bdf8; background: #082f49; margin-bottom: 1.5rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                    <h4 style="color: #38bdf8; font-size: 1.1rem;">🛡️ 1D. Automated Per-Stock Directional Bias & Daily "Chill Out" Vault Protocol</h4>
-                    <span class="badge-saved">AUTOMATED RISK GOVERNOR</span>
+                    <h4 style="color: #38bdf8; font-size: 1.15rem;">🛡️ 1D. Two-Tiered Intraday Hedging Vault: "Rule 1 Trumps Rule 2" Architecture</h4>
+                    <span class="badge-saved">HIERARCHICAL RISK GOVERNOR</span>
                 </div>
                 <p style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 1rem;">
-                    Eliminates manual discretion and locks in trading gains by enforcing an algorithmic trend filter and asymmetric daily capital boundaries across both intraday strategies.
+                    Designed around real trading session dynamics: when the bot banks early morning gains (such as Friday's +₹535 in the first 35 seconds), capital preservation becomes paramount. The Intraday Hedging Vault enforces a strict two-tiered governance rule where <strong>Rule 1 (House-Money Profit Floor) strictly trumps Rule 2 (Regime & Directional Hedging)</strong>.
                 </p>
 
-                <div class="comparison-grid">
-                    <div class="comp-box" style="border-color: #0284c7; background: rgba(8, 51, 68, 0.5);">
-                        <h5 style="color: #7dd3fc; margin-bottom: 0.3rem;">1. Dynamic Per-Stock Directional Bias Engine (<code>intraday_trend_bias.py</code>)</h5>
+                <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+                    <div class="comp-box" style="border-color: #059669; background: rgba(6, 78, 59, 0.45);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                            <h5 style="color: #86efac; font-size: 0.98rem;">Tier 1 (TRUMPS ALL): P&L House-Money Floor & Chill Out</h5>
+                            <span class="badge live">RULE 1: ABSOLUTE OVERRIDE</span>
+                        </div>
                         <p style="font-size: 0.82rem; color: #e2e8f0; line-height: 1.5;">
-                            • <strong>Per-Stock Independence:</strong> Direction is calculated dynamically per stock (e.g. HUDCO = <code>LONG_ONLY</code>, NMDC = <code>BOTH</code>, TCS = <code>SHORT_ONLY</code>).<br>
-                            • <strong>Pillar 1: Multi-Timeframe Trend (±2 pts):</strong> Close > EMA50 and EMA20 >= EMA50.<br>
-                            • <strong>Pillar 2: 15m Opening Range Breakout (±1 pt):</strong> Price above 09:15-09:30 High or below Low.<br>
-                            • <strong>Pillar 3: VWAP Stance & Slope (±1 pt):</strong> Price above VWAP with upward slope > +0.01%.<br>
-                            • <strong>Output:</strong> Score &ge; +2 &rarr; <code>LONG_ONLY</code> | Score &le; -2 &rarr; <code>SHORT_ONLY</code> | Neutral &rarr; <code>BOTH</code>.
+                            • <strong>House-Money Floor Shield:</strong> Once morning profits are banked (e.g. +₹535), the Vault permanently locks &ge; 50% (+₹267.50) into an impenetrable floor. A green day is mathematically barred from turning red.<br>
+                            • <strong>Risk-to-Cushion Gating:</strong> Subsequent trades are only permitted if estimated trade risk &le; remaining cushion (<code>realized_pnl - locked_floor</code>). If cushion &le; 0, the Vault locks into <code>PROFIT_FLOOR_PROTECTED</code>.<br>
+                            • <strong>"Chill Out" Daily Target (+₹1,500.00):</strong> Securing +₹1,500 net gains instantly triggers <code>CHILLED_OUT</code>, halting all new entries for the remainder of the session.<br>
+                            • <strong>Downside Circuit Breaker (-₹500.00):</strong> Maximum tolerable daily loss halts trading immediately.
                         </p>
                     </div>
 
-                    <div class="comp-box" style="border-color: #059669; background: rgba(6, 78, 59, 0.5);">
-                        <h5 style="color: #86efac; margin-bottom: 0.3rem;">2. The "Chill Out" Vault Protocol & Downside Circuit Breaker</h5>
+                    <div class="comp-box" style="border-color: #0284c7; background: rgba(8, 51, 68, 0.45);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                            <h5 style="color: #7dd3fc; font-size: 0.98rem;">Tier 2 (Subordinated): Volatility & Regime Hedging</h5>
+                            <span class="badge-intraday">RULE 2: TACTICAL DYNAMICS</span>
+                        </div>
                         <p style="font-size: 0.82rem; color: #e2e8f0; line-height: 1.5;">
-                            • <strong>"Play It Cool" Daily Profit Lock:</strong> Once net realized intraday gains reach <strong>+₹1,500.00</strong> across the session, the strategy triggers <code>CHILL_OUT_TARGET_REACHED</code>.<br>
-                            • <strong>Zero Afternoon Decay:</strong> All subsequent entry orders are rejected for the remainder of the session, locking peak morning earnings in the vault and preventing afternoon churn.<br>
-                            • <strong>Strict Downside Circuit Breaker:</strong> If daily realized loss hits <strong>-₹500.00</strong>, the asset is halted immediately (as demonstrated during Friday's NMDC auto-stop).<br>
-                            • <strong>Asymmetric Edge:</strong> +₹1,500 upside ceiling vs -₹500 downside floor guarantees a minimum 3:1 daily risk-to-reward ratio.
+                            • <strong>Instant Opening Strike (09:15:00 Tick 1):</strong> Never waits 15 minutes for an ORB to form. Arms instantaneously at market open using multi-day seeded EMAs + pre-market gap impulse to capture opening explosive bursts.<br>
+                            • <strong>Momentum Expansion Mode (ADX &ge; 25 or VWAP Slope &gt; 0.01%):</strong> Enforces strict Mono-Directional Breakout mode, suppressing hazardous counter-trend trades.<br>
+                            • <strong>Stagnation / Chop Mode (ADX &lt; 25 &amp; Flat VWAP):</strong> Dynamically unlocks Bidirectional Mean-Reversion hedging.<br>
+                            • <strong>Cross-Ticker Hedging Independence:</strong> Different stocks run independent directional biases (e.g. Long HUDCO while Short NMDC) without risk cross-contamination.
                         </p>
                     </div>
                 </div>
