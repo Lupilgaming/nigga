@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowGarden | System Operations & Task Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">🌱 GrowGarden Quant Platform</div>
+        <nav class="nav-links">
+            <a href="index.html">Financial Overview</a>
+            <a href="backtests.html">Backtest Matrix</a>
+            <a href="assessments.html">Reliance & Contention Audits</a>
+            <a href="sectors.html">Thematic Sector Finder</a>
+            <a href="operations.html" class="active">System Operations & Scheduler</a>
+        </nav>
+        <div class="badge-live">LIVE SYSTEM</div>
+    </header>
+
+    <main class="container">
+        <div class="header-banner">
+            <div>
+                <h1>System Operations &amp; Windows Task Scheduler</h1>
+                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 19-Sep-2026 22:04:22 IST</p>
+            </div>
+            <div class="regime-tag">
+                SYSTEM HEALTH: <strong>5/5 TASKS HEALTHY (100%)</strong>
+            </div>
+        </div>
+
+        <!-- Operations KPI Grid -->
+        <div class="kpi-grid">
+            <div class="card kpi-card">
+                <div class="kpi-title">Automated Scheduled Pipelines</div>
+                <div class="kpi-val highlight">5 Tasks Online</div>
+                <div class="kpi-sub">Pre-Market, Live, Reliance, Backtesting &amp; Sync</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Automation Framework</div>
+                <div class="kpi-val positive">Task Scheduler</div>
+                <div class="kpi-sub">Windows XML Task Definitions (v1.4 Schema)</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Pipeline Health &amp; Reliability</div>
+                <div class="kpi-val positive">100% Success</div>
+                <div class="kpi-sub">0 Failures Detected across all job runners</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Next Scheduled Pipeline Trigger</div>
+                <div class="kpi-val highlight">08:30 AM IST</div>
+                <div class="kpi-sub">Pre-Market Volatility &amp; Sector Screener</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Daily Automation Schedule Lifecycle Flowchart -->
+        <div class="card section-card">
+            <h2>Daily Automation Schedule Lifecycle &amp; Timing Matrix</h2>
+            <p class="subtitle" style="margin-bottom: 1.25rem;">
+                Every component of the quantitative desk is scheduled deterministically by Indian Standard Time (IST) market hours:
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="background: rgba(8, 51, 68, 0.45); border: 1px solid #0284c7; border-radius: 8px; padding: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                        <span class="badge-intraday">08:30 AM IST</span>
+                        <span style="font-size: 0.75rem; color: #38bdf8; font-weight: 700;">MORNING EARLY</span>
+                    </div>
+                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">1. Pre-Market Screener</h4>
+                    <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
+                        Scans high-beta liquid universe, evaluates sector sentiment, determines Automated Trend Bias, and writes screened candidates.
+                    </p>
+                </div>
+
+                <div style="background: rgba(127, 29, 29, 0.35); border: 1px solid #ef4444; border-radius: 8px; padding: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                        <span class="badge live">09:05 AM IST</span>
+                        <span style="font-size: 0.75rem; color: #fca5a5; font-weight: 700;">MARKET START</span>
+                    </div>
+                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">2. Live Gateway &amp; Engine</h4>
+                    <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
+                        Spins up Execution Gateway (port 8000), initializes contention resolvers, and connects live socket trader to market feeds.
+                    </p>
+                </div>
+
+                <div style="background: rgba(6, 78, 59, 0.4); border: 1px solid #10b981; border-radius: 8px; padding: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                        <span class="badge-saved">09:15 – 15:15 IST</span>
+                        <span style="font-size: 0.75rem; color: #4ade80; font-weight: 700;">TRADING HOURS</span>
+                    </div>
+                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">3. Active Execution</h4>
+                    <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
+                        Executes Squeeze Momentum and VWAP Mean Reversion with dynamic trailing stops, profit locks, and mandatory 15:15 squareoff.
+                    </p>
+                </div>
+
+                <div style="background: rgba(120, 53, 15, 0.4); border: 1px solid #f59e0b; border-radius: 8px; padding: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                        <span class="badge-caution">15:45 PM IST</span>
+                        <span style="font-size: 0.75rem; color: #fde047; font-weight: 700;">EVENING AUDIT</span>
+                    </div>
+                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">4. Reliance Reconciler</h4>
+                    <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
+                        Post-market audit reconciling live fills vs theoretical backtest, quantifying execution slippage, and scoring contention blocker accuracy.
+                    </p>
+                </div>
+
+                <div style="background: rgba(46, 16, 101, 0.45); border: 1px solid #8b5cf6; border-radius: 8px; padding: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
+                        <span class="badge-swing">18:30 PM IST</span>
+                        <span style="font-size: 0.75rem; color: #c084fc; font-weight: 700;">EVENING / NIGHT</span>
+                    </div>
+                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">5. Backtesting &amp; ML</h4>
+                    <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
+                        Runs 43-stock Bollinger study, refines 24-fold Walk-Forward ML sweep, computes always-profitable intervals, and updates matrix.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Scheduled Tasks Live Status & Audit Matrix -->
+        <div class="card section-card">
+            <h2>Scheduled Automation Tasks &amp; Last Run Status Matrix</h2>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Real-time operational registry monitoring execution timestamps, run durations, exit codes, and output artifacts:
+            </p>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Pipeline Task &amp; URI</th>
+                            <th>Timing Category</th>
+                            <th>Trigger Frequency</th>
+                            <th>Last Run Timestamp &amp; Dur</th>
+                            <th>Status</th>
+                            <th>Output Summary &amp; Artifacts</th>
+                            <th>Next Scheduled Run</th>
+                            <th>Manual Test Command</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr style="background: rgba(6, 78, 59, 0.12);">
+            <td>
+                <strong>Pre-Market Volatility & Sector Screener</strong><br>
+                <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_premarket.xml</small>
+            </td>
+            <td><span class="badge-intraday">MORNING (08:30)</span></td>
+            <td><strong>Daily at 08:30 AM IST (Mon-Fri)</strong></td>
+            <td>
+                <code>2026-09-19 22:00:08 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 0.0s</small>
+            </td>
+            <td><span class="badge-saved">SUCCESS</span></td>
+            <td style="max-width: 320px; white-space: normal;">
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Pre-market screen complete. Selected top candidate HUDCO with BULLISH_EXPANSION bias. 9 qualified watchlists primed.</div>
+                <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">selected_stock.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">screened_symbols.json</code></div>
+            </td>
+            <td>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 08:30:00 IST</span>
+            </td>
+            <td>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_premarket.py</code>
+            </td>
+        </tr>
+        
+        <tr style="background: rgba(8, 51, 68, 0.18);">
+            <td>
+                <strong>Intraday Live Execution Gateway & Strategy Engine</strong><br>
+                <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_intraday_live.xml</small>
+            </td>
+            <td><span class="badge live">LIVE (09:05-15:20)</span></td>
+            <td><strong>Daily at 09:05 AM – 15:20 PM IST (Mon-Fri)</strong></td>
+            <td>
+                <code>2026-09-19 22:00:47 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 0.0s</small>
+            </td>
+            <td><span class="badge-leader">ONLINE</span></td>
+            <td style="max-width: 320px; white-space: normal;">
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Intraday Live Strategy Engine active on HUDCO. Gateway operational on port 8000. Risk controls armed with 15:15 IST auto-squareoff.</div>
+                <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">live_trades.jsonl</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">gateway_orders.jsonl</code></div>
+            </td>
+            <td>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 09:05:00 IST</span>
+            </td>
+            <td>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_intraday_live.py</code>
+            </td>
+        </tr>
+        
+        <tr style="background: rgba(6, 78, 59, 0.12);">
+            <td>
+                <strong>Post-Market Reliance Reconciliation & Contention Audit</strong><br>
+                <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_postmarket_assessment.xml</small>
+            </td>
+            <td><span class="badge-caution">EVENING (15:45)</span></td>
+            <td><strong>Daily at 15:45 PM IST (Mon-Fri)</strong></td>
+            <td>
+                <code>2026-09-19 22:00:36 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 0.0s</small>
+            </td>
+            <td><span class="badge-saved">SUCCESS</span></td>
+            <td style="max-width: 320px; white-space: normal;">
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Audit complete for session. Blocker accuracy: 100.0% (2/2 losses avoided, +₹50.00 preserved). Latency & slippage verified.</div>
+                <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">reliance_audit_2026-09-19.json</code></div>
+            </td>
+            <td>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 15:45:00 IST</span>
+            </td>
+            <td>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_postmarket_assessment.py</code>
+            </td>
+        </tr>
+        
+        <tr style="background: rgba(6, 78, 59, 0.12);">
+            <td>
+                <strong>Multi-Horizon Quantitative Backtester & ML Calibrator</strong><br>
+                <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_nightly_backtests.xml</small>
+            </td>
+            <td><span class="badge-swing">EVENING (18:30)</span></td>
+            <td><strong>Daily at 18:30 PM IST (Mon-Fri / Weekend)</strong></td>
+            <td>
+                <code>2026-09-19 22:00:44 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 3.3s</small>
+            </td>
+            <td><span class="badge-saved">SUCCESS</span></td>
+            <td style="max-width: 320px; white-space: normal;">
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Backtest calibration complete. Screened Watchlist: +₹+41,074.81 (54.5% WR, 4.23% DD). 476 false trap trades filtered.</div>
+                <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">triangular_bb_results.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">ml_oos_sweep_results.json</code></div>
+            </td>
+            <td>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-20 18:30:00 IST</span>
+            </td>
+            <td>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_backtests.py</code>
+            </td>
+        </tr>
+        
+        <tr style="background: rgba(6, 78, 59, 0.12);">
+            <td>
+                <strong>Quant Platform Web Dashboard & Pages Synchronizer</strong><br>
+                <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_dashboard_sync.xml</small>
+            </td>
+            <td><span class="badge-cumulative">RECURRING (30m)</span></td>
+            <td><strong>Recurring Every 30 Minutes (09:00 - 19:00 IST)</strong></td>
+            <td>
+                <code>2026-09-19 22:00:08 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 4.1s</small>
+            </td>
+            <td><span class="badge-saved">SUCCESS</span></td>
+            <td style="max-width: 320px; white-space: normal;">
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Static reports generated in docs/ & public_pages/. Pushed to GitHub Pages remotes.</div>
+                <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">index.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">backtests.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">assessments.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">operations.html</code></div>
+            </td>
+            <td>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-19 22:30:08 IST</span>
+            </td>
+            <td>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_dashboard_sync.py</code>
+            </td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: Windows Task Scheduler XML Deployment & Controls -->
+        <div class="card section-card">
+            <h2>Windows Task Scheduler XML Deployment &amp; Manual Control Guide</h2>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                All tasks are defined using Windows Task Scheduler v1.4 XML schemas located in <code>operations/xml/</code>. You can register, query, or manually trigger all pipelines via PowerShell:
+            </p>
+
+            <div class="comparison-grid">
+                <div class="comp-box" style="background: rgba(15, 23, 42, 0.7); border-color: #38bdf8;">
+                    <h4 style="color: #38bdf8; margin-bottom: 0.5rem;">⚡ One-Click Automated Registration (PowerShell)</h4>
+                    <p style="font-size: 0.83rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 0.75rem;">
+                        Run the provided installer script in an elevated PowerShell terminal to import all 5 XML task definitions directly into Windows Task Scheduler:
+                    </p>
+                    <pre style="background: #090d16; padding: 0.75rem; border-radius: 6px; font-size: 0.8rem; color: #4ade80; overflow-x: auto; border: 1px solid #1e293b;">powershell -ExecutionPolicy Bypass -File operations/install_tasks.ps1</pre>
+                    <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 0.5rem;">
+                        To inspect registered tasks: <code>schtasks /Query /TN GrowGarden /FO LIST</code>
+                    </p>
+                </div>
+
+                <div class="comp-box" style="background: rgba(15, 23, 42, 0.7); border-color: #c084fc;">
+                    <h4 style="color: #c084fc; margin-bottom: 0.5rem;">🛠️ Direct Manual Trigger Commands</h4>
+                    <p style="font-size: 0.83rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 0.75rem;">
+                        Execute any job on demand without waiting for the scheduler:
+                    </p>
+                    <div style="font-size: 0.78rem; font-family: monospace; color: #e2e8f0; line-height: 1.8;">
+                        • <strong>Pre-Market Screener (Morning):</strong> <code>.venv/Scripts/python.exe operations/run_premarket.py</code><br>
+                        • <strong>Live Intraday Engine (Market):</strong> <code>.venv/Scripts/python.exe operations/run_intraday_live.py</code><br>
+                        • <strong>Reliance Reconciler (Evening):</strong> <code>.venv/Scripts/python.exe operations/run_postmarket_assessment.py</code><br>
+                        • <strong>Nightly Backtester (Evening):</strong> <code>.venv/Scripts/python.exe operations/run_backtests.py</code><br>
+                        • <strong>Dashboard Synchronizer:</strong> <code>.venv/Scripts/python.exe operations/run_dashboard_sync.py</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
