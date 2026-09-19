@@ -68,6 +68,35 @@ body { background-color: var(--bg-dark); color: var(--text-primary); line-height
 .badge-caution { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; background: #78350f; color: #fde047; border: 1px solid #d97706; }
 .badge-neutral { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; background: #374151; color: #e5e7eb; }
 
+.badge-leader { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; background: #064e3b; color: #4ade80; border: 1px solid #16a34a; }
+.badge-challenger { display: inline-block; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; background: #312e81; color: #c7d2fe; border: 1px solid #4f46e5; }
+.badge-near { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; background: #78350f; color: #fde047; border: 1px solid #d97706; }
+.badge-far { display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; background: #1e1b4b; color: #93c5fd; border: 1px solid #3b82f6; }
+
+.badge-leader-mini { font-size: 0.65rem; background: #064e3b; color: #4ade80; padding: 0.1rem 0.4rem; border-radius: 3px; font-weight: 700; }
+.badge-challenger-mini { font-size: 0.65rem; background: #312e81; color: #c7d2fe; padding: 0.1rem 0.4rem; border-radius: 3px; font-weight: 700; }
+
+.sector-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(580px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+@media (max-width: 768px) { .sector-grid { grid-template-columns: 1fr; } }
+.sector-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 8px; padding: 1.5rem; }
+.sector-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
+.sector-title { font-size: 1.2rem; font-weight: 700; color: #f8fafc; }
+.score-pill { background: #064e3b; border: 1px solid #059669; padding: 0.3rem 0.6rem; border-radius: 6px; text-align: center; }
+.score-num { font-size: 1.1rem; font-weight: 800; color: #4ade80; }
+.score-denom { font-size: 0.75rem; color: #a7f3d0; }
+.sector-tailwinds { font-size: 0.88rem; color: #cbd5e1; line-height: 1.5; margin-bottom: 1.25rem; }
+.sector-subgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+@media (max-width: 600px) { .sector-subgrid { grid-template-columns: 1fr; } }
+.subgrid-heading { font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.04em; }
+
+.stock-chip { background: #0f172a; border-radius: 6px; padding: 0.75rem; margin-bottom: 0.6rem; border: 1px solid var(--border-color); }
+.leader-chip { border-left: 3px solid #10b981; }
+.challenger-chip { border-left: 3px solid #6366f1; }
+.chip-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.2rem; }
+.chip-name { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 0.3rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.chip-metrics { font-size: 0.8rem; color: #e2e8f0; margin-bottom: 0.3rem; }
+.chip-moat { font-size: 0.75rem; color: #94a3b8; line-height: 1.35; }
+
 .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
 .status-dot.green { background: #22c55e; }
 .positive { color: var(--accent-green); }
