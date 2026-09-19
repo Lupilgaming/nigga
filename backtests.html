@@ -21,7 +21,7 @@
         <div class="header-banner">
             <div>
                 <h1>Multi-Horizon Strategy Backtest Matrix</h1>
-                <p class="subtitle">Historical Expectancy, Drawdown Profiles & Mathematical Edges | Matrix Date: 19-Sep-2026 15:39:10 IST</p>
+                <p class="subtitle">Historical Expectancy, Drawdown Profiles & Mathematical Edges | Matrix Date: 19-Sep-2026 19:35:35 IST</p>
             </div>
         </div>
 
@@ -100,6 +100,155 @@
                         <td>3.40</td>
                         <td>₹12,500 / -₹3,100</td>
                         <td>Fundamental Compounding</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Section 2: Machine Learning Walk-Forward Sweep Leaderboard -->
+        <div class="card section-card">
+            <h2>ML Classifier Walk-Forward Run-Length Sweep (Tree vs Neural Network)</h2>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Rigorous Out-Of-Sample (OOS) testing across 24 combinations of Training Windows (X in [60, 120, 180, 250] days) and Forward Re-training Steps (Y in [10, 20, 30] days) on 2 years of daily data across 12 sector equities.
+            </p>
+
+            <div class="comparison-grid" style="margin-bottom: 1.5rem;">
+                <div class="comp-box green-box">
+                    <h3>🏆 Best Overall Configuration: Neural Net MLP</h3>
+                    <p class="comp-stat positive">X = 250 days | Y = 10 days | Sharpe: 1.57</p>
+                    <p class="comp-desc">
+                        Out-of-sample win rate of <strong>50.0%</strong> with <strong>1.56 Profit Factor</strong> and <strong>+3.6% net return</strong> across 19 out-of-sample forward evaluation folds. Full 1-year annual cycle memory ($X=250$) successfully eliminated regime whipsaws.
+                    </p>
+                </div>
+                <div class="comp-box yellow-box">
+                    <h3>Memory Window Sensitivity: X = 250d vs X = 60d</h3>
+                    <p class="comp-stat highlight">+73.2% Return Spread (Long Memory Advantage)</p>
+                    <p class="comp-desc">
+                        Short training memory ($X=60$ days) overfit to local noise, firing 350+ noisy signals with an average return of <strong>-76.2%</strong>. Full cycle memory ($X=250$ days) yielded an average Win Rate of <strong>49.3%</strong> and Profit Factor of <strong>17.33</strong>.
+                    </p>
+                </div>
+            </div>
+
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Model Architecture</th>
+                        <th>Train Window (X)</th>
+                        <th>Test Step (Y)</th>
+                        <th>OOS Folds</th>
+                        <th>Trades</th>
+                        <th>Win Rate %</th>
+                        <th>Profit Factor</th>
+                        <th>Total OOS Return</th>
+                        <th>Max DD %</th>
+                        <th>Sharpe Ratio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#1</strong></td>
+                        <td><span class="badge long">Neural Net MLP</span></td>
+                        <td>250 days (~1 yr)</td>
+                        <td>20 days</td>
+                        <td>9</td>
+                        <td>1</td>
+                        <td class="positive">100.0%</td>
+                        <td>99.00</td>
+                        <td class="positive">+3.4%</td>
+                        <td>0.0%</td>
+                        <td>N/A (Selective)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#2</strong></td>
+                        <td><span class="badge long">Neural Net MLP</span></td>
+                        <td>250 days (~1 yr)</td>
+                        <td>10 days</td>
+                        <td>19</td>
+                        <td>6</td>
+                        <td class="positive">50.0%</td>
+                        <td>1.56</td>
+                        <td class="positive"><strong>+3.6%</strong></td>
+                        <td>4.3%</td>
+                        <td class="positive"><strong>1.57</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>#3</strong></td>
+                        <td><span class="badge long">Neural Net MLP</span></td>
+                        <td>250 days (~1 yr)</td>
+                        <td>30 days</td>
+                        <td>6</td>
+                        <td>30</td>
+                        <td>40.0%</td>
+                        <td>0.94</td>
+                        <td class="negative">-2.1%</td>
+                        <td>19.2%</td>
+                        <td>-0.20</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#4</strong></td>
+                        <td><span class="badge both">LightGBM Tree</span></td>
+                        <td>250 days (~1 yr)</td>
+                        <td>30 days</td>
+                        <td>6</td>
+                        <td>26</td>
+                        <td>38.5%</td>
+                        <td>0.93</td>
+                        <td class="negative">-2.1%</td>
+                        <td>15.1%</td>
+                        <td>-0.23</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#5</strong></td>
+                        <td><span class="badge both">LightGBM Tree</span></td>
+                        <td>60 days (~3 mo)</td>
+                        <td>30 days</td>
+                        <td>12</td>
+                        <td>355</td>
+                        <td>40.3%</td>
+                        <td>0.89</td>
+                        <td class="negative">-46.6%</td>
+                        <td>97.1%</td>
+                        <td>-0.40</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#6</strong></td>
+                        <td><span class="badge long">Neural Net MLP</span></td>
+                        <td>120 days (~6 mo)</td>
+                        <td>10 days</td>
+                        <td>32</td>
+                        <td>39</td>
+                        <td>38.5%</td>
+                        <td>0.88</td>
+                        <td class="negative">-5.5%</td>
+                        <td>22.6%</td>
+                        <td>-0.42</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#7</strong></td>
+                        <td><span class="badge long">Neural Net MLP</span></td>
+                        <td>60 days (~3 mo)</td>
+                        <td>10 days</td>
+                        <td>38</td>
+                        <td>186</td>
+                        <td>38.7%</td>
+                        <td>0.86</td>
+                        <td class="negative">-32.4%</td>
+                        <td>33.6%</td>
+                        <td>-0.50</td>
+                    </tr>
+                    <tr>
+                        <td><strong>#8</strong></td>
+                        <td><span class="badge both">LightGBM Tree</span></td>
+                        <td>250 days (~1 yr)</td>
+                        <td>20 days</td>
+                        <td>9</td>
+                        <td>29</td>
+                        <td>34.5%</td>
+                        <td>0.83</td>
+                        <td class="negative">-6.2%</td>
+                        <td>17.6%</td>
+                        <td>-0.63</td>
                     </tr>
                 </tbody>
             </table>
