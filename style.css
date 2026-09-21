@@ -115,6 +115,11 @@ body { background-color: var(--bg-dark); color: var(--text-primary); line-height
 .chip-metrics { font-size: 0.8rem; color: #e2e8f0; margin-bottom: 0.3rem; }
 .chip-moat { font-size: 0.75rem; color: #94a3b8; line-height: 1.35; }
 
+.progress-bar-container { background: #1e293b; border: 1px solid #334155; border-radius: 6px; height: 10px; width: 100%; overflow: hidden; margin-top: 6px; }
+.progress-bar-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #38bdf8, #4ade80); transition: width 0.3s; }
+.progress-bar-fill.amber { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.progress-bar-fill.red { background: linear-gradient(90deg, #ef4444, #f87171); }
+
 .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
 .status-dot.green { background: #22c55e; }
 .positive { color: var(--accent-green); }

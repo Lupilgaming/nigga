@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowGarden | Capital Control & Strategy Allocation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="brand">🌱 GrowGarden Quant Platform</div>
+        <nav class="nav-links">
+            <a href="index.html">Financial Overview</a>
+            <a href="capital.html" class="active">Capital Control</a>
+            <a href="backtests.html">Backtest Matrix</a>
+            <a href="assessments.html">Reliance & Contention Audits</a>
+            <a href="sectors.html">Thematic Sector Finder</a>
+            <a href="operations.html">System Operations & Scheduler</a>
+        </nav>
+        <div class="badge-live">LIVE SYSTEM</div>
+    </header>
+
+    <main class="container">
+        <div class="header-banner">
+            <div>
+                <h1>Capital Control & Strategy Allocations</h1>
+                <p class="subtitle">Multi-Horizon Margin Governor, Dynamic Leeway Scaling & Per-Asset Exposure | Updated: 21-Sep-2026 08:53:49 IST</p>
+            </div>
+            <div class="regime-tag">
+                SYSTEM REGIME: <strong>BULLISH_MOMENTUM</strong> (1.25x Multiplier | Intraday & Swing: LONG_ONLY)
+            </div>
+        </div>
+
+        <!-- Top Metric Summary Cards -->
+        <div class="kpi-grid">
+            <div class="card kpi-card">
+                <div class="kpi-title">Total Base Capital Pool</div>
+                <div class="kpi-val highlight">₹120,000.00</div>
+                <div class="kpi-sub">Intraday: ₹30k | Swing: ₹50k | Long-Term: ₹40k</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Dynamic Scaled Leeway</div>
+                <div class="kpi-val positive">₹205,625.00</div>
+                <div class="kpi-sub">Greedy Scaling on Win Rates ≥ 70% + 1.25x Regime</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Active Available Margin</div>
+                <div class="kpi-val positive">₹199,665.00</div>
+                <div class="kpi-sub">Deployed: ₹5,960.00 (2.9% utilization)</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Realized Session Net PnL</div>
+                <div class="kpi-val positive">+₹1,100.00</div>
+                <div class="kpi-sub">HUDCO: +₹1,605.00 (85.7% WR) | NMDC: -₹505.00</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Contention Capital Shield</div>
+                <div class="kpi-val positive">+₹50.00</div>
+                <div class="kpi-sub">2 Conflicting Collision Trades Blocked (100% Accuracy)</div>
+            </div>
+        </div>
+
+        <!-- Horizon Capital Allocation Cards -->
+        <div class="card section-card">
+            <h2>Multi-Horizon Capital Pool Architecture</h2>
+            <p class="subtitle">Strict partition barriers prevent intraday margin calls from contaminating swing or long-term holdings.</p>
+            
+            <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 1rem;">
+                <div class="comp-box" style="background: rgba(8, 51, 68, 0.4); border-color: #0284c7;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="badge-intraday">INTRADAY POOL</span>
+                        <small style="color:#38bdf8; font-weight:700;">MIS (5x Leverage)</small>
+                    </div>
+                    <div class="comp-stat positive" style="color:#38bdf8;">₹43,125.00 Scaled</div>
+                    <p class="comp-desc">
+                        <strong>Base:</strong> ₹30,000.00 &bull; <strong>Used:</strong> ₹5,960.00 &bull; <strong>Avail:</strong> ₹37,165.00<br>
+                        <strong>Active Candidate:</strong> HUDCO (400 sh) &bull; Direction: <code>LONG_ONLY</code><br>
+                        <strong>Risk Controls:</strong> -₹1,000/strat daily loss cutoff &bull; <strong>15:15 IST</strong> auto-squareoff
+                    </p>
+                </div>
+
+                <div class="comp-box" style="background: rgba(46, 16, 101, 0.4); border-color: #7c3aed;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="badge-swing">SWING POOL</span>
+                        <small style="color:#c084fc; font-weight:700;">CNC (Cash Delivery)</small>
+                    </div>
+                    <div class="comp-stat positive" style="color:#c084fc;">₹62,500.00 Scaled</div>
+                    <p class="comp-desc">
+                        <strong>Base:</strong> ₹50,000.00 &bull; <strong>Used:</strong> ₹0.00 &bull; <strong>Avail:</strong> ₹62,500.00<br>
+                        <strong>Execution Window:</strong> 15:15 – 15:25 IST (EOD Candle Close Confirmation)<br>
+                        <strong>Holding:</strong> 2 – 7 Days &bull; Backtest Edge: <strong>+₹41,074.81</strong> (54.5% WR, 4.2% DD)
+                    </p>
+                </div>
+
+                <div class="comp-box" style="background: rgba(6, 78, 59, 0.4); border-color: #059669;">
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span class="badge-long">LONG-TERM POOL</span>
+                        <small style="color:#4ade80; font-weight:700;">CNC (Cash Delivery)</small>
+                    </div>
+                    <div class="comp-stat positive" style="color:#4ade80;">₹100,000.00 Scaled</div>
+                    <p class="comp-desc">
+                        <strong>Base:</strong> ₹40,000.00 &bull; <strong>Used:</strong> ₹0.00 &bull; <strong>Avail:</strong> ₹100,000.00<br>
+                        <strong>4 Baskets:</strong> GARP Value, Dual Momentum, Stage-2 Breakout, High FCF Moats<br>
+                        <strong>Governance:</strong> Gemini AI Fundamental Audit (ROE > 18%, D/E < 1.0)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategy Capital Control Table -->
+        <div class="card section-card">
+            <h2>Strategy-Level Capital & Performance Matrix</h2>
+            <p class="subtitle">Real-time breakdown of margin limits, greedy leeway factors, utilization bars, and realized returns per strategy.</p>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Strategy</th>
+                            <th>Horizon / Mode</th>
+                            <th>Base Budget</th>
+                            <th>Dynamic Leeway</th>
+                            <th>Used Margin</th>
+                            <th>Available Margin</th>
+                            <th>Utilization & Leeway State</th>
+                            <th>Realized PnL</th>
+                            <th>Win Rate</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td>
+                <strong>Squeeze Momentum Breakout</strong><br>
+                <small><code>intra_squeeze</code></small>
+            </td>
+            <td><span class="badge-intraday">INTRADAY</span> <small>MIS (5x)</small></td>
+            <td>₹15,000.00</td>
+            <td><strong>₹24,375.00</strong> <small>(1.62x)</small></td>
+            <td>₹5,960.00</td>
+            <td class="positive">₹18,415.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>24.5%</span>
+                    <span style="color:var(--text-muted);">GREEDY_EXPANSION (+30% Boost)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 24.5%;"></div>
+                </div>
+            </td>
+            <td class="positive"><strong>₹+1,100.00</strong></td>
+            <td><strong>66.7%</strong></td>
+            <td><span class="badge-leader">ONLINE / ACTIVE</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Adaptive ATR VWAP Mean-Reversion</strong><br>
+                <small><code>intra_vwap_mean_rev</code></small>
+            </td>
+            <td><span class="badge-intraday">INTRADAY</span> <small>MIS (5x)</small></td>
+            <td>₹15,000.00</td>
+            <td><strong>₹18,750.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹18,750.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (1.25x Regime)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class=""><strong>₹+0.00</strong></td>
+            <td><strong>50.0%</strong></td>
+            <td><span class="badge-neutral">ONLINE / STANDBY</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Triangular Bollinger Bands + Expanded RSI</strong><br>
+                <small><code>swing_triangular_bb</code></small>
+            </td>
+            <td><span class="badge-swing">SWING</span> <small>CNC (1x)</small></td>
+            <td>₹25,000.00</td>
+            <td><strong>₹31,250.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹31,250.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (1.25x Regime)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class="positive"><strong>₹+41,074.81</strong></td>
+            <td><strong>54.5%</strong></td>
+            <td><span class="badge-challenger">ONLINE / SCANNING</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Sector Statistical Arbitrage & ML Classifier</strong><br>
+                <small><code>swing_sector_stat_arb</code></small>
+            </td>
+            <td><span class="badge-swing">SWING</span> <small>CNC (1x)</small></td>
+            <td>₹25,000.00</td>
+            <td><strong>₹31,250.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹31,250.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (1.25x Regime)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class="positive"><strong>₹+38,912.40</strong></td>
+            <td><strong>62.1%</strong></td>
+            <td><span class="badge-challenger">ONLINE / CLUSTERING</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>GARP Value + Gemini Fundamental Audit</strong><br>
+                <small><code>long_garp_value</code></small>
+            </td>
+            <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
+            <td>₹10,000.00</td>
+            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹25,000.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (Quarterly Basket)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class=""><strong>₹+0.00</strong></td>
+            <td><strong>65.0%</strong></td>
+            <td><span class="badge-long">ONLINE / AUDITING</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Dual Momentum (Absolute + 12M RS)</strong><br>
+                <small><code>long_dual_momentum</code></small>
+            </td>
+            <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
+            <td>₹10,000.00</td>
+            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹25,000.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (Monthly Rebalance)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class=""><strong>₹+0.00</strong></td>
+            <td><strong>60.0%</strong></td>
+            <td><span class="badge-long">ONLINE / REBALANCING</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Stan Weinstein Stage-2 Continuation</strong><br>
+                <small><code>long_stage2_breakout</code></small>
+            </td>
+            <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
+            <td>₹10,000.00</td>
+            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹25,000.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (Weekly Stage Audit)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class=""><strong>₹+0.00</strong></td>
+            <td><strong>58.0%</strong></td>
+            <td><span class="badge-long">ONLINE / STAGE_AUDIT</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Consistent Free Cash Flow Compounders</strong><br>
+                <small><code>long_compounder</code></small>
+            </td>
+            <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
+            <td>₹10,000.00</td>
+            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
+            <td>₹0.00</td>
+            <td class="positive">₹25,000.00</td>
+            <td style="min-width: 140px;">
+                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
+                    <span>0.0%</span>
+                    <span style="color:var(--text-muted);">NORMAL_BASE (Core Holdings)</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
+                </div>
+            </td>
+            <td class=""><strong>₹+0.00</strong></td>
+            <td><strong>68.0%</strong></td>
+            <td><span class="badge-long">ONLINE / COMPOUNDING</span></td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Stock-by-Stock Capital Deployed & PnL Ledger -->
+        <div class="card section-card">
+            <h2>Stock-by-Stock Capital Deployment & Performance Ledger</h2>
+            <p class="subtitle">Individual asset accountability showing how much capital was allocated to which stock, executions, and realized outcomes.</p>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Stock</th>
+                            <th>Strategy Assigned</th>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>CMP</th>
+                            <th>Margin Blocked</th>
+                            <th>Total Exposure</th>
+                            <th>Net Realized PnL</th>
+                            <th>Win Rate</th>
+                            <th>Exit Reasons Breakdown</th>
+                            <th>Current State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td>
+                <strong>HUDCO</strong><br>
+                <small style="color:var(--text-muted);">Housing & Urban Development Corp</small>
+            </td>
+            <td><code>intra_squeeze</code></td>
+            <td><span class="badge-intraday">INTRADAY</span> <small>MIS (5x)</small></td>
+            <td>400 sh</td>
+            <td>₹175.35</td>
+            <td><strong>₹5,960.00</strong></td>
+            <td>₹70,140.00</td>
+            <td class="positive">
+                <strong>₹+1,605.00</strong><br>
+                <small>(+26.9% ROI)</small>
+            </td>
+            <td>85.7% (6W / 1L)</td>
+            <td><small>GREEDY_TRAIL_EXIT (3x), BREAKEVEN_PLUS_LOCK (2x), MANUAL_PROFIT_LOCK (1x), SL (1x)</small></td>
+            <td><span class="badge-leader">CLOSED / FLAT (Armed for 21-Sep Open)</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>NMDC</strong><br>
+                <small style="color:var(--text-muted);">National Mineral Development Corp</small>
+            </td>
+            <td><code>intra_squeeze</code></td>
+            <td><span class="badge-intraday">INTRADAY</span> <small>MIS (5x)</small></td>
+            <td>500 sh</td>
+            <td>₹80.45</td>
+            <td><strong>₹8,130.00</strong></td>
+            <td>₹40,225.00</td>
+            <td class="negative">
+                <strong>₹-505.00</strong><br>
+                <small>(-6.2% ROI)</small>
+            </td>
+            <td>0.0% (0W / 2L)</td>
+            <td><small>STOP_LOSS (-₹350.00), MAX_DAILY_LOSS_BREACH (-₹155.00)</small></td>
+            <td><span class="badge-caution">CIRCUIT_BREAKER_HALTED (Losses Capped)</span></td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>ASHOKLEY</strong><br>
+                <small style="color:var(--text-muted);">Ashok Leyland Limited</small>
+            </td>
+            <td><code>intra_squeeze</code></td>
+            <td><span class="badge-intraday">INTRADAY (Thu)</span> <small>MIS (5x)</small></td>
+            <td>400 sh</td>
+            <td>₹159.05</td>
+            <td><strong>₹12,688.00</strong></td>
+            <td>₹63,620.00</td>
+            <td class="negative">
+                <strong>₹-604.00</strong><br>
+                <small>(-4.8% ROI)</small>
+            </td>
+            <td>25.0% (1W / 3L)</td>
+            <td><small>STOP_LOSS (2x), STAGNATION_PROFIT (1x), EOD_SQUAREOFF (1x)</small></td>
+            <td><span class="badge-neutral">HISTORICAL_SESSION (Replaced by HUDCO)</span></td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Pre-Market Screened Watchlist Capital Reservation -->
+        <div class="card section-card">
+            <h2>Today's Pre-Market Qualified Watchlist & Capital Reservation (21-Sep-2026)</h2>
+            <p class="subtitle">Scanned at 08:30 AM IST. Capital reservations earmarked for market open (09:15 IST) and EOD swing confirmation (15:15 IST).</p>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Company Name</th>
+                            <th>Directional Bias</th>
+                            <th>CMP</th>
+                            <th>Target Strategy Horizon</th>
+                            <th>Capital Reservation</th>
+                            <th>Readiness Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td><strong>HUDCO</strong></td>
+            <td><small style="color:var(--text-muted);">Housing & Urban Dev Corp</small></td>
+            <td><span class="badge long">BULLISH_EXPANSION</span></td>
+            <td>₹175.35</td>
+            <td><code>Intraday Squeeze + Swing BB</code></td>
+            <td>₹25,000.00</td>
+            <td><span class="badge-saved">PRIMARY_MOMENTUM_LEADER</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>SYRMA</strong></td>
+            <td><small style="color:var(--text-muted);">Syrma SGS Technology</small></td>
+            <td><span class="badge long">BULLISH_BREAKOUT</span></td>
+            <td>₹492.10</td>
+            <td><code>Intraday Squeeze / Swing BB</code></td>
+            <td>₹25,000.00</td>
+            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>PRIZOR</strong></td>
+            <td><small style="color:var(--text-muted);">Prizor Visuals</small></td>
+            <td><span class="badge long">VOLATILITY_EXPANSION</span></td>
+            <td>₹182.40</td>
+            <td><code>Intraday Squeeze / Swing BB</code></td>
+            <td>₹20,000.00</td>
+            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>VADILALIND</strong></td>
+            <td><small style="color:var(--text-muted);">Vadilal Industries</small></td>
+            <td><span class="badge long">SWING_TRIMA_BOUNCE</span></td>
+            <td>₹4,890.00</td>
+            <td><code>Swing Triangular BB (CNC)</code></td>
+            <td>₹31,250.00</td>
+            <td><span class="badge-saved">SWING_QUALIFIED</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>HINDALCO</strong></td>
+            <td><small style="color:var(--text-muted);">Hindalco Industries</small></td>
+            <td><span class="badge long">SECTOR_STAT_ARB</span></td>
+            <td>₹688.50</td>
+            <td><code>Swing Sector Stat-Arb ML</code></td>
+            <td>₹31,250.00</td>
+            <td><span class="badge-saved">SECTOR_CLUSTER_LEADER</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>V2RETAIL</strong></td>
+            <td><small style="color:var(--text-muted);">V2 Retail Limited</small></td>
+            <td><span class="badge long">BULLISH_EXPANSION</span></td>
+            <td>₹1,150.00</td>
+            <td><code>Stage-2 Breakout / Swing BB</code></td>
+            <td>₹25,000.00</td>
+            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>CYIENTDLM</strong></td>
+            <td><small style="color:var(--text-muted);">Cyient DLM Limited</small></td>
+            <td><span class="badge long">BREAKOUT_CONSOLIDATION</span></td>
+            <td>₹710.00</td>
+            <td><code>Intraday Squeeze / Swing BB</code></td>
+            <td>₹20,000.00</td>
+            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>PARAGMILK</strong></td>
+            <td><small style="color:var(--text-muted);">Parag Milk Foods</small></td>
+            <td><span class="badge long">VALUE_ACCUMULATION</span></td>
+            <td>₹224.50</td>
+            <td><code>Long GARP Value + Gemini</code></td>
+            <td>₹25,000.00</td>
+            <td><span class="badge-saved">FUNDAMENTAL_QUALIFIED</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>HAL</strong></td>
+            <td><small style="color:var(--text-muted);">Hindustan Aeronautics</small></td>
+            <td><span class="badge long">LONG_MOMENTUM_MOAT</span></td>
+            <td>₹4,650.00</td>
+            <td><code>Consistent Cash Flow Compounder</code></td>
+            <td>₹25,000.00</td>
+            <td><span class="badge-saved">CORE_COMPOUNDER</span></td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Dynamic Capital Leeway Architecture & Safeguards -->
+        <div class="card section-card highlight-card">
+            <h2>Dynamic Capital Leeway Controller & Circuit Breakers</h2>
+            <div class="comparison-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem;">
+                <div class="comp-box" style="background: rgba(15, 23, 42, 0.6); border-color: #38bdf8;">
+                    <h3 style="color:#38bdf8;">1. Greedy Scaling & Throttling Rules</h3>
+                    <ul style="margin-left: 1.2rem; font-size: 0.88rem; color: #cbd5e1; line-height: 1.7; margin-top: 0.5rem;">
+                        <li><strong>Greedy Expansion (+30%):</strong> Strategies achieving Win Rate ≥ 70% with positive daily PnL automatically earn +30% additional margin leeway.</li>
+                        <li><strong>Regime Multiplier (1.25x):</strong> Bullish Momentum regime inflates overall capital deployment limits by 1.25x while enforcing <code>LONG_ONLY</code>.</li>
+                        <li><strong>Drawdown Throttle (-40%):</strong> Two consecutive losses or daily PnL &lt; -₹500 reduces allocated margin by 40% immediately.</li>
+                        <li><strong>Strategy Circuit Breaker:</strong> Three consecutive losses halts the strategy completely until manual review or next market session.</li>
+                    </ul>
+                </div>
+
+                <div class="comp-box" style="background: rgba(15, 23, 42, 0.6); border-color: #4ade80;">
+                    <h3 style="color:#4ade80;">2. Contention Gatekeeper & Time Safeguards</h3>
+                    <ul style="margin-left: 1.2rem; font-size: 0.88rem; color: #cbd5e1; line-height: 1.7; margin-top: 0.5rem;">
+                        <li><strong>Contention Blocker:</strong> When two strategies generate opposing orders on the same symbol (e.g. Squeeze BUY vs VWAP SELL), the conflicting order is blocked and routed to Paper Trading.</li>
+                        <li><strong>Capital Preserved:</strong> 100% blocker accuracy on Friday preserved +₹50.00 in brokerage and avoided holding self-cancelling positions.</li>
+                        <li><strong>15:10 IST Freeze:</strong> No new intraday MIS positions are permitted after 15:10 IST.</li>
+                        <li><strong>15:15 IST Mandatory Square-off:</strong> Execution Gateway automatically market-closes all open MIS positions, completely eliminating overnight margin risk.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            GrowGarden Quant Platform &bull; Zerodha Kite Connect v4/v5 via VM Squid Proxy &bull; Central Execution Gateway Port 8000
+        </div>
+    </main>
+</body>
+</html>
