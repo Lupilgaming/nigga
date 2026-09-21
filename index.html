@@ -25,7 +25,7 @@
         <div class="header-banner">
             <div>
                 <h1>Executive Financial Progress</h1>
-                <p class="subtitle">Multi-Horizon Portfolio & Realized Capital Utilization | Updated: 21-Sep-2026 10:30:01 IST</p>
+                <p class="subtitle">Multi-Horizon Portfolio & Realized Capital Utilization | Updated: 21-Sep-2026 10:31:27 IST</p>
             </div>
             <div class="regime-tag">
                 SYSTEM REGIME: <strong>BULLISH_MOMENTUM</strong>
@@ -55,6 +55,177 @@
                 <div class="kpi-sub">2 Intraday (MIS) | 2 Swing (CNC) | 4 Long-Term</div>
             </div>
         </div>
+
+        <!-- Live Intraday Strategy & Market Radar (Real-Time Tick Stream) -->
+        
+    <div class="card section-card" style="border-left: 4px solid #10b981; background: linear-gradient(180deg, rgba(16, 185, 129, 0.05) 0%, rgba(15, 23, 42, 0.7) 100%);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; flex-wrap:wrap; gap:0.5rem;">
+            <div>
+                <h2 style="display:flex; align-items:center; gap:0.5rem;">
+                    <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#10b981; box-shadow:0 0 10px #10b981;"></span>
+                    Live Intraday Strategy & Market Radar (Real-Time)
+                </h2>
+                <p class="subtitle">Live WebSocket tick stream evaluating dual intraday models concurrently (Squeeze Breakouts + VWAP Mean-Reversion) across liquid focus tickers.</p>
+            </div>
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span class="badge-saved" style="background:#059669;">STREAMING ACTIVE</span>
+                <span style="font-size:0.8rem; color:var(--text-muted);" id="radar-updated-at">Refreshed: 21-Sep-2026 10:31:12 IST</span>
+            </div>
+        </div>
+
+        <!-- Mini Vault KPI Strip -->
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:0.8rem; margin-bottom:1.2rem;">
+            <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Strategy [1]: Squeeze Momentum</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#34d399;">₹+0.00 Realized</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Max Margin: ₹24,375.00 &bull; Floor: ₹0.00 &bull; <span class="badge-saved" style="font-size:0.65rem;">ACTIVE</span></div>
+            </div>
+            <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Strategy [2]: VWAP Mean-Reversion</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#38bdf8;">₹+0.00 Realized</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Max Margin: ₹18,750.00 &bull; Floor: ₹0.00 &bull; <span class="badge-saved" style="font-size:0.65rem;">ACTIVE</span></div>
+            </div>
+            <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Execution Gateway (Port 8000)</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#a78bfa;">ONLINE &bull; &lt;1ms Latency</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Zerodha Kite Connect &bull; Squid Proxy 65.20.83.244 &bull; <span class="badge-saved" style="font-size:0.65rem;">ONLINE</span></div>
+            </div>
+            <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">EOD Order Book Scalper</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#f59e0b;">ARMED (15:00 IST)</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Level 2 Top-5 Depth &bull; Broker MIS Auto-Squareoff Rush &bull; <span class="badge-saved" style="font-size:0.65rem;">ARMED</span></div>
+            </div>
+        </div>
+
+        <!-- Live Tickers Radar Table -->
+        <table class="styled-table" id="live-radar-table">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Live LTP</th>
+                    <th>Bias & Regime</th>
+                    <th>Squeeze Momentum Setup</th>
+                    <th>VWAP Mean-Reversion Setup</th>
+                    <th>Proximity to Trigger / Strategy Focus</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr id="row-PFC">
+            <td><strong style="font-size: 1.05rem;">PFC</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-PFC">₹345.80</strong></td>
+            <td>
+                <span class="badge both" id="bias-PFC">BOTH</span>
+                <span class="badge-saved" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-PFC">CHOP_STAGNATION</span>
+            </td>
+            <td id="sq-PFC"><code>IDLE</code></td>
+            <td id="vw-PFC"><code>IDLE</code></td>
+            <td id="prox-PFC" style="color: #10b981; font-weight: 700;">Upper BB ₹346.37 (-0.57) | Oversold Dip (Lower Band ₹345.85, RSI 48.1)</td>
+        </tr>
+        
+        <tr id="row-HUDCO">
+            <td><strong style="font-size: 1.05rem;">HUDCO</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-HUDCO">₹174.53</strong></td>
+            <td>
+                <span class="badge both" id="bias-HUDCO">BOTH</span>
+                <span class="badge-saved" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-HUDCO">CHOP_STAGNATION</span>
+            </td>
+            <td id="sq-HUDCO"><code>IDLE</code></td>
+            <td id="vw-HUDCO"><code>IDLE</code></td>
+            <td id="prox-HUDCO" style="color: #10b981; font-weight: 700;">Upper BB ₹175.12 (-0.59) | Oversold Dip (Lower Band ₹174.61, RSI 37.1)</td>
+        </tr>
+        
+        <tr id="row-TATASTEEL">
+            <td><strong style="font-size: 1.05rem;">TATASTEEL</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-TATASTEEL">₹184.68</strong></td>
+            <td>
+                <span class="badge short" id="bias-TATASTEEL">SHORT_ONLY</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-TATASTEEL">TREND_EXPANSION</span>
+            </td>
+            <td id="sq-TATASTEEL"><code>IDLE</code></td>
+            <td id="vw-TATASTEEL"><code>IDLE</code></td>
+            <td id="prox-TATASTEEL" style="color: #10b981; font-weight: 700;">Upper BB ₹185.53 (-0.85) | Oversold Dip (Lower Band ₹185.69, RSI 44.4)</td>
+        </tr>
+        
+        <tr id="row-SUZLON">
+            <td><strong style="font-size: 1.05rem;">SUZLON</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-SUZLON">₹43.32</strong></td>
+            <td>
+                <span class="badge long" id="bias-SUZLON">LONG_ONLY</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-SUZLON">TREND_EXPANSION</span>
+            </td>
+            <td id="sq-SUZLON"><code>IDLE</code></td>
+            <td id="vw-SUZLON"><code>IDLE</code></td>
+            <td id="prox-SUZLON" style="color: #10b981; font-weight: 700;">Upper BB Breakout Zone (₹43.34, -0.02) | Oversold Dip (Lower Band ₹43.26, RSI 57.1)</td>
+        </tr>
+        
+        <tr id="row-NMDC">
+            <td><strong style="font-size: 1.05rem;">NMDC</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-NMDC">₹80.27</strong></td>
+            <td>
+                <span class="badge both" id="bias-NMDC">BOTH</span>
+                <span class="badge-saved" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-NMDC">CHOP_STAGNATION</span>
+            </td>
+            <td id="sq-NMDC"><code>IDLE</code></td>
+            <td id="vw-NMDC"><code>IDLE</code></td>
+            <td id="prox-NMDC" style="color: #10b981; font-weight: 700;">Upper BB Breakout Zone (₹80.38, -0.11) | Oversold Dip (Lower Band ₹80.54, RSI 52.5)</td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <!-- Client-Side Auto-Refresh Script -->
+        <script>
+        (function() {
+            function updateRadar() {
+                fetch('live_intraday_status.json?t=' + Date.now())
+                    .then(response => {
+                        if (!response.ok) return null;
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (!data || !data.symbols) return;
+                        var tsEl = document.getElementById('radar-updated-at');
+                        if (tsEl && data.timestamp) tsEl.innerText = 'Refreshed: ' + data.timestamp;
+
+                        data.symbols.forEach(function(s) {
+                            var ltpEl = document.getElementById('ltp-' + s.symbol);
+                            if (ltpEl && s.ltp) ltpEl.innerText = '₹' + Number(s.ltp).toFixed(2);
+
+                            var biasEl = document.getElementById('bias-' + s.symbol);
+                            if (biasEl && s.bias) {
+                                biasEl.innerText = s.bias;
+                                biasEl.className = s.bias === 'LONG_ONLY' ? 'badge long' : (s.bias === 'SHORT_ONLY' ? 'badge short' : 'badge both');
+                            }
+
+                            var regEl = document.getElementById('regime-' + s.symbol);
+                            if (regEl && s.regime) {
+                                regEl.innerText = s.regime;
+                                regEl.className = s.regime === 'CHOP_STAGNATION' ? 'badge-saved' : 'badge-leader';
+                            }
+
+                            var sqEl = document.getElementById('sq-' + s.symbol);
+                            if (sqEl && s.squeeze_status) sqEl.innerHTML = '<code>' + s.squeeze_status + '</code>';
+
+                            var vwEl = document.getElementById('vw-' + s.symbol);
+                            if (vwEl && s.vwap_status) vwEl.innerHTML = '<code>' + s.vwap_status + '</code>';
+
+                            var proxEl = document.getElementById('prox-' + s.symbol);
+                            if (proxEl && s.proximity) {
+                                proxEl.innerText = s.proximity;
+                                var isAlert = s.proximity.indexOf('Breakout') !== -1 || s.proximity.indexOf('Oversold') !== -1 || s.proximity.indexOf('Alert') !== -1;
+                                proxEl.style.color = isAlert ? '#10b981' : 'var(--text-muted)';
+                                proxEl.style.fontWeight = isAlert ? '700' : 'normal';
+                            }
+                        });
+                    })
+                    .catch(function(err) {});
+            }
+            setInterval(updateRadar, 8000);
+        })();
+        </script>
+    </div>
+    
 
         <!-- Live Platform Component Status Grid -->
         
