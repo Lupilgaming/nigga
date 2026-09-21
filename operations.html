@@ -25,7 +25,7 @@
         <div class="header-banner">
             <div>
                 <h1>System Operations &amp; Windows Task Scheduler</h1>
-                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 21-Sep-2026 12:30:02 IST</p>
+                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 21-Sep-2026 12:55:56 IST</p>
             </div>
             <div class="regime-tag">
                 SYSTEM HEALTH: <strong>5/6 TASKS HEALTHY (100%)</strong>
@@ -63,18 +63,18 @@
             <div>
                 <h2 style="display:flex; align-items:center; gap:0.5rem;">
                     <span style="display:inline-block; width:12px; height:12px; border-radius:50%; background:#10b981; box-shadow:0 0 10px #10b981;"></span>
-                    Live Intraday Strategy & Market Radar (Real-Time)
+                    Live Intraday Strategy & Market Radar (Real-Time Tick Stream)
                 </h2>
-                <p class="subtitle">Live WebSocket tick stream evaluating dual intraday models concurrently (Squeeze Breakouts + VWAP Mean-Reversion) across liquid focus tickers.</p>
+                <p class="subtitle">Live WebSocket tick stream evaluating dual intraday models concurrently (Squeeze Breakouts + VWAP Mean-Reversion) with Dynamic Universe Expansion &amp; Ticker Hot-Swapping.</p>
             </div>
             <div style="display:flex; align-items:center; gap:0.6rem;">
-                <span class="badge-saved" style="background:#059669;">STREAMING ACTIVE</span>
-                <span style="font-size:0.8rem; color:var(--text-muted);" id="radar-updated-at">Refreshed: 21-Sep-2026 12:29:56 IST</span>
+                <span class="badge-saved" style="background:#059669;">STREAMING ACTIVE (6 TICKERS)</span>
+                <span style="font-size:0.8rem; color:var(--text-muted);" id="radar-updated-at">Refreshed: 21-Sep-2026 12:55:54 IST</span>
             </div>
         </div>
 
         <!-- Mini Vault KPI Strip -->
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:0.8rem; margin-bottom:1.2rem;">
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap:0.8rem; margin-bottom:1.2rem;">
             <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Strategy [1]: Squeeze Momentum</div>
                 <div style="font-size:1.1rem; font-weight:700; color:#34d399;">₹+0.00 Realized</div>
@@ -86,93 +86,240 @@
                 <div style="font-size:0.75rem; color:var(--text-muted);">Max Margin: ₹18,750.00 &bull; Floor: ₹0.00 &bull; <span class="badge-saved" style="font-size:0.65rem;">ACTIVE</span></div>
             </div>
             <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Dynamic Expansion Engine</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#10b981;">ACTIVE &bull; 60-Stock Scan</div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Cycle: 150s &bull; Auto Hot-Swap Stagnant &bull; <span class="badge-saved" style="font-size:0.65rem;">ONLINE</span></div>
+            </div>
+            <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Execution Gateway (Port 8000)</div>
                 <div style="font-size:1.1rem; font-weight:700; color:#a78bfa;">ONLINE &bull; &lt;1ms Latency</div>
-                <div style="font-size:0.75rem; color:var(--text-muted);">Zerodha Kite Connect &bull; Squid Proxy 65.20.83.244 &bull; <span class="badge-saved" style="font-size:0.65rem;">ONLINE</span></div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Zerodha Kite Connect &bull; Squid Proxy &bull; <span class="badge-saved" style="font-size:0.65rem;">ONLINE</span></div>
             </div>
             <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">EOD Order Book Scalper</div>
                 <div style="font-size:1.1rem; font-weight:700; color:#f59e0b;">ARMED (15:00 IST)</div>
-                <div style="font-size:0.75rem; color:var(--text-muted);">Level 2 Top-5 Depth &bull; Broker MIS Auto-Squareoff Rush &bull; <span class="badge-saved" style="font-size:0.65rem;">ARMED</span></div>
+                <div style="font-size:0.75rem; color:var(--text-muted);">Top-5 Depth Imbalance &bull; 1m-5m Scalp &bull; <span class="badge-saved" style="font-size:0.65rem;">ARMED</span></div>
             </div>
         </div>
 
-        <!-- Live Tickers Radar Table -->
-        <table class="styled-table" id="live-radar-table">
+        <!-- Section A: Active Streaming Pool -->
+        <h3 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+            <span>[A] Active WebSocket Streaming Pool (6 Instruments)</span>
+            <small style="color:var(--text-muted); font-size:0.75rem; font-weight:normal;">Auto Trend Bias &bull; EMA-9 Pullback + Squeeze Breakouts</small>
+        </h3>
+        <table class="styled-table" id="live-radar-table" style="margin-bottom: 1.5rem;">
             <thead>
                 <tr>
                     <th>Symbol</th>
                     <th>Live LTP</th>
-                    <th>Bias & Regime</th>
+                    <th>Bias &amp; Regime</th>
                     <th>Squeeze Momentum Setup</th>
                     <th>VWAP Mean-Reversion Setup</th>
                     <th>Proximity to Trigger / Strategy Focus</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="live-radar-tbody">
                 
-        <tr id="row-PFC">
-            <td><strong style="font-size: 1.05rem;">PFC</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
-            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-PFC">₹346.30</strong></td>
+        <tr id="row-SUNPHARMA">
+            <td><strong style="font-size: 1.05rem;">SUNPHARMA</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-SUNPHARMA">₹1873.70</strong></td>
             <td>
-                <span class="badge long" id="bias-PFC">LONG_ONLY</span>
-                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-PFC">TREND_EXPANSION</span>
+                <span class="badge both" id="bias-SUNPHARMA">AUTO</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-SUNPHARMA">NORMAL</span>
             </td>
-            <td id="sq-PFC"><code>IDLE</code></td>
-            <td id="vw-PFC"><code>IDLE</code></td>
-            <td id="prox-PFC" style="color: #10b981; font-weight: 700;">Upper BB Breakout Zone (₹346.45, -0.15) | Oversold Dip (Lower Band ₹345.92, RSI 50.0)</td>
+            <td id="sq-SUNPHARMA"><code>IDLE</code></td>
+            <td id="vw-SUNPHARMA"><code>IDLE</code></td>
+            <td id="prox-SUNPHARMA" style="color: var(--text-muted);">Consolidating</td>
         </tr>
         
-        <tr id="row-HUDCO">
-            <td><strong style="font-size: 1.05rem;">HUDCO</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
-            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-HUDCO">₹174.36</strong></td>
+        <tr id="row-DRREDDY">
+            <td><strong style="font-size: 1.05rem;">DRREDDY</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-DRREDDY">₹1208.90</strong></td>
             <td>
-                <span class="badge both" id="bias-HUDCO">BOTH</span>
-                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-HUDCO">TREND_EXPANSION</span>
+                <span class="badge long" id="bias-DRREDDY">LONG_ONLY</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-DRREDDY">TREND_EXPANSION</span>
             </td>
-            <td id="sq-HUDCO"><code>IDLE</code></td>
-            <td id="vw-HUDCO"><code>IDLE</code></td>
-            <td id="prox-HUDCO" style="color: #10b981; font-weight: 700;">Upper BB Breakout Zone (₹174.36, +0.00) | Oversold Dip (Lower Band ₹174.77, RSI 65.7)</td>
+            <td id="sq-DRREDDY"><code>IDLE</code></td>
+            <td id="vw-DRREDDY"><code>IDLE</code></td>
+            <td id="prox-DRREDDY" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹1208.70) | VWAP ₹1205.12</td>
         </tr>
         
-        <tr id="row-TATASTEEL">
-            <td><strong style="font-size: 1.05rem;">TATASTEEL</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
-            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-TATASTEEL">₹184.60</strong></td>
+        <tr id="row-ITC">
+            <td><strong style="font-size: 1.05rem;">ITC</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-ITC">₹267.10</strong></td>
             <td>
-                <span class="badge short" id="bias-TATASTEEL">SHORT_ONLY</span>
-                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-TATASTEEL">TREND_EXPANSION</span>
+                <span class="badge both" id="bias-ITC">AUTO</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-ITC">NORMAL</span>
             </td>
-            <td id="sq-TATASTEEL"><code>IDLE</code></td>
-            <td id="vw-TATASTEEL"><code>IDLE</code></td>
-            <td id="prox-TATASTEEL" style="color: #10b981; font-weight: 700;">Upper BB ₹185.30 (-0.70) | Oversold Dip (Lower Band ₹184.92, RSI 14.5)</td>
+            <td id="sq-ITC"><code>IDLE</code></td>
+            <td id="vw-ITC"><code>IDLE</code></td>
+            <td id="prox-ITC" style="color: var(--text-muted);">Consolidating</td>
         </tr>
         
-        <tr id="row-SUZLON">
-            <td><strong style="font-size: 1.05rem;">SUZLON</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
-            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-SUZLON">₹43.38</strong></td>
+        <tr id="row-BEL">
+            <td><strong style="font-size: 1.05rem;">BEL</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-BEL">₹397.95</strong></td>
             <td>
-                <span class="badge both" id="bias-SUZLON">BOTH</span>
-                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-SUZLON">TREND_EXPANSION</span>
+                <span class="badge long" id="bias-BEL">LONG_ONLY</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-BEL">TREND_EXPANSION</span>
             </td>
-            <td id="sq-SUZLON"><code>IDLE</code></td>
-            <td id="vw-SUZLON"><code>IDLE</code></td>
-            <td id="prox-SUZLON" style="color: #10b981; font-weight: 700;">Upper BB Breakout Zone (₹43.43, -0.05) | VWAP ₹43.29</td>
+            <td id="sq-BEL"><code>IDLE</code></td>
+            <td id="vw-BEL"><code>IDLE</code></td>
+            <td id="prox-BEL" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹398.15) | VWAP ₹397.36</td>
         </tr>
         
-        <tr id="row-NMDC">
-            <td><strong style="font-size: 1.05rem;">NMDC</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
-            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-NMDC">₹80.32</strong></td>
+        <tr id="row-DLF">
+            <td><strong style="font-size: 1.05rem;">DLF</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-DLF">₹657.70</strong></td>
             <td>
-                <span class="badge both" id="bias-NMDC">BOTH</span>
-                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-NMDC">TREND_EXPANSION</span>
+                <span class="badge long" id="bias-DLF">LONG_ONLY</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-DLF">TREND_EXPANSION</span>
             </td>
-            <td id="sq-NMDC"><code>IDLE</code></td>
-            <td id="vw-NMDC"><code>IDLE</code></td>
-            <td id="prox-NMDC" style="color: #10b981; font-weight: 700;">Upper BB ₹80.60 (-0.28) | Oversold Dip (Lower Band ₹80.19, RSI 17.6)</td>
+            <td id="sq-DLF"><code>IDLE</code></td>
+            <td id="vw-DLF"><code>IDLE</code></td>
+            <td id="prox-DLF" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹657.27) | VWAP ₹653.83</td>
+        </tr>
+        
+        <tr id="row-HCLTECH">
+            <td><strong style="font-size: 1.05rem;">HCLTECH</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+            <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-HCLTECH">₹1279.10</strong></td>
+            <td>
+                <span class="badge both" id="bias-HCLTECH">AUTO</span>
+                <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-HCLTECH">NORMAL</span>
+            </td>
+            <td id="sq-HCLTECH"><code>IDLE</code></td>
+            <td id="vw-HCLTECH"><code>IDLE</code></td>
+            <td id="prox-HCLTECH" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹1275.89) | VWAP ₹1268.65</td>
         </tr>
         
             </tbody>
         </table>
+
+        <!-- Section B: Dynamic Universe Momentum Leaderboard -->
+        <h3 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
+            <span>[B] Dynamic Universe Screener: Top Momentum Leaders &amp; Pullback Radar</span>
+            <small style="color:#10b981; font-size:0.75rem; font-weight:600;">Scanned 60 Liquid F&amp;O Equities &bull; Rolling 150s</small>
+        </h3>
+        <table class="styled-table" id="dynamic-hotlist-table" style="margin-bottom: 1rem;">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Symbol</th>
+                    <th>LTP</th>
+                    <th>Day Change</th>
+                    <th>From Open</th>
+                    <th>M-Score</th>
+                    <th>Trend State</th>
+                    <th>Hot-Swap Status</th>
+                </tr>
+            </thead>
+            <tbody id="dynamic-hotlist-tbody">
+                
+        <tr>
+            <td><strong>#1</strong></td>
+            <td><strong style="font-size: 1.02rem;">HCLTECH</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+            <td><strong>₹1279.40</strong></td>
+            <td style="color: #34d399; font-weight:700;">+2.41%</td>
+            <td style="color: #38bdf8; font-weight:600;">+2.99%</td>
+            <td style="color: #a78bfa; font-weight:700;">+2.55</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#2</strong></td>
+            <td><strong style="font-size: 1.02rem;">SUNPHARMA</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+            <td><strong>₹1873.20</strong></td>
+            <td style="color: #34d399; font-weight:700;">+1.95%</td>
+            <td style="color: #38bdf8; font-weight:600;">+2.24%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.86</td>
+            <td><span class="badge both" style="font-size:0.7rem;">PULLBACK</span></td>
+            <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#3</strong></td>
+            <td><strong style="font-size: 1.02rem;">DLF</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+            <td><strong>₹657.40</strong></td>
+            <td style="color: #34d399; font-weight:700;">+2.03%</td>
+            <td style="color: #38bdf8; font-weight:600;">+1.91%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.83</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#4</strong></td>
+            <td><strong style="font-size: 1.02rem;">DRREDDY</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+            <td><strong>₹1208.50</strong></td>
+            <td style="color: #34d399; font-weight:700;">+1.98%</td>
+            <td style="color: #38bdf8; font-weight:600;">+1.98%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.80</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#5</strong></td>
+            <td><strong style="font-size: 1.02rem;">TCS</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+            <td><strong>₹2131.00</strong></td>
+            <td style="color: #34d399; font-weight:700;">+1.24%</td>
+            <td style="color: #38bdf8; font-weight:600;">+1.96%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.67</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#6</strong></td>
+            <td><strong style="font-size: 1.02rem;">HEROMOTOCO</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+            <td><strong>₹5396.00</strong></td>
+            <td style="color: #34d399; font-weight:700;">+2.09%</td>
+            <td style="color: #38bdf8; font-weight:600;">+1.66%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.67</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#7</strong></td>
+            <td><strong style="font-size: 1.02rem;">ITC</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+            <td><strong>₹267.15</strong></td>
+            <td style="color: #34d399; font-weight:700;">+1.85%</td>
+            <td style="color: #38bdf8; font-weight:600;">+1.37%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.45</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>#8</strong></td>
+            <td><strong style="font-size: 1.02rem;">HDFCBANK</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+            <td><strong>₹739.25</strong></td>
+            <td style="color: #34d399; font-weight:700;">+1.13%</td>
+            <td style="color: #38bdf8; font-weight:600;">+1.13%</td>
+            <td style="color: #a78bfa; font-weight:700;">+1.11</td>
+            <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+            <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <!-- Recent Dynamic Hot-Swaps -->
+        <div style="margin-top: 0.8rem;">
+            <div style="font-size:0.8rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; margin-bottom:0.4rem;">
+                Dynamic Pool Rebalance Activity Log:
+            </div>
+            
+            <div style="background: rgba(15, 23, 42, 0.6); padding: 0.6rem 0.9rem; border-radius: 6px; border-left: 3px solid #38bdf8; font-size: 0.82rem; margin-bottom: 0.4rem;">
+                <span style="color: #94a3b8; font-weight: 600;">[12:54:49]</span>
+                <span style="color: #ef4444; font-weight: 700;">Dropped PFC</span> &rarr;
+                <span style="color: #10b981; font-weight: 700;">Subscribed HCLTECH (₹1279.40)</span>:
+                <span style="color: #cbd5e1;">Replaced stagnant PFC with trending momentum leader HCLTECH</span>
+            </div>
+            
+        </div>
 
         <!-- Client-Side Auto-Refresh Script -->
         <script>
@@ -188,7 +335,24 @@
                         var tsEl = document.getElementById('radar-updated-at');
                         if (tsEl && data.timestamp) tsEl.innerText = 'Refreshed: ' + data.timestamp;
 
+                        var tbody = document.getElementById('live-radar-tbody');
                         data.symbols.forEach(function(s) {
+                            var rowEl = document.getElementById('row-' + s.symbol);
+                            if (!rowEl && tbody) {
+                                // Dynamically add row if new ticker was hot-swapped into the pool
+                                var tr = document.createElement('tr');
+                                tr.id = 'row-' + s.symbol;
+                                tr.innerHTML = '<td><strong style="font-size: 1.05rem;">' + s.symbol + '</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>' +
+                                    '<td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-' + s.symbol + '">₹' + Number(s.ltp).toFixed(2) + '</strong></td>' +
+                                    '<td><span class="badge ' + (s.bias === 'LONG_ONLY' ? 'long' : (s.bias === 'SHORT_ONLY' ? 'short' : 'both')) + '" id="bias-' + s.symbol + '">' + (s.bias || 'AUTO') + '</span> ' +
+                                    '<span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-' + s.symbol + '">' + (s.regime || 'NORMAL') + '</span></td>' +
+                                    '<td id="sq-' + s.symbol + '"><code>' + (s.squeeze_status || 'IDLE') + '</code></td>' +
+                                    '<td id="vw-' + s.symbol + '"><code>' + (s.vwap_status || 'IDLE') + '</code></td>' +
+                                    '<td id="prox-' + s.symbol + '" style="color: #10b981; font-weight: 700;">' + (s.proximity || 'Tracking') + '</td>';
+                                tbody.appendChild(tr);
+                                return;
+                            }
+
                             var ltpEl = document.getElementById('ltp-' + s.symbol);
                             if (ltpEl && s.ltp) ltpEl.innerText = '₹' + Number(s.ltp).toFixed(2);
 
@@ -213,7 +377,7 @@
                             var proxEl = document.getElementById('prox-' + s.symbol);
                             if (proxEl && s.proximity) {
                                 proxEl.innerText = s.proximity;
-                                var isAlert = s.proximity.indexOf('Breakout') !== -1 || s.proximity.indexOf('Oversold') !== -1 || s.proximity.indexOf('Alert') !== -1;
+                                var isAlert = s.proximity.indexOf('Retest') !== -1 || s.proximity.indexOf('Breakout') !== -1 || s.proximity.indexOf('Oversold') !== -1 || s.proximity.indexOf('Alert') !== -1;
                                 proxEl.style.color = isAlert ? '#10b981' : 'var(--text-muted)';
                                 proxEl.style.fontWeight = isAlert ? '700' : 'normal';
                             }
@@ -430,16 +594,16 @@
             <td><span class="badge-cumulative">RECURRING (30m)</span></td>
             <td><strong>Recurring Every 30 Minutes (09:00 - 19:00 IST)</strong></td>
             <td>
-                <code>2026-09-21 12:00:05 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 3.4s</small>
+                <code>2026-09-21 12:30:05 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 3.3s</small>
             </td>
             <td><span class="badge-saved">SUCCESS</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 3.4s. Pages synchronized with live system status.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 3.3s. Pages synchronized with live system status.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">index.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">capital.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">predictions.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">backtests.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">assessments.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">sectors.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">operations.html</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 12:30:05 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 13:00:05 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_dashboard_sync.py</code>
