@@ -1,5 +1,5 @@
 {
-  "timestamp": "21-Sep-2026 12:56:09 IST",
+  "timestamp": "21-Sep-2026 12:56:54 IST",
   "gateway_status": "ONLINE",
   "dynamic_expansion_mode": "ACTIVE",
   "active_pool_count": 6,
@@ -152,7 +152,7 @@
   "symbols": [
     {
       "symbol": "SUNPHARMA",
-      "ltp": 1873.6,
+      "ltp": 1873.4,
       "bias": "SHORT_ONLY",
       "regime": "OPENING_STRIKE",
       "squeeze_status": "IDLE",
@@ -165,20 +165,20 @@
     },
     {
       "symbol": "DRREDDY",
-      "ltp": 1208.9,
+      "ltp": 1208.4,
       "bias": "LONG_ONLY",
       "regime": "TREND_EXPANSION",
       "squeeze_status": "IDLE",
       "vwap_status": "IDLE",
-      "upper_bb": 1209.78,
+      "upper_bb": 1209.77,
       "vwap": 1205.12,
-      "lower_band": 1203.27,
-      "rsi": 51.7,
-      "proximity": "EMA-9 Retest Zone (\u20b91208.75) | VWAP \u20b91205.12"
+      "lower_band": 1203.15,
+      "rsi": 47.6,
+      "proximity": "EMA-9 Retest Zone (\u20b91208.65) | VWAP \u20b91205.12"
     },
     {
       "symbol": "ITC",
-      "ltp": 267.05,
+      "ltp": 267.15,
       "bias": "SHORT_ONLY",
       "regime": "OPENING_STRIKE",
       "squeeze_status": "IDLE",
@@ -191,42 +191,42 @@
     },
     {
       "symbol": "BEL",
-      "ltp": 398.0,
+      "ltp": 397.95,
       "bias": "LONG_ONLY",
       "regime": "TREND_EXPANSION",
       "squeeze_status": "IDLE",
       "vwap_status": "IDLE",
-      "upper_bb": 399.03,
+      "upper_bb": 399.04,
       "vwap": 397.36,
-      "lower_band": 396.91,
-      "rsi": 39.3,
-      "proximity": "EMA-9 Retest Zone (\u20b9398.13) | VWAP \u20b9397.36"
+      "lower_band": 396.88,
+      "rsi": 37.9,
+      "proximity": "EMA-9 Retest Zone (\u20b9398.12) | VWAP \u20b9397.36"
     },
     {
       "symbol": "DLF",
-      "ltp": 657.8,
+      "ltp": 658.9,
       "bias": "LONG_ONLY",
       "regime": "TREND_EXPANSION",
       "squeeze_status": "IDLE",
       "vwap_status": "IDLE",
-      "upper_bb": 658.1,
+      "upper_bb": 658.4,
       "vwap": 653.83,
-      "lower_band": 652.73,
-      "rsi": 55.6,
-      "proximity": "EMA-9 Retest Zone (\u20b9657.41) | VWAP \u20b9653.83"
+      "lower_band": 652.58,
+      "rsi": 64.8,
+      "proximity": "EMA-9 Retest Zone (\u20b9657.63) | VWAP \u20b9653.83"
     },
     {
       "symbol": "HCLTECH",
-      "ltp": 1279.8,
+      "ltp": 1279.4,
       "bias": "LONG_ONLY",
       "regime": "TREND_EXPANSION",
       "squeeze_status": "IDLE",
       "vwap_status": "IDLE",
-      "upper_bb": 1281.69,
+      "upper_bb": 1281.61,
       "vwap": 1268.65,
-      "lower_band": 1265.88,
-      "rsi": 95.1,
-      "proximity": "EMA-9 Retest Zone (\u20b91276.90) | VWAP \u20b91268.65"
+      "lower_band": 1265.82,
+      "rsi": 92.5,
+      "proximity": "EMA-9 Retest Zone (\u20b91276.82) | VWAP \u20b91268.65"
     }
   ]
 }
