@@ -1,5 +1,5 @@
 {
-  "timestamp": "21-Sep-2026 10:31:27 IST",
+  "timestamp": "21-Sep-2026 10:59:51 IST",
   "gateway_status": "ONLINE",
   "vaults": {
     "intra_squeeze": {
@@ -26,68 +26,68 @@
   "symbols": [
     {
       "symbol": "PFC",
-      "ltp": 345.8,
-      "bias": "BOTH",
-      "regime": "CHOP_STAGNATION",
-      "squeeze_status": "IDLE",
-      "vwap_status": "IDLE",
-      "upper_bb": 346.37,
-      "vwap": 346.21,
-      "lower_band": 345.85,
-      "rsi": 48.1,
-      "proximity": "Upper BB \u20b9346.37 (-0.57) | Oversold Dip (Lower Band \u20b9345.85, RSI 48.1)"
-    },
-    {
-      "symbol": "HUDCO",
-      "ltp": 174.53,
-      "bias": "BOTH",
-      "regime": "CHOP_STAGNATION",
-      "squeeze_status": "IDLE",
-      "vwap_status": "IDLE",
-      "upper_bb": 175.12,
-      "vwap": 174.89,
-      "lower_band": 174.61,
-      "rsi": 37.1,
-      "proximity": "Upper BB \u20b9175.12 (-0.59) | Oversold Dip (Lower Band \u20b9174.61, RSI 37.1)"
-    },
-    {
-      "symbol": "TATASTEEL",
-      "ltp": 184.75,
+      "ltp": 345.05,
       "bias": "SHORT_ONLY",
       "regime": "TREND_EXPANSION",
       "squeeze_status": "IDLE",
       "vwap_status": "IDLE",
-      "upper_bb": 185.53,
-      "vwap": 186.1,
-      "lower_band": 185.68,
-      "rsi": 46.3,
-      "proximity": "Upper BB \u20b9185.53 (-0.78) | Oversold Dip (Lower Band \u20b9185.68, RSI 46.3)"
+      "upper_bb": 345.37,
+      "vwap": 346.21,
+      "lower_band": 345.99,
+      "rsi": 42.9,
+      "proximity": "Upper BB \u20b9345.37 (-0.32) | Oversold Dip (Lower Band \u20b9345.99, RSI 42.9)"
     },
     {
-      "symbol": "SUZLON",
-      "ltp": 43.33,
-      "bias": "LONG_ONLY",
-      "regime": "TREND_EXPANSION",
-      "squeeze_status": "IDLE",
-      "vwap_status": "IDLE",
-      "upper_bb": 43.34,
-      "vwap": 43.32,
-      "lower_band": 43.26,
-      "rsi": 60.0,
-      "proximity": "Upper BB Breakout Zone (\u20b943.34, -0.01) | Oversold Dip (Lower Band \u20b943.26, RSI 60.0)"
-    },
-    {
-      "symbol": "NMDC",
-      "ltp": 80.27,
+      "symbol": "HUDCO",
+      "ltp": 174.44,
       "bias": "BOTH",
       "regime": "CHOP_STAGNATION",
       "squeeze_status": "IDLE",
       "vwap_status": "IDLE",
-      "upper_bb": 80.38,
+      "upper_bb": 174.48,
+      "vwap": 174.89,
+      "lower_band": 174.62,
+      "rsi": 58.6,
+      "proximity": "Upper BB Breakout Zone (\u20b9174.48, -0.04) | Oversold Dip (Lower Band \u20b9174.62, RSI 58.6)"
+    },
+    {
+      "symbol": "TATASTEEL",
+      "ltp": 184.95,
+      "bias": "BOTH",
+      "regime": "CHOP_STAGNATION",
+      "squeeze_status": "IDLE",
+      "vwap_status": "IDLE",
+      "upper_bb": 184.93,
+      "vwap": 186.1,
+      "lower_band": 185.78,
+      "rsi": 64.7,
+      "proximity": "Upper BB Breakout Zone (\u20b9184.93, +0.02) | Oversold Dip (Lower Band \u20b9185.78, RSI 64.7)"
+    },
+    {
+      "symbol": "SUZLON",
+      "ltp": 43.3,
+      "bias": "BOTH",
+      "regime": "CHOP_STAGNATION",
+      "squeeze_status": "IDLE",
+      "vwap_status": "IDLE",
+      "upper_bb": 43.45,
+      "vwap": 43.32,
+      "lower_band": 43.25,
+      "rsi": 14.8,
+      "proximity": "Upper BB \u20b943.45 (-0.15) | Oversold Dip (Lower Band \u20b943.25, RSI 14.8)"
+    },
+    {
+      "symbol": "NMDC",
+      "ltp": 80.13,
+      "bias": "SHORT_ONLY",
+      "regime": "TREND_EXPANSION",
+      "squeeze_status": "IDLE",
+      "vwap_status": "IDLE",
+      "upper_bb": 80.21,
       "vwap": 80.65,
-      "lower_band": 80.54,
-      "rsi": 52.5,
-      "proximity": "Upper BB Breakout Zone (\u20b980.38, -0.11) | Oversold Dip (Lower Band \u20b980.54, RSI 52.5)"
+      "lower_band": 80.56,
+      "rsi": 38.7,
+      "proximity": "Upper BB Breakout Zone (\u20b980.21, -0.08) | Oversold Dip (Lower Band \u20b980.56, RSI 38.7)"
     }
   ]
 }
