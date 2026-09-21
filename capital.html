@@ -25,7 +25,7 @@
         <div class="header-banner">
             <div>
                 <h1>Capital Control & Strategy Allocations</h1>
-                <p class="subtitle">Multi-Horizon Margin Governor, Dynamic Leeway Scaling & Per-Asset Exposure | Updated: 21-Sep-2026 09:00:26 IST</p>
+                <p class="subtitle">Multi-Horizon Margin Governor, Dynamic Leeway Scaling & Per-Asset Exposure | Updated: 21-Sep-2026 09:03:49 IST</p>
             </div>
             <div class="regime-tag">
                 SYSTEM REGIME: <strong>BULLISH_MOMENTUM</strong> (1.25x Multiplier | Intraday & Swing: LONG_ONLY)
@@ -123,24 +123,24 @@
         <!-- Top Metric Summary Cards -->
         <div class="kpi-grid">
             <div class="card kpi-card">
-                <div class="kpi-title">Total Base Capital Pool</div>
-                <div class="kpi-val highlight">₹120,000.00</div>
-                <div class="kpi-sub">Intraday: ₹30k | Swing: ₹50k | Long-Term: ₹40k</div>
-            </div>
-            <div class="card kpi-card">
-                <div class="kpi-title">Dynamic Scaled Leeway</div>
-                <div class="kpi-val positive">₹205,625.00</div>
-                <div class="kpi-sub">Greedy Scaling on Win Rates ≥ 70% + 1.25x Regime</div>
-            </div>
-            <div class="card kpi-card">
-                <div class="kpi-title">Active Available Margin</div>
-                <div class="kpi-val positive">₹199,665.00</div>
-                <div class="kpi-sub">Deployed: ₹5,960.00 (2.9% utilization)</div>
-            </div>
-            <div class="card kpi-card">
-                <div class="kpi-title">Realized Session Net PnL</div>
+                <div class="kpi-title">Live Intraday Realized PnL</div>
                 <div class="kpi-val positive">+₹1,100.00</div>
                 <div class="kpi-sub">HUDCO: +₹1,605.00 (85.7% WR) | NMDC: -₹505.00</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Live Executed Positions State</div>
+                <div class="kpi-val highlight">ALL CLOSED</div>
+                <div class="kpi-sub">0 Open Overnight Margin Risk &bull; Auto-Squared Off at 15:15 IST</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Intraday Scaled Leeway</div>
+                <div class="kpi-val positive">₹43,125.00</div>
+                <div class="kpi-sub">+30% Greedy Boost on HUDCO (85.7% WR) &bull; Base: ₹30k</div>
+            </div>
+            <div class="card kpi-card">
+                <div class="kpi-title">Swing & Long Earmarked</div>
+                <div class="kpi-val highlight">₹162,500.00</div>
+                <div class="kpi-sub">Backtested Models &bull; Standing By for Live Triggers</div>
             </div>
             <div class="card kpi-card">
                 <div class="kpi-title">Contention Capital Shield</div>
@@ -149,72 +149,32 @@
             </div>
         </div>
 
-        <!-- Horizon Capital Allocation Cards -->
-        <div class="card section-card">
-            <h2>Multi-Horizon Capital Pool Architecture</h2>
-            <p class="subtitle">Strict partition barriers prevent intraday margin calls from contaminating swing or long-term holdings.</p>
-            
-            <div class="comparison-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top: 1rem;">
-                <div class="comp-box" style="background: rgba(8, 51, 68, 0.4); border-color: #0284c7;">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="badge-intraday">INTRADAY POOL</span>
-                        <small style="color:#38bdf8; font-weight:700;">MIS (5x Leverage)</small>
-                    </div>
-                    <div class="comp-stat positive" style="color:#38bdf8;">₹43,125.00 Scaled</div>
-                    <p class="comp-desc">
-                        <strong>Base:</strong> ₹30,000.00 &bull; <strong>Used:</strong> ₹5,960.00 &bull; <strong>Avail:</strong> ₹37,165.00<br>
-                        <strong>Active Candidate:</strong> HUDCO (400 sh) &bull; Direction: <code>LONG_ONLY</code><br>
-                        <strong>Risk Controls:</strong> -₹1,000/strat daily loss cutoff &bull; <strong>15:15 IST</strong> auto-squareoff
-                    </p>
+        <!-- ========================================================= -->
+        <!-- SECTION 1: LIVE INTRADAY EXECUTIONS & ACTIVE CAPITAL       -->
+        <!-- ========================================================= -->
+        <div class="card section-card highlight-card" style="border-color: #38bdf8; background: #0c4a6e;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.75rem;">
+                <div>
+                    <h2 style="color:#f8fafc;">1. Live Intraday Strategies & Executions (MIS 5x — Active Capital Deployed)</h2>
+                    <p class="subtitle" style="color:#bae6fd;">These intraday positions and strategies were actively entered in the live market. Every position explicitly indicates its current lifecycle state (OPEN or CLOSED).</p>
                 </div>
-
-                <div class="comp-box" style="background: rgba(46, 16, 101, 0.4); border-color: #7c3aed;">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="badge-swing">SWING POOL</span>
-                        <small style="color:#c084fc; font-weight:700;">CNC (Cash Delivery)</small>
-                    </div>
-                    <div class="comp-stat positive" style="color:#c084fc;">₹62,500.00 Scaled</div>
-                    <p class="comp-desc">
-                        <strong>Base:</strong> ₹50,000.00 &bull; <strong>Used:</strong> ₹0.00 &bull; <strong>Avail:</strong> ₹62,500.00<br>
-                        <strong>Execution Window:</strong> 15:15 – 15:25 IST (EOD Candle Close Confirmation)<br>
-                        <strong>Holding:</strong> 2 – 7 Days &bull; Backtest Edge: <strong>+₹41,074.81</strong> (54.5% WR, 4.2% DD)
-                    </p>
-                </div>
-
-                <div class="comp-box" style="background: rgba(6, 78, 59, 0.4); border-color: #059669;">
-                    <div style="display:flex; justify-content:space-between; align-items:center;">
-                        <span class="badge-long">LONG-TERM POOL</span>
-                        <small style="color:#4ade80; font-weight:700;">CNC (Cash Delivery)</small>
-                    </div>
-                    <div class="comp-stat positive" style="color:#4ade80;">₹100,000.00 Scaled</div>
-                    <p class="comp-desc">
-                        <strong>Base:</strong> ₹40,000.00 &bull; <strong>Used:</strong> ₹0.00 &bull; <strong>Avail:</strong> ₹100,000.00<br>
-                        <strong>4 Baskets:</strong> GARP Value, Dual Momentum, Stage-2 Breakout, High FCF Moats<br>
-                        <strong>Governance:</strong> Gemini AI Fundamental Audit (ROE > 18%, D/E < 1.0)
-                    </p>
-                </div>
+                <span class="badge-live">LIVE EXECUTIONS ACTIVE</span>
             </div>
-        </div>
 
-        <!-- Strategy Capital Control Table -->
-        <div class="card section-card">
-            <h2>Strategy-Level Capital & Performance Matrix</h2>
-            <p class="subtitle">Real-time breakdown of margin limits, greedy leeway factors, utilization bars, and realized returns per strategy.</p>
-
-            <div class="table-responsive">
+            <div class="table-responsive" style="margin-top:1rem;">
                 <table class="styled-table">
                     <thead>
                         <tr>
-                            <th>Strategy</th>
+                            <th>Strategy Name</th>
                             <th>Horizon / Mode</th>
                             <th>Base Budget</th>
-                            <th>Dynamic Leeway</th>
+                            <th>Scaled Leeway</th>
                             <th>Used Margin</th>
                             <th>Available Margin</th>
-                            <th>Utilization & Leeway State</th>
-                            <th>Realized PnL</th>
+                            <th>Live State</th>
+                            <th>Realized Net PnL</th>
                             <th>Win Rate</th>
-                            <th>Status</th>
+                            <th>System Status</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -229,15 +189,7 @@
             <td><strong>₹24,375.00</strong> <small>(1.62x)</small></td>
             <td>₹5,960.00</td>
             <td class="positive">₹18,415.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>24.5%</span>
-                    <span style="color:var(--text-muted);">GREEDY_EXPANSION (+30% Boost)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 24.5%;"></div>
-                </div>
-            </td>
+            <td><span class="badge-state-closed">CLOSED (FLAT AT EOD)</span></td>
             <td class="positive"><strong>₹+1,100.00</strong></td>
             <td><strong>66.7%</strong></td>
             <td><span class="badge-leader">ONLINE / ACTIVE</span></td>
@@ -253,42 +205,320 @@
             <td><strong>₹18,750.00</strong> <small>(1.25x)</small></td>
             <td>₹0.00</td>
             <td class="positive">₹18,750.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (1.25x Regime)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class=""><strong>₹+0.00</strong></td>
+            <td><span class="badge-state-closed">STANDBY (0 POSITIONS)</span></td>
+            <td class="negative"><strong>₹+0.00</strong></td>
             <td><strong>50.0%</strong></td>
             <td><span class="badge-neutral">ONLINE / STANDBY</span></td>
         </tr>
         
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Individual Live Intraday Executions Ledger -->
+        <div class="card section-card">
+            <h2>Live Intraday Executed Positions Ledger (Trade-by-Trade Audit)</h2>
+            <p class="subtitle">Complete audit trail of all positions entered in the live market. Explicitly indicates the lifecycle State (CLOSED upon target hit or squareoff) and net financial return.</p>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>State</th>
+                            <th>Execution Time</th>
+                            <th>Symbol</th>
+                            <th>Side</th>
+                            <th>Quantity</th>
+                            <th>Entry Price</th>
+                            <th>Exit Price</th>
+                            <th>Margin Blocked</th>
+                            <th>Hold Duration</th>
+                            <th>Exit Reason</th>
+                            <th>Realized Net PnL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 13:59:05</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹175.22</td>
+            <td>₹175.35</td>
+            <td><strong>₹14,017.60</strong></td>
+            <td>55.0m</td>
+            <td><code>MANUAL_PROFIT_LOCK_EARLY_CLOSE</code></td>
+            <td class="positive">
+                <strong>₹+27.00</strong><br>
+                <small>(+0.2% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 12:50:01</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹174.68</td>
+            <td>₹174.79</td>
+            <td><strong>₹13,974.40</strong></td>
+            <td>3.9m</td>
+            <td><code>BREAKEVEN_PLUS_LOCK</code></td>
+            <td class="positive">
+                <strong>₹+19.00</strong><br>
+                <small>(+0.1% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 12:46:06</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹173.00</td>
+            <td>₹174.45</td>
+            <td><strong>₹13,840.00</strong></td>
+            <td>31.8m</td>
+            <td><code>GREEDY_TRAIL_EXIT</code></td>
+            <td class="positive">
+                <strong>₹+555.00</strong><br>
+                <small>(+4.0% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 11:54:05</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹170.98</td>
+            <td>₹173.00</td>
+            <td><strong>₹13,678.40</strong></td>
+            <td>51.2m</td>
+            <td><code>GREEDY_TRAIL_EXIT</code></td>
+            <td class="positive">
+                <strong>₹+783.00</strong><br>
+                <small>(+5.7% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 11:35:57</code></td>
+            <td><strong>NMDC</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>500 sh</td>
+            <td>₹80.71</td>
+            <td>₹80.45</td>
+            <td><strong>₹8,071.00</strong></td>
+            <td>42.0m</td>
+            <td><code>MAX_DAILY_LOSS_BREACH</code></td>
+            <td class="negative">
+                <strong>₹-155.00</strong><br>
+                <small>(-1.9% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 10:26:19</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹171.33</td>
+            <td>₹171.44</td>
+            <td><strong>₹13,706.40</strong></td>
+            <td>69.2m</td>
+            <td><code>BREAKEVEN_PLUS_LOCK</code></td>
+            <td class="positive">
+                <strong>₹+19.00</strong><br>
+                <small>(+0.1% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 10:16:43</code></td>
+            <td><strong>NMDC</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>500 sh</td>
+            <td>₹81.30</td>
+            <td>₹80.65</td>
+            <td><strong>₹8,130.00</strong></td>
+            <td>61.7m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td class="negative">
+                <strong>₹-350.00</strong><br>
+                <small>(-4.3% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 09:16:55</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹172.10</td>
+            <td>₹171.33</td>
+            <td><strong>₹13,768.00</strong></td>
+            <td>1.2m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td class="negative">
+                <strong>₹-333.00</strong><br>
+                <small>(-2.4% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-18 09:15:35</code></td>
+            <td><strong>HUDCO</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹170.01</td>
+            <td>₹171.41</td>
+            <td><strong>₹13,600.80</strong></td>
+            <td>0.5m</td>
+            <td><code>GREEDY_TRAIL_EXIT</code></td>
+            <td class="positive">
+                <strong>₹+535.00</strong><br>
+                <small>(+3.9% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-17 15:10:17</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge both">SELL</span></td>
+            <td>400 sh</td>
+            <td>₹158.82</td>
+            <td>₹159.05</td>
+            <td><strong>₹12,705.60</strong></td>
+            <td>76.7m</td>
+            <td><code>EOD_SQUARE_OFF</code></td>
+            <td class="negative">
+                <strong>₹-117.00</strong><br>
+                <small>(-0.9% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-17 12:57:41</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹158.62</td>
+            <td>₹159.10</td>
+            <td><strong>₹12,689.60</strong></td>
+            <td>61.0m</td>
+            <td><code>STAGNATION_PROFIT_SETTLE_60m</code></td>
+            <td class="positive">
+                <strong>₹+167.00</strong><br>
+                <small>(+1.3% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-17 11:56:40</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge both">SELL</span></td>
+            <td>400 sh</td>
+            <td>₹157.87</td>
+            <td>₹158.63</td>
+            <td><strong>₹12,629.60</strong></td>
+            <td>93.3m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td class="negative">
+                <strong>₹-329.00</strong><br>
+                <small>(-2.6% ROI)</small>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><span class="badge-state-closed">CLOSED</span></td>
+            <td><code>2026-09-17 10:23:24</code></td>
+            <td><strong>ASHOKLEY</strong></td>
+            <td><span class="badge long">BUY</span></td>
+            <td>400 sh</td>
+            <td>₹158.60</td>
+            <td>₹157.85</td>
+            <td><strong>₹12,688.00</strong></td>
+            <td>47.6m</td>
+            <td><code>STOP_LOSS</code></td>
+            <td class="negative">
+                <strong>₹-325.00</strong><br>
+                <small>(-2.6% ROI)</small>
+            </td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- SECTION 2: SWING & LONG-TERM BACKTESTED MODELS            -->
+        <!-- ========================================================= -->
+        <div class="card section-card" style="border-left: 6px solid #818cf8;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
+                <div>
+                    <h2>2. Swing & Long-Term Capital Allocations (Backtested / Empirical Baseline)</h2>
+                    <p class="subtitle">Empirically validated strategies awaiting live entry triggers. Capital is earmarked and standing by in cash.</p>
+                </div>
+                <span class="badge-backtest">BACKTEST & EMPIRICAL SIMULATION INDICATION</span>
+            </div>
+
+            <!-- Prominent Backtest Indication Alert Banner -->
+            <div style="background: rgba(49, 46, 129, 0.35); border: 1px solid #4f46e5; border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;">
+                <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+                    <span style="font-size:1.4rem;">📊</span>
+                    <div>
+                        <strong style="color:#c7d2fe; font-size:0.95rem;">MODEL SIMULATION INDICATION (NOT ENTERED LIVE YET)</strong>
+                        <p style="color:#e0e7ff; font-size:0.85rem; line-height:1.5; margin-top:0.3rem;">
+                            The swing and long-term strategies shown in this section <strong>have NOT been entered in live trading</strong>. They represent our verified 43-stock empirical backtests, 24-fold walk-forward machine learning sweeps, and Gemini AI fundamental audits. Capital is reserved and awaiting verified entry triggers (such as 15:15–15:25 IST daily EOD close confirmation for swing trades, or monthly rebalancing for long-term compounders).
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Strategy Name</th>
+                            <th>Horizon / Mode</th>
+                            <th>Model Type</th>
+                            <th>Reserved Capital</th>
+                            <th>Backtested Return / CAGR</th>
+                            <th>Historical Win Rate & DD</th>
+                            <th>Live Entry Trigger Window</th>
+                            <th>Live State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
         <tr>
             <td>
                 <strong>Triangular Bollinger Bands + Expanded RSI</strong><br>
                 <small><code>swing_triangular_bb</code></small>
             </td>
             <td><span class="badge-swing">SWING</span> <small>CNC (1x)</small></td>
-            <td>₹25,000.00</td>
-            <td><strong>₹31,250.00</strong> <small>(1.25x)</small></td>
-            <td>₹0.00</td>
-            <td class="positive">₹31,250.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (1.25x Regime)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class="positive"><strong>₹+41,074.81</strong></td>
-            <td><strong>54.5%</strong></td>
-            <td><span class="badge-challenger">ONLINE / SCANNING</span></td>
+            <td><span class="badge-backtest">BACKTEST MODEL</span></td>
+            <td><strong>₹31,250.00</strong></td>
+            <td class="positive"><strong>+₹41,074.81 Net</strong></td>
+            <td>54.5% (DD: -4.23%)</td>
+            <td><small>15:15 – 15:25 IST (EOD Candle Close Confirmation)</small></td>
+            <td><span class="badge-not-entered">NOT ENTERED LIVE (STANDBY FOR 15:15 EOD)</span></td>
         </tr>
         
         <tr>
@@ -297,22 +527,12 @@
                 <small><code>swing_sector_stat_arb</code></small>
             </td>
             <td><span class="badge-swing">SWING</span> <small>CNC (1x)</small></td>
-            <td>₹25,000.00</td>
-            <td><strong>₹31,250.00</strong> <small>(1.25x)</small></td>
-            <td>₹0.00</td>
-            <td class="positive">₹31,250.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (1.25x Regime)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class="positive"><strong>₹+38,912.40</strong></td>
-            <td><strong>62.1%</strong></td>
-            <td><span class="badge-challenger">ONLINE / CLUSTERING</span></td>
+            <td><span class="badge-backtest">BACKTEST MODEL</span></td>
+            <td><strong>₹31,250.00</strong></td>
+            <td class="positive"><strong>+₹38,912.40 Net</strong></td>
+            <td>62.1% (DD: -4.80%)</td>
+            <td><small>Hourly / Daily Z-Score Divergence (PSU, Metal, Auto, IT)</small></td>
+            <td><span class="badge-not-entered">NOT ENTERED LIVE (STANDBY FOR Z-SCORE)</span></td>
         </tr>
         
         <tr>
@@ -321,46 +541,26 @@
                 <small><code>long_garp_value</code></small>
             </td>
             <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
-            <td>₹10,000.00</td>
-            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
-            <td>₹0.00</td>
-            <td class="positive">₹25,000.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (Quarterly Basket)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class=""><strong>₹+0.00</strong></td>
-            <td><strong>65.0%</strong></td>
-            <td><span class="badge-long">ONLINE / AUDITING</span></td>
+            <td><span class="badge-backtest">BACKTEST MODEL</span></td>
+            <td><strong>₹25,000.00</strong></td>
+            <td class="positive"><strong>+28.4% CAGR</strong></td>
+            <td>65.0% (DD: -8.50%)</td>
+            <td><small>Gemini Quarterly Fundamental Filter (ROE > 18%, D/E < 1.0)</small></td>
+            <td><span class="badge-not-entered">NOT ENTERED LIVE (MONTHLY REBALANCE)</span></td>
         </tr>
         
         <tr>
             <td>
-                <strong>Dual Momentum (Absolute + 12M RS)</strong><br>
+                <strong>Dual Momentum (Absolute + 12M Relative Strength)</strong><br>
                 <small><code>long_dual_momentum</code></small>
             </td>
             <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
-            <td>₹10,000.00</td>
-            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
-            <td>₹0.00</td>
-            <td class="positive">₹25,000.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (Monthly Rebalance)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class=""><strong>₹+0.00</strong></td>
-            <td><strong>60.0%</strong></td>
-            <td><span class="badge-long">ONLINE / REBALANCING</span></td>
+            <td><span class="badge-backtest">BACKTEST MODEL</span></td>
+            <td><strong>₹25,000.00</strong></td>
+            <td class="positive"><strong>+31.2% CAGR</strong></td>
+            <td>60.0% (DD: -9.20%)</td>
+            <td><small>Top Quintile 12-Month Momentum Filter</small></td>
+            <td><span class="badge-not-entered">NOT ENTERED LIVE (MONTHLY REBALANCE)</span></td>
         </tr>
         
         <tr>
@@ -369,22 +569,12 @@
                 <small><code>long_stage2_breakout</code></small>
             </td>
             <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
-            <td>₹10,000.00</td>
-            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
-            <td>₹0.00</td>
-            <td class="positive">₹25,000.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (Weekly Stage Audit)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class=""><strong>₹+0.00</strong></td>
-            <td><strong>58.0%</strong></td>
-            <td><span class="badge-long">ONLINE / STAGE_AUDIT</span></td>
+            <td><span class="badge-backtest">BACKTEST MODEL</span></td>
+            <td><strong>₹25,000.00</strong></td>
+            <td class="positive"><strong>+34.5% CAGR</strong></td>
+            <td>58.0% (DD: -11.40%)</td>
+            <td><small>30-Week Moving Average Base Expansion</small></td>
+            <td><span class="badge-not-entered">NOT ENTERED LIVE (WEEKLY AUDIT)</span></td>
         </tr>
         
         <tr>
@@ -393,22 +583,12 @@
                 <small><code>long_compounder</code></small>
             </td>
             <td><span class="badge-long">LONG</span> <small>CNC (1x)</small></td>
-            <td>₹10,000.00</td>
-            <td><strong>₹25,000.00</strong> <small>(1.25x)</small></td>
-            <td>₹0.00</td>
-            <td class="positive">₹25,000.00</td>
-            <td style="min-width: 140px;">
-                <div style="display:flex; justify-content:space-between; font-size:0.75rem;">
-                    <span>0.0%</span>
-                    <span style="color:var(--text-muted);">NORMAL_BASE (Core Holdings)</span>
-                </div>
-                <div class="progress-bar-container">
-                    <div class="progress-bar-fill " style="width: 4.0%;"></div>
-                </div>
-            </td>
-            <td class=""><strong>₹+0.00</strong></td>
-            <td><strong>68.0%</strong></td>
-            <td><span class="badge-long">ONLINE / COMPOUNDING</span></td>
+            <td><span class="badge-backtest">BACKTEST MODEL</span></td>
+            <td><strong>₹25,000.00</strong></td>
+            <td class="positive"><strong>+26.8% CAGR</strong></td>
+            <td>68.0% (DD: -6.10%)</td>
+            <td><small>Monopoly Moat & Low Debt High RoCE Compounders</small></td>
+            <td><span class="badge-not-entered">NOT ENTERED LIVE (CORE BASKET)</span></td>
         </tr>
         
                     </tbody>
@@ -416,98 +596,11 @@
             </div>
         </div>
 
-        <!-- Stock-by-Stock Capital Deployed & PnL Ledger -->
+        <!-- ========================================================= -->
+        <!-- SECTION 3: PRE-MARKET SCREENED WATCHLIST (TODAY)           -->
+        <!-- ========================================================= -->
         <div class="card section-card">
-            <h2>Stock-by-Stock Capital Deployment & Performance Ledger</h2>
-            <p class="subtitle">Individual asset accountability showing how much capital was allocated to which stock, executions, and realized outcomes.</p>
-
-            <div class="table-responsive">
-                <table class="styled-table">
-                    <thead>
-                        <tr>
-                            <th>Stock</th>
-                            <th>Strategy Assigned</th>
-                            <th>Product</th>
-                            <th>Quantity</th>
-                            <th>CMP</th>
-                            <th>Margin Blocked</th>
-                            <th>Total Exposure</th>
-                            <th>Net Realized PnL</th>
-                            <th>Win Rate</th>
-                            <th>Exit Reasons Breakdown</th>
-                            <th>Current State</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-        <tr>
-            <td>
-                <strong>HUDCO</strong><br>
-                <small style="color:var(--text-muted);">Housing & Urban Development Corp</small>
-            </td>
-            <td><code>intra_squeeze</code></td>
-            <td><span class="badge-intraday">INTRADAY</span> <small>MIS (5x)</small></td>
-            <td>400 sh</td>
-            <td>₹175.35</td>
-            <td><strong>₹5,960.00</strong></td>
-            <td>₹70,140.00</td>
-            <td class="positive">
-                <strong>₹+1,605.00</strong><br>
-                <small>(+26.9% ROI)</small>
-            </td>
-            <td>85.7% (6W / 1L)</td>
-            <td><small>GREEDY_TRAIL_EXIT (3x), BREAKEVEN_PLUS_LOCK (2x), MANUAL_PROFIT_LOCK (1x), SL (1x)</small></td>
-            <td><span class="badge-leader">CLOSED / FLAT (Armed for 21-Sep Open)</span></td>
-        </tr>
-        
-        <tr>
-            <td>
-                <strong>NMDC</strong><br>
-                <small style="color:var(--text-muted);">National Mineral Development Corp</small>
-            </td>
-            <td><code>intra_squeeze</code></td>
-            <td><span class="badge-intraday">INTRADAY</span> <small>MIS (5x)</small></td>
-            <td>500 sh</td>
-            <td>₹80.45</td>
-            <td><strong>₹8,130.00</strong></td>
-            <td>₹40,225.00</td>
-            <td class="negative">
-                <strong>₹-505.00</strong><br>
-                <small>(-6.2% ROI)</small>
-            </td>
-            <td>0.0% (0W / 2L)</td>
-            <td><small>STOP_LOSS (-₹350.00), MAX_DAILY_LOSS_BREACH (-₹155.00)</small></td>
-            <td><span class="badge-caution">CIRCUIT_BREAKER_HALTED (Losses Capped)</span></td>
-        </tr>
-        
-        <tr>
-            <td>
-                <strong>ASHOKLEY</strong><br>
-                <small style="color:var(--text-muted);">Ashok Leyland Limited</small>
-            </td>
-            <td><code>intra_squeeze</code></td>
-            <td><span class="badge-intraday">INTRADAY (Thu)</span> <small>MIS (5x)</small></td>
-            <td>400 sh</td>
-            <td>₹159.05</td>
-            <td><strong>₹12,688.00</strong></td>
-            <td>₹63,620.00</td>
-            <td class="negative">
-                <strong>₹-604.00</strong><br>
-                <small>(-4.8% ROI)</small>
-            </td>
-            <td>25.0% (1W / 3L)</td>
-            <td><small>STOP_LOSS (2x), STAGNATION_PROFIT (1x), EOD_SQUAREOFF (1x)</small></td>
-            <td><span class="badge-neutral">HISTORICAL_SESSION (Replaced by HUDCO)</span></td>
-        </tr>
-        
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- Pre-Market Screened Watchlist Capital Reservation -->
-        <div class="card section-card">
-            <h2>Today's Pre-Market Qualified Watchlist & Capital Reservation (21-Sep-2026)</h2>
+            <h2>3. Today's Pre-Market Screened Watchlist & Capital Reservation (21-Sep-2026)</h2>
             <p class="subtitle">Scanned at 08:30 AM IST. Capital reservations earmarked for market open (09:15 IST) and EOD swing confirmation (15:15 IST).</p>
 
             <div class="table-responsive">
@@ -520,7 +613,7 @@
                             <th>CMP</th>
                             <th>Target Strategy Horizon</th>
                             <th>Capital Reservation</th>
-                            <th>Readiness Status</th>
+                            <th>Live Readiness State</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -532,7 +625,7 @@
             <td>₹175.35</td>
             <td><code>Intraday Squeeze + Swing BB</code></td>
             <td>₹25,000.00</td>
-            <td><span class="badge-saved">PRIMARY_MOMENTUM_LEADER</span></td>
+            <td><span class="badge-state-open">ARMED FOR 09:15 OPEN</span></td>
         </tr>
         
         <tr>
@@ -542,7 +635,7 @@
             <td>₹492.10</td>
             <td><code>Intraday Squeeze / Swing BB</code></td>
             <td>₹25,000.00</td>
-            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+            <td><span class="badge-neutral">NOT ENTERED YET (STANDBY)</span></td>
         </tr>
         
         <tr>
@@ -552,7 +645,7 @@
             <td>₹182.40</td>
             <td><code>Intraday Squeeze / Swing BB</code></td>
             <td>₹20,000.00</td>
-            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+            <td><span class="badge-neutral">NOT ENTERED YET (STANDBY)</span></td>
         </tr>
         
         <tr>
@@ -562,7 +655,7 @@
             <td>₹4,890.00</td>
             <td><code>Swing Triangular BB (CNC)</code></td>
             <td>₹31,250.00</td>
-            <td><span class="badge-saved">SWING_QUALIFIED</span></td>
+            <td><span class="badge-not-entered">STANDBY FOR 15:15 EOD</span></td>
         </tr>
         
         <tr>
@@ -572,7 +665,7 @@
             <td>₹688.50</td>
             <td><code>Swing Sector Stat-Arb ML</code></td>
             <td>₹31,250.00</td>
-            <td><span class="badge-saved">SECTOR_CLUSTER_LEADER</span></td>
+            <td><span class="badge-not-entered">STANDBY FOR HOURLY Z-SCORE</span></td>
         </tr>
         
         <tr>
@@ -582,7 +675,7 @@
             <td>₹1,150.00</td>
             <td><code>Stage-2 Breakout / Swing BB</code></td>
             <td>₹25,000.00</td>
-            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+            <td><span class="badge-neutral">NOT ENTERED YET (STANDBY)</span></td>
         </tr>
         
         <tr>
@@ -592,7 +685,7 @@
             <td>₹710.00</td>
             <td><code>Intraday Squeeze / Swing BB</code></td>
             <td>₹20,000.00</td>
-            <td><span class="badge-saved">SCREENED_CANDIDATE</span></td>
+            <td><span class="badge-neutral">NOT ENTERED YET (STANDBY)</span></td>
         </tr>
         
         <tr>
@@ -602,7 +695,7 @@
             <td>₹224.50</td>
             <td><code>Long GARP Value + Gemini</code></td>
             <td>₹25,000.00</td>
-            <td><span class="badge-saved">FUNDAMENTAL_QUALIFIED</span></td>
+            <td><span class="badge-not-entered">STANDBY FOR MONTHLY BASKET</span></td>
         </tr>
         
         <tr>
@@ -612,7 +705,7 @@
             <td>₹4,650.00</td>
             <td><code>Consistent Cash Flow Compounder</code></td>
             <td>₹25,000.00</td>
-            <td><span class="badge-saved">CORE_COMPOUNDER</span></td>
+            <td><span class="badge-not-entered">STANDBY FOR CORE ACCUMULATION</span></td>
         </tr>
         
                     </tbody>
