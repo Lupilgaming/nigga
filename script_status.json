@@ -1,0 +1,142 @@
+{
+  "execution_gateway": {
+    "script_id": "execution_gateway",
+    "name": "Central Execution Gateway (Port 8000)",
+    "category": "Infrastructure / Execution Gateway",
+    "execution_mode": "OFFLINE",
+    "operational_state": "OFFLINE",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 0,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 0.0,
+    "last_completed_at": "2026-09-21 15:36:35 IST",
+    "next_scheduled_run": "2026-09-22 08:30:00 IST",
+    "display_badge": {
+      "text": "OFFLINE",
+      "class": "badge short",
+      "color": "#f87171"
+    },
+    "status_text": "Server Closed (Day Ended at 15:30 IST). Scheduled to launch tomorrow 22-Sep-2026 08:30 IST."
+  },
+  "premarket_screener": {
+    "script_id": "premarket_screener",
+    "name": "Pre-Market Volatility & Sector Screener",
+    "category": "Pre-Market Early (08:30 IST)",
+    "execution_mode": "SCHEDULED",
+    "operational_state": "DONE_FOR_THE_DAY",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 0,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 0.0,
+    "last_completed_at": "2026-09-21 08:48:00 IST",
+    "next_scheduled_run": "2026-09-22 08:30:00 IST",
+    "display_badge": {
+      "text": "DONE FOR THE DAY",
+      "class": "badge-saved",
+      "color": "#10b981"
+    },
+    "status_text": "Done for the day (21-Sep-2026: Scanned 43 assets, top candidate HUDCO). Scheduled for tomorrow 22-Sep-2026 08:30 IST."
+  },
+  "intraday_dual_engine": {
+    "script_id": "intraday_dual_engine",
+    "name": "Unified Intraday Strategy Engine (Squeeze + VWAP)",
+    "category": "Live Market Hours (09:05 - 15:10 IST)",
+    "execution_mode": "LIVE_ENABLED_STANDBY",
+    "operational_state": "DONE_FOR_THE_DAY",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 0,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 0.0,
+    "last_completed_at": "2026-09-21 15:10:00 IST",
+    "next_scheduled_run": "2026-09-22 09:05:00 IST",
+    "display_badge": {
+      "text": "DONE FOR THE DAY",
+      "class": "badge-saved",
+      "color": "#10b981"
+    },
+    "status_text": "Done for the day (21-Sep-2026: 0 live orders placed, capital 100% preserved). Scheduled (Live) for tomorrow 22-Sep-2026 09:05 IST."
+  },
+  "eod_orderbook_scalper": {
+    "script_id": "eod_orderbook_scalper",
+    "name": "EOD MIS Unwind & Order Book Imbalance Scalper",
+    "category": "EOD Unwind Window (15:00 - 15:26 IST)",
+    "execution_mode": "PAPER_ONLY",
+    "operational_state": "DONE_FOR_THE_DAY",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 19,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 17498.39,
+    "last_completed_at": "2026-09-21 15:26:00 IST",
+    "next_scheduled_run": "2026-09-22 15:00:00 IST",
+    "display_badge": {
+      "text": "SCHEDULED (PAPER ONLY)",
+      "class": "badge paper",
+      "color": "#818cf8"
+    },
+    "status_text": "Done for the day (21-Sep-2026: 19 paper scalps executed in sandbox). Scheduled (Paper Only) for tomorrow 22-Sep-2026 15:00 IST."
+  },
+  "postmarket_assessment": {
+    "script_id": "postmarket_assessment",
+    "name": "Post-Market Reliance Reconciliation & Contention Audit",
+    "category": "Post-Market Assessment (15:45 IST)",
+    "execution_mode": "SCHEDULED",
+    "operational_state": "SCHEDULED",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 0,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 0.0,
+    "last_completed_at": "2026-09-19 22:00:36 IST",
+    "next_scheduled_run": "2026-09-21 15:45:00 IST",
+    "display_badge": {
+      "text": "SCHEDULED",
+      "class": "badge-caution",
+      "color": "#f59e0b"
+    },
+    "status_text": "Scheduled for today 21-Sep-2026 15:45 IST."
+  },
+  "nightly_backtests": {
+    "script_id": "nightly_backtests",
+    "name": "Multi-Horizon Quantitative Backtester & ML Calibrator",
+    "category": "Evening Calibration (18:30 IST)",
+    "execution_mode": "SCHEDULED",
+    "operational_state": "SCHEDULED",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 0,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 0.0,
+    "last_completed_at": "2026-09-19 22:00:44 IST",
+    "next_scheduled_run": "2026-09-21 18:30:00 IST",
+    "display_badge": {
+      "text": "SCHEDULED",
+      "class": "badge-swing",
+      "color": "#a855f7"
+    },
+    "status_text": "Scheduled for today 21-Sep-2026 18:30 IST."
+  },
+  "dashboard_sync": {
+    "script_id": "dashboard_sync",
+    "name": "Quant Platform Web Dashboard & Pages Synchronizer",
+    "category": "Continuous Synchronization (Every 30m)",
+    "execution_mode": "SCHEDULED",
+    "operational_state": "SCHEDULED",
+    "run_for_day": "2026-09-21",
+    "live_orders_placed": 0,
+    "paper_trades_executed": 0,
+    "realized_pnl_live_rs": 0.0,
+    "realized_pnl_paper_rs": 0.0,
+    "last_completed_at": "2026-09-21 15:30:06 IST",
+    "next_scheduled_run": "2026-09-21 16:00:00 IST",
+    "display_badge": {
+      "text": "SCHEDULED",
+      "class": "badge-cumulative",
+      "color": "#38bdf8"
+    },
+    "status_text": "Scheduled (Recurring) for 21-Sep-2026 16:00 IST."
+  }
+}
