@@ -2,10 +2,11 @@
  * GrowGarden Client-Side Authentication Gate
  * Protects static HTML dashboards with SHA-256 password verification.
  */
-(function() {
+(function () {
     const VALID_HASHES = [
-        "c39de2fbee432a306d9e2e585d2c682edb772fbcebf0c1a3a36dd83edbfc51a2", // 'putitinafile'
-        "e041c575a9b2c6841ad3416d04d0000f2958a059dcd0f12a7b2749eef05b66f8"  // 'put it in a file'
+        //      "c39de2fbee432a306d9e2e585d2c682edb772fbcebf0c1a3a36dd83edbfc51a2", // 'putitinafile'
+        "96f85e88d382dd77bf1aa20dd66bfc2fdba889679221182b4e7f4749b41e5e14", // niggersforfree
+        //      "e041c575a9b2c6841ad3416d04d0000f2958a059dcd0f12a7b2749eef05b66f8"  // 'put it in a file'
     ];
     const STORAGE_KEY = "gg_auth_token";
 
@@ -16,7 +17,7 @@
     if (document.head) {
         document.head.appendChild(styleEl);
     } else {
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             if (document.head) document.head.appendChild(styleEl);
         });
     }
@@ -121,10 +122,10 @@
         const btn = overlay.querySelector("#gg-auth-btn");
         const err = overlay.querySelector("#gg-auth-error");
 
-        input.addEventListener("focus", function() { input.style.borderColor = "#38bdf8"; });
-        input.addEventListener("blur", function() { input.style.borderColor = "#2e2e34"; });
+        input.addEventListener("focus", function () { input.style.borderColor = "#38bdf8"; });
+        input.addEventListener("blur", function () { input.style.borderColor = "#2e2e34"; });
 
-        form.addEventListener("submit", async function(e) {
+        form.addEventListener("submit", async function (e) {
             e.preventDefault();
             btn.disabled = true;
             btn.textContent = "Verifying...";
@@ -144,7 +145,7 @@
             }
         });
 
-        setTimeout(function() { input.focus(); }, 100);
+        setTimeout(function () { input.focus(); }, 100);
     }
 
     // Check existing session
@@ -166,7 +167,7 @@
     }
 
     // Global logout helper
-    window.logoutAuth = function() {
+    window.logoutAuth = function () {
         sessionStorage.removeItem(STORAGE_KEY);
         location.reload();
     };
