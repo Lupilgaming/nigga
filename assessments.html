@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrowGarden | Daily Reliance & Contention Audits</title>
     <link rel="stylesheet" href="style.css">
-    <script src="auth.js"></script>
 </head>
 <body>
     <script>
@@ -38,14 +37,13 @@
     <header class="navbar">
         <div class="brand"><a href="index.html" style="color:inherit; text-decoration:none;">🌱 GrowGarden</a></div>
         <nav class="nav-links">
-            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="expansion.html">Intraday Expansion</a><a href="backtest_review.html">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html" class="active">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html">Scheduler</a>
+            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="backtest_review.html">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html" class="active">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html">Scheduler</a>
         </nav>
         <div style="display:flex; align-items:center; gap:0.6rem;">
             <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-btn" title="Toggle Theme (Black &amp; White Minimalist / Light Mode)" aria-label="Toggle Theme">
                 <span id="themeIcon">🌓</span>
             </button>
             <div class="badge-live">LIVE SYSTEM</div>
-            <button onclick="logoutAuth()" class="theme-toggle-btn" title="Lock Dashboard Session" style="width:auto; padding:0 0.5rem; font-size:0.75rem; font-weight:600;">🔒 Lock</button>
         </div>
     </header>
 
@@ -53,7 +51,7 @@
         <div class="header-banner">
             <div>
                 <h1>Daily Reliance & Model Calibration</h1>
-                <p class="subtitle">Post-Market Reconciliation & Contention Blocker Evaluation | Audited: 22-Sep-2026 08:45:03 IST</p>
+                <p class="subtitle">Post-Market Reconciliation & Contention Blocker Evaluation | Audited: 22-Sep-2026 15:35:06 IST</p>
             </div>
             <div class="regime-tag">
                 EVALUATION VERDICT: <strong>HIGHLY_BENEFICIAL</strong>
@@ -358,19 +356,19 @@
     <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:0.8rem; margin-bottom:1rem;">
         <div style="background: rgba(30, 41, 59, 0.6); padding:0.6rem 0.9rem; border-radius:6px; border:1px solid rgba(255,255,255,0.06);">
             <div style="font-size:0.75rem; color:var(--text-muted);">Completed Scalps</div>
-            <div style="font-size:1.15rem; font-weight:700; color:#f8fafc;">19 Trades</div>
+            <div style="font-size:1.15rem; font-weight:700; color:#f8fafc;">29 Trades</div>
         </div>
         <div style="background: rgba(30, 41, 59, 0.6); padding:0.6rem 0.9rem; border-radius:6px; border:1px solid rgba(255,255,255,0.06);">
             <div style="font-size:0.75rem; color:var(--text-muted);">Win Rate</div>
-            <div style="font-size:1.15rem; font-weight:700; color:#34d399;">57.9% (11W / 8L)</div>
+            <div style="font-size:1.15rem; font-weight:700; color:#f87171;">48.3% (14W / 15L)</div>
         </div>
         <div style="background: rgba(30, 41, 59, 0.6); padding:0.6rem 0.9rem; border-radius:6px; border:1px solid rgba(255,255,255,0.06);">
             <div style="font-size:0.75rem; color:var(--text-muted);">Net Simulated P&amp;L</div>
-            <div style="font-size:1.15rem; font-weight:700; color:#34d399;">₹+17,498.39</div>
+            <div style="font-size:1.15rem; font-weight:700; color:#34d399;">₹+28,292.44</div>
         </div>
         <div style="background: rgba(30, 41, 59, 0.6); padding:0.6rem 0.9rem; border-radius:6px; border:1px solid rgba(255,255,255,0.06);">
             <div style="font-size:0.75rem; color:var(--text-muted);">Profit Factor</div>
-            <div style="font-size:1.15rem; font-weight:700; color:#38bdf8;">53.78</div>
+            <div style="font-size:1.15rem; font-weight:700; color:#38bdf8;">39.34</div>
         </div>
     </div>
     <div class="table-responsive">
@@ -616,6 +614,126 @@
             <td>5.3m</td>
             <td class="positive"><strong>₹+36.80</strong> (+0.25%)</td>
             <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>SUNPHARMA</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>40 sh</td>
+            <td>₹1846.20</td>
+            <td>₹1846.60</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-62.5%</span></td>
+            <td>5.0m</td>
+            <td class="negative"><strong>₹-44.00</strong> (-0.30%)</td>
+            <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>TECHM</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>48 sh</td>
+            <td>₹1550.10</td>
+            <td>₹1551.50</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-60.0%</span></td>
+            <td>5.1m</td>
+            <td class="negative"><strong>₹-95.20</strong> (-0.64%)</td>
+            <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>DLF</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>112 sh</td>
+            <td>₹669.50</td>
+            <td>₹669.40</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-52.7%</span></td>
+            <td>5.0m</td>
+            <td class="negative"><strong>₹-16.80</strong> (-0.11%)</td>
+            <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>TECHM</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>48 sh</td>
+            <td>₹1551.60</td>
+            <td>₹1552.60</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-40.1%</span></td>
+            <td>5.1m</td>
+            <td class="negative"><strong>₹-76.00</strong> (-0.51%)</td>
+            <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>DLF</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>111 sh</td>
+            <td>₹670.00</td>
+            <td>₹671.45</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-46.1%</span></td>
+            <td>2.3m</td>
+            <td class="negative"><strong>₹-188.95</strong> (-1.27%)</td>
+            <td><small style="color:var(--text-muted);">STOP_LOSS_HIT</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>DLF</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>111 sh</td>
+            <td>₹671.20</td>
+            <td>₹671.80</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-91.0%</span></td>
+            <td>5.0m</td>
+            <td class="negative"><strong>₹-94.60</strong> (-0.63%)</td>
+            <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>TCS</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>35 sh</td>
+            <td>₹2103.00</td>
+            <td>₹2105.00</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-66.7%</span></td>
+            <td>5.0m</td>
+            <td class="negative"><strong>₹-98.00</strong> (-0.67%)</td>
+            <td><small style="color:var(--text-muted);">MAX_HOLD_5M_EXPIRED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>DLF</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>111 sh</td>
+            <td>₹671.50</td>
+            <td>₹649.90</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-91.5%</span></td>
+            <td>0.4m</td>
+            <td class="positive"><strong>₹+2,369.60</strong> (+15.90%)</td>
+            <td><small style="color:var(--text-muted);">TARGET_PROFIT_REACHED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>HCLTECH</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>60 sh</td>
+            <td>₹1309.60</td>
+            <td>₹1233.40</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-44.6%</span></td>
+            <td>0.1m</td>
+            <td class="positive"><strong>₹+4,544.00</strong> (+28.91%)</td>
+            <td><small style="color:var(--text-muted);">TARGET_PROFIT_REACHED</small></td>
+        </tr>
+        
+        <tr>
+            <td><strong>HEROMOTOCO</strong></td>
+            <td><span class="badge short">SELL</span></td>
+            <td>14 sh</td>
+            <td>₹5552.00</td>
+            <td>₹5229.00</td>
+            <td><span class="badge" style="background:rgba(239,68,68,0.15); color:#f87171; font-weight:700;">-30.1%</span></td>
+            <td>0.1m</td>
+            <td class="positive"><strong>₹+4,494.00</strong> (+28.91%)</td>
+            <td><small style="color:var(--text-muted);">TARGET_PROFIT_REACHED</small></td>
         </tr>
         
             </tbody>

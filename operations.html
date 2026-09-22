@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrowGarden | System Operations & Task Scheduler</title>
     <link rel="stylesheet" href="style.css">
-    <script src="auth.js"></script>
 </head>
 <body>
     <script>
@@ -38,14 +37,13 @@
     <header class="navbar">
         <div class="brand"><a href="index.html" style="color:inherit; text-decoration:none;">🌱 GrowGarden</a></div>
         <nav class="nav-links">
-            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="expansion.html">Intraday Expansion</a><a href="backtest_review.html">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html" class="active">Scheduler</a>
+            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="backtest_review.html">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html" class="active">Scheduler</a>
         </nav>
         <div style="display:flex; align-items:center; gap:0.6rem;">
             <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-btn" title="Toggle Theme (Black &amp; White Minimalist / Light Mode)" aria-label="Toggle Theme">
                 <span id="themeIcon">🌓</span>
             </button>
             <div class="badge-live">LIVE SYSTEM</div>
-            <button onclick="logoutAuth()" class="theme-toggle-btn" title="Lock Dashboard Session" style="width:auto; padding:0 0.5rem; font-size:0.75rem; font-weight:600;">🔒 Lock</button>
         </div>
     </header>
 
@@ -53,7 +51,7 @@
         <div class="header-banner">
             <div>
                 <h1>System Operations &amp; Windows Task Scheduler</h1>
-                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 22-Sep-2026 08:45:03 IST</p>
+                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 22-Sep-2026 15:35:06 IST</p>
             </div>
             <div class="regime-tag">
                 SYSTEM HEALTH: <strong>6/6 TASKS HEALTHY (100%)</strong>
@@ -132,7 +130,7 @@
                 </code>
             </div>
             <div style="color: var(--text-muted); font-size: 0.72rem;">
-                Verified at 2026-09-22 08:19:56 IST &bull; Consumer: <strong>eod_orderbook_scalper</strong> &bull; Zero Information Dropped
+                Verified at 2026-09-22 15:00:01 IST &bull; Consumer: <strong>eod_orderbook_scalper</strong> &bull; Zero Information Dropped
             </div>
         </div>
     </div>
@@ -151,7 +149,7 @@
             </div>
             <div style="display:flex; align-items:center; gap:0.6rem;">
                 <span class="badge-saved" style="background:#1e293b; border: 1px solid #475569; color:#94a3b8;">DONE FOR THE DAY (21-SEP-2026)</span>
-                <span style="font-size:0.8rem; color:var(--text-muted);" id="radar-updated-at">Refreshed: 21-Sep-2026 15:36:35 IST</span>
+                <span style="font-size:0.8rem; color:var(--text-muted);" id="radar-updated-at">Refreshed: 22-Sep-2026 15:09:27 IST</span>
             </div>
         </div>
 
@@ -174,7 +172,7 @@
             </div>
             <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Execution Gateway (Port 8000)</div>
-                <div style="font-size:1.1rem; font-weight:700; color:#a78bfa;">OFFLINE &bull; Port Closed</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#a78bfa;">ONLINE &bull; Port Closed</div>
                 <div style="font-size:0.75rem; color:var(--text-muted);">Server Closed (15:30 IST) &bull; Next: 22-Sep 08:30 IST &bull; <span class="badge short" style="font-size:0.65rem;">OFFLINE</span></div>
             </div>
             <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
@@ -184,14 +182,14 @@
             </div>
             <div style="background: rgba(30, 41, 59, 0.7); padding: 0.8rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                 <div style="font-size:0.75rem; color:var(--text-muted); text-transform:uppercase;">Restlessness Urgency (&Rscr;)</div>
-                <div style="font-size:1.1rem; font-weight:700; color:#94a3b8;" id="radar-restlessness-val">&Rscr; = 0.00 (0%)</div>
+                <div style="font-size:1.1rem; font-weight:700; color:#f59e0b;" id="radar-restlessness-val">&Rscr; = 1.00 (100%)</div>
                 <div style="font-size:0.75rem; color:var(--text-muted);">Standby between sessions &bull; <span class="badge-neutral" style="font-size:0.65rem;">RESET FOR 22-SEP</span></div>
             </div>
         </div>
 
         <!-- Section A: Active Streaming Pool -->
         <h3 style="font-size: 1.05rem; margin-bottom: 0.6rem; color: #e2e8f0; display:flex; justify-content:space-between; align-items:center;">
-            <span>[A] Active WebSocket Streaming Pool (0 Instruments)</span>
+            <span>[A] Active WebSocket Streaming Pool (10 Instruments)</span>
             <small style="color:var(--text-muted); font-size:0.75rem; font-weight:normal;">Auto Trend Bias &bull; EMA-9 Pullback + Squeeze Breakouts</small>
         </h3>
         <table class="styled-table" id="live-radar-table" style="margin-bottom: 1.5rem;">
@@ -207,24 +205,126 @@
             </thead>
             <tbody id="live-radar-tbody">
                 
-        <tr>
-            <td colspan="6" style="text-align: center; padding: 2.2rem 1.5rem; background: rgba(15, 23, 42, 0.6); color: #94a3b8;">
-                <div style="font-size: 1.15rem; font-weight: 700; color: #f8fafc; margin-bottom: 0.5rem;">
-                    🏁 Market Session Closed &bull; Logged Status: DONE FOR THE DAY (21-Sep-2026)
-                </div>
-                <div style="font-size: 0.88rem; color: #cbd5e1; max-width: 720px; margin: 0 auto 0.8rem; line-height: 1.6;">
-                    <strong>0 Live Exchange Orders Placed Today</strong> &bull; Capital 100% Preserved (₹0.00 Live PnL).<br>
-                    All intraday streaming sockets detached and positions flat at 15:10 IST.<br>
-                    Central Execution Gateway (port 8000) closed cleanly post-market.
-                </div>
-                <div style="display: inline-flex; gap: 0.6rem; flex-wrap: wrap; justify-content: center;">
-                    <span class="badge-saved">CAPITAL PRESERVED: ₹205,625.00</span>
-                    <span class="badge paper">EOD SCALPER: 19 PAPER SCALPS (SANDBOX)</span>
-                    <span class="badge-intraday">NEXT RUN: 22-SEP-2026 08:30 IST</span>
-                </div>
-            </td>
-        </tr>
-        
+            <tr id="row-INDIGO">
+                <td><strong style="font-size: 1.05rem;">INDIGO</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-INDIGO">₹5035.00</strong></td>
+                <td>
+                    <span class="badge long" id="bias-INDIGO">LONG_ONLY</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-INDIGO">TREND_EXPANSION</span>
+                </td>
+                <td id="sq-INDIGO"><code>IDLE</code></td>
+                <td id="vw-INDIGO"><code>IDLE</code></td>
+                <td id="prox-INDIGO" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹5037.50) | VWAP ₹4986.39</td>
+            </tr>
+            
+            <tr id="row-DLF">
+                <td><strong style="font-size: 1.05rem;">DLF</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-DLF">₹670.05</strong></td>
+                <td>
+                    <span class="badge long" id="bias-DLF">LONG_ONLY</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-DLF">TREND_EXPANSION</span>
+                </td>
+                <td id="sq-DLF"><code>IDLE</code></td>
+                <td id="vw-DLF"><code>IDLE</code></td>
+                <td id="prox-DLF" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹669.63) | VWAP ₹667.49</td>
+            </tr>
+            
+            <tr id="row-BHARATFORG">
+                <td><strong style="font-size: 1.05rem;">BHARATFORG</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-BHARATFORG">₹2005.60</strong></td>
+                <td>
+                    <span class="badge long" id="bias-BHARATFORG">LONG_ONLY</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-BHARATFORG">TREND_EXPANSION</span>
+                </td>
+                <td id="sq-BHARATFORG"><code>IDLE</code></td>
+                <td id="vw-BHARATFORG"><code>IDLE</code></td>
+                <td id="prox-BHARATFORG" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹2006.51) | VWAP ₹2004.19</td>
+            </tr>
+            
+            <tr id="row-JINDALSTEL">
+                <td><strong style="font-size: 1.05rem;">JINDALSTEL</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-JINDALSTEL">₹1144.80</strong></td>
+                <td>
+                    <span class="badge both" id="bias-JINDALSTEL">BOTH</span>
+                    <span class="badge-saved" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-JINDALSTEL">CHOP_STAGNATION</span>
+                </td>
+                <td id="sq-JINDALSTEL"><code>IDLE</code></td>
+                <td id="vw-JINDALSTEL"><code>IDLE</code></td>
+                <td id="prox-JINDALSTEL" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹1144.53) | VWAP ₹1143.51</td>
+            </tr>
+            
+            <tr id="row-TITAN">
+                <td><strong style="font-size: 1.05rem;">TITAN</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-TITAN">₹4949.50</strong></td>
+                <td>
+                    <span class="badge both" id="bias-TITAN">BOTH</span>
+                    <span class="badge-saved" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-TITAN">CHOP_STAGNATION</span>
+                </td>
+                <td id="sq-TITAN"><code>IDLE</code></td>
+                <td id="vw-TITAN"><code>IDLE</code></td>
+                <td id="prox-TITAN" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹4950.39) | VWAP ₹4936.54</td>
+            </tr>
+            
+            <tr id="row-OBEROIRLTY">
+                <td><strong style="font-size: 1.05rem;">OBEROIRLTY</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-OBEROIRLTY">₹1838.80</strong></td>
+                <td>
+                    <span class="badge both" id="bias-OBEROIRLTY">BOTH</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-OBEROIRLTY">TREND_EXPANSION</span>
+                </td>
+                <td id="sq-OBEROIRLTY"><code>IDLE</code></td>
+                <td id="vw-OBEROIRLTY"><code>IDLE</code></td>
+                <td id="prox-OBEROIRLTY" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹1838.78) | VWAP ₹1838.36</td>
+            </tr>
+            
+            <tr id="row-GODREJCP">
+                <td><strong style="font-size: 1.05rem;">GODREJCP</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-GODREJCP">₹874.90</strong></td>
+                <td>
+                    <span class="badge both" id="bias-GODREJCP">AUTO</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-GODREJCP">NORMAL</span>
+                </td>
+                <td id="sq-GODREJCP"><code>IDLE</code></td>
+                <td id="vw-GODREJCP"><code>IDLE</code></td>
+                <td id="prox-GODREJCP" style="color: var(--text-muted);">Consolidating</td>
+            </tr>
+            
+            <tr id="row-PIIND">
+                <td><strong style="font-size: 1.05rem;">PIIND</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-PIIND">₹2384.50</strong></td>
+                <td>
+                    <span class="badge short" id="bias-PIIND">SHORT_ONLY</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-PIIND">TREND_EXPANSION</span>
+                </td>
+                <td id="sq-PIIND"><code>IDLE</code></td>
+                <td id="vw-PIIND"><code>IDLE</code></td>
+                <td id="prox-PIIND" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹2391.73) | Oversold Dip (Lower Band ₹2390.85, RSI 28.6)</td>
+            </tr>
+            
+            <tr id="row-DEEPAKNTR">
+                <td><strong style="font-size: 1.05rem;">DEEPAKNTR</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-DEEPAKNTR">₹1615.00</strong></td>
+                <td>
+                    <span class="badge short" id="bias-DEEPAKNTR">SHORT_ONLY</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-DEEPAKNTR">TREND_EXPANSION</span>
+                </td>
+                <td id="sq-DEEPAKNTR"><code>IDLE</code></td>
+                <td id="vw-DEEPAKNTR"><code>IDLE</code></td>
+                <td id="prox-DEEPAKNTR" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹1615.17) | Oversold Dip (Lower Band ₹1616.33, RSI 32.6)</td>
+            </tr>
+            
+            <tr id="row-TATASTEEL">
+                <td><strong style="font-size: 1.05rem;">TATASTEEL</strong> <span class="badge" style="font-size:0.68rem;">NSE CASH</span></td>
+                <td><strong style="font-size: 1.15rem; color: #60a5fa;" id="ltp-TATASTEEL">₹185.07</strong></td>
+                <td>
+                    <span class="badge both" id="bias-TATASTEEL">AUTO</span>
+                    <span class="badge-leader" style="font-size:0.7rem; margin-left:0.3rem;" id="regime-TATASTEEL">NORMAL</span>
+                </td>
+                <td id="sq-TATASTEEL"><code>IDLE</code></td>
+                <td id="vw-TATASTEEL"><code>IDLE</code></td>
+                <td id="prox-TATASTEEL" style="color: #10b981; font-weight: 700;">EMA-9 Retest Zone (₹184.90) | VWAP ₹184.31</td>
+            </tr>
+            
             </tbody>
         </table>
 
@@ -250,90 +350,90 @@
                 
             <tr>
                 <td><strong>#1</strong></td>
-                <td><strong style="font-size: 1.02rem;">HCLTECH</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1281.00</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+3.12%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.75</td>
+                <td><strong style="font-size: 1.02rem;">BHARATFORG</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹2006.50</strong></td>
+                <td style="color: #34d399; font-weight:700;">+1.91%</td>
+                <td style="color: #38bdf8; font-weight:600;">+2.11%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.85</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#2</strong></td>
-                <td><strong style="font-size: 1.02rem;">DLF</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹660.25</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.35%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.34</td>
-                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><strong style="font-size: 1.02rem;">PIIND</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹2384.50</strong></td>
+                <td style="color: #34d399; font-weight:700;">+2.70%</td>
+                <td style="color: #38bdf8; font-weight:600;">+0.83%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.44</td>
+                <td><span class="badge both" style="font-size:0.7rem;">PULLBACK</span></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#3</strong></td>
-                <td><strong style="font-size: 1.02rem;">HEROMOTOCO</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹5419.00</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.09%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.18</td>
+                <td><strong style="font-size: 1.02rem;">TITAN</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹4948.50</strong></td>
+                <td style="color: #34d399; font-weight:700;">+1.51%</td>
+                <td style="color: #38bdf8; font-weight:600;">+1.49%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.38</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#4</strong></td>
-                <td><strong style="font-size: 1.02rem;">TECHM</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1558.50</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.93%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.14</td>
+                <td><strong style="font-size: 1.02rem;">DLF</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹670.00</strong></td>
+                <td style="color: #34d399; font-weight:700;">+1.48%</td>
+                <td style="color: #38bdf8; font-weight:600;">+1.21%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.30</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#5</strong></td>
-                <td><strong style="font-size: 1.02rem;">TCS</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹2128.70</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.85%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.11</td>
+                <td><strong style="font-size: 1.02rem;">INDIGO</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹5036.00</strong></td>
+                <td style="color: #34d399; font-weight:700;">+1.92%</td>
+                <td style="color: #38bdf8; font-weight:600;">+0.72%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.29</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#6</strong></td>
-                <td><strong style="font-size: 1.02rem;">SUNPHARMA</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1868.90</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.00%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.04</td>
-                <td><span class="badge-neutral" style="font-size:0.7rem;">CONSOLIDATING</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><strong style="font-size: 1.02rem;">DEEPAKNTR</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹1615.00</strong></td>
+                <td style="color: #34d399; font-weight:700;">+1.81%</td>
+                <td style="color: #38bdf8; font-weight:600;">+0.62%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.12</td>
+                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#7</strong></td>
-                <td><strong style="font-size: 1.02rem;">TITAN</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹4875.00</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.21%</td>
-                <td style="color: #a78bfa; font-weight:700;">+0.86</td>
-                <td><span class="badge-neutral" style="font-size:0.7rem;">CONSOLIDATING</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><strong style="font-size: 1.02rem;">JINDALSTEL</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹1144.80</strong></td>
+                <td style="color: #34d399; font-weight:700;">+1.26%</td>
+                <td style="color: #38bdf8; font-weight:600;">+0.86%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.03</td>
+                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             <tr>
                 <td><strong>#8</strong></td>
-                <td><strong style="font-size: 1.02rem;">ONGC</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹235.63</strong></td>
-                <td style="color: #f87171; font-weight:700;">+0.00%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.22%</td>
-                <td style="color: #a78bfa; font-weight:700;">+0.76</td>
+                <td><strong style="font-size: 1.02rem;">OBEROIRLTY</strong> <span class="badge-saved" style="font-size:0.68rem;">LIVE STREAMING</span></td>
+                <td><strong>₹1838.60</strong></td>
+                <td style="color: #34d399; font-weight:700;">+0.97%</td>
+                <td style="color: #38bdf8; font-weight:600;">+0.81%</td>
+                <td style="color: #a78bfa; font-weight:700;">+0.98</td>
                 <td><span class="badge-neutral" style="font-size:0.7rem;">CONSOLIDATING</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+                <td><small style="color:var(--text-muted);">Active WebSocket tick ingestion</small></td>
             </tr>
             
             </tbody>
@@ -718,19 +818,19 @@
             <td><span class="badge live">LIVE (09:05-15:20)</span></td>
             <td><strong>Daily at 09:05 AM – 15:20 PM IST (Mon-Fri)</strong></td>
             <td>
-                <code>2026-09-21 15:10:00 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 21877.0s</small>
+                <code>2026-09-22 15:10:53 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 16280.9s</small>
             </td>
             <td><span class="badge-saved">DONE FOR THE DAY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Done for the day (21-Sep-2026: 0 live exchange orders placed, capital 100% preserved). Auto-squareoff executed at 15:10 IST. Scheduled (Live) for tomorrow 22-Sep-2026 09:05 IST.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Done for the day (22-Sep-2026: Unified intraday session completed. All positions flat at 15:10 IST. Capital preserved). Scheduled (Live) for tomorrow 23-Sep-2026 09:05 IST.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">live_trades.jsonl</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">gateway_orders.jsonl</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 09:05:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-23 09:05:00 IST</span>
             </td>
             <td>
-                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_intraday_live.py</code>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_intraday_live.py --live</code>
             </td>
         </tr>
         
@@ -742,7 +842,7 @@
             <td><span class="badge-caution">POST-CLOSE (15:32)</span></td>
             <td><strong>Daily at 15:32 PM IST (Mon-Fri - Post-Close)</strong></td>
             <td>
-                <code>2026-09-22 08:15:35 IST</code><br>
+                <code>2026-09-22 15:32:00 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 0.0s</small>
             </td>
             <td><span class="badge-saved">SUCCESS</span></td>
@@ -751,7 +851,7 @@
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">reliance_audit_2026-09-22.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 08:45:35 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 16:02:00 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_postmarket_assessment.py</code>
@@ -766,8 +866,8 @@
             <td><span class="badge-swing">EOD CLOSE (15:35)</span></td>
             <td><strong>Daily at 15:35 PM IST (Mon-Fri - Market Close)</strong></td>
             <td>
-                <code>2026-09-22 08:12:57 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 6.5s</small>
+                <code>2026-09-22 15:35:03 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 3.4s</small>
             </td>
             <td><span class="badge-saved">SUCCESS</span></td>
             <td style="max-width: 320px; white-space: normal;">
@@ -775,7 +875,7 @@
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">triangular_bb_results.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">ml_oos_sweep_results.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 08:42:57 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 16:05:03 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_backtests.py</code>
@@ -790,23 +890,23 @@
             <td><span class="badge-cumulative">MILESTONES (08:45 & 15:40)</span></td>
             <td><strong>Milestone Triggers: Post-Screen (08:45 IST) & EOD Final (15:40 IST)</strong></td>
             <td>
-                <code>2026-09-22 08:31:02 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 8.7s</small>
+                <code>2026-09-22 08:45:08 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 7.3s</small>
             </td>
             <td><span class="badge-saved">SUCCESS</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 8.7s. Pages synchronized with live system status.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 7.3s. Pages synchronized with live system status.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">index.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">capital.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">predictions.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">backtests.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">assessments.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">sectors.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">operations.html</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 09:01:02 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 09:15:08 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_dashboard_sync.py</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(6, 78, 59, 0.12);">
+        <tr style="background: rgba(6, 78, 59, 0.15);">
             <td>
                 <strong>EOD MIS Liquidation & Order Book Imbalance (OBI) Scalper</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_eod_scalper.xml</small>
@@ -814,19 +914,19 @@
             <td><span class="badge paper">EOD (15:00-15:26)</span></td>
             <td><strong>Daily at 15:00 PM – 15:26 PM IST (Mon-Fri)</strong></td>
             <td>
-                <code>2026-09-22 08:19:58 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 2.6s</small>
+                <code>2026-09-22 15:26:01 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 1559.9s</small>
             </td>
-            <td><span class="badge-saved">SUCCESS</span></td>
+            <td><span class="badge-saved">DONE FOR THE DAY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">EOD Scalper test sampling complete: 0 test trades sampled. Pipe operational.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Done for the day (22-Sep-2026: 10 trades executed in LIVE EXCHANGE, Net PnL: Rs +10,794.05). All positions flat at 15:26:00 IST. Scheduled (Live) for tomorrow 23-Sep-2026 15:00 IST.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">eod_scalper_paper_trades.jsonl</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 08:49:58 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 15:56:01 IST</span>
             </td>
             <td>
-                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_eod_scalper.py</code>
+                <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_eod_scalper.py --live</code>
             </td>
         </tr>
         

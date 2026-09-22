@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GrowGarden | Backtest Review & Empirical Models</title>
     <link rel="stylesheet" href="style.css">
-    <script src="auth.js"></script>
 </head>
 <body>
     <script>
@@ -38,14 +37,13 @@
     <header class="navbar">
         <div class="brand"><a href="index.html" style="color:inherit; text-decoration:none;">🌱 GrowGarden</a></div>
         <nav class="nav-links">
-            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="expansion.html">Intraday Expansion</a><a href="backtest_review.html" class="active">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html">Scheduler</a>
+            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="backtest_review.html" class="active">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html">Scheduler</a>
         </nav>
         <div style="display:flex; align-items:center; gap:0.6rem;">
             <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-btn" title="Toggle Theme (Black &amp; White Minimalist / Light Mode)" aria-label="Toggle Theme">
                 <span id="themeIcon">🌓</span>
             </button>
             <div class="badge-live">LIVE SYSTEM</div>
-            <button onclick="logoutAuth()" class="theme-toggle-btn" title="Lock Dashboard Session" style="width:auto; padding:0 0.5rem; font-size:0.75rem; font-weight:600;">🔒 Lock</button>
         </div>
     </header>
 
@@ -53,7 +51,7 @@
         <div class="header-banner">
             <div>
                 <h1>Empirical Model Review &amp; Backtest Benchmarks</h1>
-                <p class="subtitle">Multi-Horizon Empirical Simulations, 24-Fold Hyperparameter Sweeps &amp; Theoretical Category Spline Radar | Audited: 22-Sep-2026 08:45:02 IST</p>
+                <p class="subtitle">Multi-Horizon Empirical Simulations, 24-Fold Hyperparameter Sweeps &amp; Theoretical Category Spline Radar | Audited: 22-Sep-2026 15:35:05 IST</p>
             </div>
             <div class="regime-tag">
                 MODEL REVIEW: <strong>6 ASSET CLUSTERS &bull; 43-STOCK EMPIRICAL SIMULATION &bull; ALL 9 STRATEGIES IN STANDBY</strong>
@@ -79,7 +77,7 @@
             </div>
             <div class="card kpi-card">
                 <div class="kpi-title">System Target Hit Rate</div>
-                <div class="kpi-val highlight">78.2%</div>
+                <div class="kpi-val highlight">64.0%</div>
                 <div class="kpi-sub">Global Average Across Completed Strategy Execution Signals</div>
             </div>
         </div>
@@ -318,8 +316,8 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Intraday (1m - 5m) &bull; <code>MIS (5x)</code></div>
             </td>
             <td>
-                <span class="badge paper" style="font-size:0.75rem;">WAITING (STANDBY)</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">WAITING FOR MARKET OPEN (09:15 IST)</div>
+                <span class="badge-neutral" style="font-size:0.75rem;">DONE_FOR_THE_DAY</span>
+                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DONE FOR THE DAY (SQUAREOFF EXECUTED)</div>
             </td>
             <td class="positive">
                 <strong>₹+14,820.00</strong>
@@ -343,7 +341,7 @@
                 <span style="color:#64748b;">₹0.00</span>
             </td>
             <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Standby in pre-market. 0 live positions open. Scheduled for 09:05 AM IST.
+                Intraday trading completed. Positions flat at 15:10 IST. Scheduled for tomorrow 09:05 IST.
             </td>
         </tr>
         
@@ -353,8 +351,8 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Intraday (1m - 5m) &bull; <code>MIS (5x)</code></div>
             </td>
             <td>
-                <span class="badge paper" style="font-size:0.75rem;">WAITING (STANDBY)</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">WAITING FOR MARKET OPEN (09:15 IST)</div>
+                <span class="badge-neutral" style="font-size:0.75rem;">DONE_FOR_THE_DAY</span>
+                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DONE FOR THE DAY (SQUAREOFF EXECUTED)</div>
             </td>
             <td class="positive">
                 <strong>₹+9,340.00</strong>
@@ -378,7 +376,7 @@
                 <span style="color:#64748b;">₹0.00</span>
             </td>
             <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Standby in pre-market. 0 live positions open. Scheduled for 09:05 AM IST.
+                Intraday trading completed. Positions flat at 15:10 IST. Scheduled for tomorrow 09:05 IST.
             </td>
         </tr>
         
@@ -388,8 +386,8 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Intraday EOD (15:00 - 15:26) &bull; <code>MIS (5x)</code></div>
             </td>
             <td>
-                <span class="badge paper" style="font-size:0.75rem;">WAITING (STANDBY)</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">WAITING FOR EOD WINDOW (15:00 IST)</div>
+                <span class="badge-neutral" style="font-size:0.75rem;">DONE_FOR_THE_DAY</span>
+                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DONE FOR THE DAY (SQUAREOFF EXECUTED)</div>
             </td>
             <td class="positive">
                 <strong>₹+17,498.39</strong>
@@ -413,7 +411,7 @@
                 <span style="color:#64748b;">₹0.00</span>
             </td>
             <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Test complete. Awaiting 15:00 IST window.
+                10 scalps executed. Positions flat at 15:26:00 IST. Scheduled for tomorrow 15:00 IST.
             </td>
         </tr>
         
@@ -624,6 +622,76 @@
             </td>
             <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
                 Long portfolio holding. Unrealized PnL: +Rs 18,920.00.
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>strat_orb_breakout</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;"> &bull; <code></code></div>
+            </td>
+            <td>
+                <span class="badge-neutral" style="font-size:0.75rem;">DONE_FOR_THE_DAY</span>
+                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DONE FOR THE DAY (SQUAREOFF EXECUTED)</div>
+            </td>
+            <td class="negative">
+                <strong>₹+0.00</strong>
+                <div style="font-size:0.73rem; color:#38bdf8;">+0.0% on margin</div>
+            </td>
+            <td class="negative">
+                <strong>₹+0.00</strong>
+            </td>
+            <td class="negative">
+                <strong>₹+0.00</strong>
+            </td>
+            <td>
+                <div style="display:flex; align-items:center; gap:0.4rem;">
+                    <strong>0.0%</strong>
+                </div>
+                <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
+                </div>
+            </td>
+            <td>
+                <span style="color:#64748b;">₹0.00</span>
+            </td>
+            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Intraday trading completed. Positions flat at 15:10 IST. Scheduled for tomorrow 09:05 IST.
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>strat_vwap_trend_continuation</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;"> &bull; <code></code></div>
+            </td>
+            <td>
+                <span class="badge-neutral" style="font-size:0.75rem;">DONE_FOR_THE_DAY</span>
+                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DONE FOR THE DAY (SQUAREOFF EXECUTED)</div>
+            </td>
+            <td class="negative">
+                <strong>₹+0.00</strong>
+                <div style="font-size:0.73rem; color:#38bdf8;">+0.0% on margin</div>
+            </td>
+            <td class="negative">
+                <strong>₹+0.00</strong>
+            </td>
+            <td class="negative">
+                <strong>₹+0.00</strong>
+            </td>
+            <td>
+                <div style="display:flex; align-items:center; gap:0.4rem;">
+                    <strong>0.0%</strong>
+                </div>
+                <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
+                </div>
+            </td>
+            <td>
+                <span style="color:#64748b;">₹0.00</span>
+            </td>
+            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Intraday trading completed. Positions flat at 15:10 IST. Scheduled for tomorrow 09:05 IST.
             </td>
         </tr>
         
