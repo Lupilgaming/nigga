@@ -1,0 +1,27 @@
+{
+  "status": "VERIFIED_VALID",
+  "consumer": "intraday_live_trader",
+  "verified_at": "2026-09-22 10:39:35 IST",
+  "contract_date": "2026-09-22",
+  "contract_source": "operations/run_premarket.py",
+  "checksum": "7bb4486d26404070",
+  "checksum_matched": true,
+  "freshness_valid": true,
+  "sanity_valid": true,
+  "summary": "Contract 7bb4486d26404070 fully verified. Freshness: 2026-09-22 (TODAY). Sanity: 100% PASS.",
+  "leader": "HCLTECH",
+  "cmp": 1281.0,
+  "target": 10.89,
+  "stop_loss": 5.45,
+  "bias": "BULLISH_EXPANSION",
+  "basket": [
+    "HCLTECH",
+    "DLF",
+    "HEROMOTOCO",
+    "TECHM",
+    "TCS",
+    "SUNPHARMA"
+  ],
+  "basket_size": 6,
+  "handshake": "PREMARKET -> INTRADAY_LIVE_TRADER 100% INTACT"
+}
