@@ -7,25 +7,51 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <script>
+        (function() {
+            try {
+                const saved = localStorage.getItem('gg_theme');
+                if (saved === 'light' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                }
+            } catch(e) {}
+        })();
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            const next = current === 'light' ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', next);
+            try { localStorage.setItem('gg_theme', next); } catch(e) {}
+            updateThemeIcon(next);
+        }
+        function updateThemeIcon(theme) {
+            const icon = document.getElementById('themeIcon');
+            if (icon) icon.textContent = theme === 'light' ? '☀️' : '🌙';
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const current = document.documentElement.getAttribute('data-theme') || 'dark';
+            updateThemeIcon(current);
+        });
+    </script>
     <header class="navbar">
-        <div class="brand">🌱 GrowGarden Quant Platform</div>
+        <div class="brand"><a href="index.html" style="color:inherit; text-decoration:none;">🌱 GrowGarden</a></div>
         <nav class="nav-links">
-            <a href="index.html">Financial Overview</a>
-            <a href="capital.html">Capital Control</a>
-            <a href="predictions.html">Model Predictions</a>
-            <a href="backtests.html">Backtest Matrix</a>
-            <a href="assessments.html">Reliance & Contention Audits</a>
-            <a href="sectors.html">Thematic Sector Finder</a>
-            <a href="operations.html" class="active">System Operations & Scheduler</a>
+            <a href="index.html">Financial Overview</a><a href="review.html">Live Status Review</a><a href="backtest_review.html">Backtest Review</a><a href="capital.html">Capital Control</a><a href="predictions.html">Model Predictions</a><a href="backtests.html">Backtest Matrix</a><a href="assessments.html">Reliance Audits</a><a href="sectors.html">Sector Finder</a><a href="operations.html" class="active">Scheduler</a>
         </nav>
-        <div class="badge-live">LIVE SYSTEM</div>
+        <div style="display:flex; align-items:center; gap:0.6rem;">
+            <button id="themeToggleBtn" onclick="toggleTheme()" class="theme-toggle-btn" title="Toggle Theme (Black &amp; White Minimalist / Light Mode)" aria-label="Toggle Theme">
+                <span id="themeIcon">🌓</span>
+            </button>
+            <div class="badge-live">LIVE SYSTEM</div>
+        </div>
     </header>
 
     <main class="container">
         <div class="header-banner">
             <div>
                 <h1>System Operations &amp; Windows Task Scheduler</h1>
-                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 22-Sep-2026 00:00:04 IST</p>
+                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 22-Sep-2026 08:13:00 IST</p>
             </div>
             <div class="regime-tag">
                 SYSTEM HEALTH: <strong>6/6 TASKS HEALTHY (100%)</strong>
@@ -51,8 +77,8 @@
             </div>
             <div class="card kpi-card">
                 <div class="kpi-title">Next Scheduled Pipeline Trigger</div>
-                <div class="kpi-val highlight">15:45 PM IST</div>
-                <div class="kpi-sub">Post-Market Reliance Reconciliation &amp; Contention Audit</div>
+                <div class="kpi-val highlight">08:30 AM IST</div>
+                <div class="kpi-sub">Pre-Market Volatility &amp; Sector Screener (Next Session)</div>
             </div>
         </div>
 
@@ -169,88 +195,88 @@
             <tr>
                 <td><strong>#1</strong></td>
                 <td><strong style="font-size: 1.02rem;">HCLTECH</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1283.20</strong></td>
-                <td style="color: #34d399; font-weight:700;">+2.71%</td>
-                <td style="color: #38bdf8; font-weight:600;">+3.29%</td>
-                <td style="color: #a78bfa; font-weight:700;">+2.80</td>
+                <td><strong>₹1281.00</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+3.12%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.75</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
                 <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
             </tr>
             
             <tr>
                 <td><strong>#2</strong></td>
-                <td><strong style="font-size: 1.02rem;">HEROMOTOCO</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹5415.00</strong></td>
-                <td style="color: #34d399; font-weight:700;">+2.45%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.02%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.99</td>
-                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
-            </tr>
-            
-            <tr>
-                <td><strong>#3</strong></td>
                 <td><strong style="font-size: 1.02rem;">DLF</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹658.40</strong></td>
-                <td style="color: #34d399; font-weight:700;">+2.18%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.06%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.93</td>
-                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
-            </tr>
-            
-            <tr>
-                <td><strong>#4</strong></td>
-                <td><strong style="font-size: 1.02rem;">TCS</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹2137.60</strong></td>
-                <td style="color: #34d399; font-weight:700;">+1.55%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.28%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.91</td>
-                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
-            </tr>
-            
-            <tr>
-                <td><strong>#5</strong></td>
-                <td><strong style="font-size: 1.02rem;">SUNPHARMA</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1871.30</strong></td>
-                <td style="color: #34d399; font-weight:700;">+1.85%</td>
-                <td style="color: #38bdf8; font-weight:600;">+2.13%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.76</td>
-                <td><span class="badge both" style="font-size:0.7rem;">PULLBACK</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
-            </tr>
-            
-            <tr>
-                <td><strong>#6</strong></td>
-                <td><strong style="font-size: 1.02rem;">ITC</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹267.70</strong></td>
-                <td style="color: #34d399; font-weight:700;">+2.06%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.57%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.64</td>
-                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
-                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
-            </tr>
-            
-            <tr>
-                <td><strong>#7</strong></td>
-                <td><strong style="font-size: 1.02rem;">TECHM</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1554.00</strong></td>
-                <td style="color: #34d399; font-weight:700;">+1.10%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.64%</td>
+                <td><strong>₹660.25</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+2.35%</td>
                 <td style="color: #a78bfa; font-weight:700;">+1.34</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
                 <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
             </tr>
             
             <tr>
-                <td><strong>#8</strong></td>
-                <td><strong style="font-size: 1.02rem;">RELIANCE</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
-                <td><strong>₹1247.00</strong></td>
-                <td style="color: #34d399; font-weight:700;">+1.68%</td>
-                <td style="color: #38bdf8; font-weight:600;">+1.05%</td>
-                <td style="color: #a78bfa; font-weight:700;">+1.24</td>
+                <td><strong>#3</strong></td>
+                <td><strong style="font-size: 1.02rem;">HEROMOTOCO</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+                <td><strong>₹5419.00</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+2.09%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.18</td>
                 <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+            </tr>
+            
+            <tr>
+                <td><strong>#4</strong></td>
+                <td><strong style="font-size: 1.02rem;">TECHM</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+                <td><strong>₹1558.50</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+1.93%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.14</td>
+                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+            </tr>
+            
+            <tr>
+                <td><strong>#5</strong></td>
+                <td><strong style="font-size: 1.02rem;">TCS</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+                <td><strong>₹2128.70</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+1.85%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.11</td>
+                <td><span class="badge long" style="font-size:0.7rem;">EXPANSION</span></td>
+                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+            </tr>
+            
+            <tr>
+                <td><strong>#6</strong></td>
+                <td><strong style="font-size: 1.02rem;">SUNPHARMA</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+                <td><strong>₹1868.90</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+2.00%</td>
+                <td style="color: #a78bfa; font-weight:700;">+1.04</td>
+                <td><span class="badge-neutral" style="font-size:0.7rem;">CONSOLIDATING</span></td>
+                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+            </tr>
+            
+            <tr>
+                <td><strong>#7</strong></td>
+                <td><strong style="font-size: 1.02rem;">TITAN</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+                <td><strong>₹4875.00</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+1.21%</td>
+                <td style="color: #a78bfa; font-weight:700;">+0.86</td>
+                <td><span class="badge-neutral" style="font-size:0.7rem;">CONSOLIDATING</span></td>
+                <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
+            </tr>
+            
+            <tr>
+                <td><strong>#8</strong></td>
+                <td><strong style="font-size: 1.02rem;">ONGC</strong> <span class="badge paper" style="font-size:0.68rem;">HOT-SWAP ELIGIBLE</span></td>
+                <td><strong>₹235.63</strong></td>
+                <td style="color: #f87171; font-weight:700;">+0.00%</td>
+                <td style="color: #38bdf8; font-weight:600;">+1.22%</td>
+                <td style="color: #a78bfa; font-weight:700;">+0.76</td>
+                <td><span class="badge-neutral" style="font-size:0.7rem;">CONSOLIDATING</span></td>
                 <td><small style="color:var(--text-muted);">Queued for next rebalance slot</small></td>
             </tr>
             
@@ -452,51 +478,51 @@
         <tr>
             <td>
                 <strong>Post-Market Reliance Reconciliation & Contention Audit</strong><br>
-                <small style="color:var(--text-muted);">Post-Market Assessment (15:45 IST)</small>
+                <small style="color:var(--text-muted);">Post-Market Assessment (15:32 IST)</small>
             </td>
             <td><span class="badge-neutral" style="font-size:0.7rem;">SCHEDULED</span></td>
             <td><span class="badge-caution" style="font-size:0.75rem;">SCHEDULED</span></td>
-            <td><code>2026-09-21</code></td>
+            <td><code>2026-09-22</code></td>
             <td><strong style="color:#94a3b8;">0 Live Orders</strong><br><small style="color:var(--text-muted);">(Capital 100% Preserved)</small></td>
             <td style="max-width: 330px; white-space: normal; font-size: 0.83rem; line-height: 1.4;">
-                Scheduled for today 21-Sep-2026 15:45 IST.
+                Scheduled for today 22-Sep-2026 15:32 IST (immediately post-close).
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 15:45:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 15:32:00 IST</span>
             </td>
         </tr>
         
         <tr>
             <td>
-                <strong>Multi-Horizon Quantitative Backtester & ML Calibrator</strong><br>
-                <small style="color:var(--text-muted);">Evening Calibration (18:30 IST)</small>
+                <strong>End-of-Day (EOD) Quantitative Backtester & ML Calibrator</strong><br>
+                <small style="color:var(--text-muted);">End-of-Day Calibration (15:35 IST)</small>
             </td>
             <td><span class="badge-neutral" style="font-size:0.7rem;">SCHEDULED</span></td>
             <td><span class="badge-swing" style="font-size:0.75rem;">SCHEDULED</span></td>
-            <td><code>2026-09-21</code></td>
+            <td><code>2026-09-22</code></td>
             <td><strong style="color:#94a3b8;">0 Live Orders</strong><br><small style="color:var(--text-muted);">(Capital 100% Preserved)</small></td>
             <td style="max-width: 330px; white-space: normal; font-size: 0.83rem; line-height: 1.4;">
-                Scheduled for today 21-Sep-2026 18:30 IST.
+                Scheduled to run at end of trading day 22-Sep-2026 15:35 IST (immediately at market close).
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 18:30:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 15:35:00 IST</span>
             </td>
         </tr>
         
         <tr>
             <td>
                 <strong>Quant Platform Web Dashboard & Pages Synchronizer</strong><br>
-                <small style="color:var(--text-muted);">Continuous Synchronization (Every 30m)</small>
+                <small style="color:var(--text-muted);">Event-Driven Milestone Publishing</small>
             </td>
             <td><span class="badge-neutral" style="font-size:0.7rem;">SCHEDULED</span></td>
             <td><span class="badge-cumulative" style="font-size:0.75rem;">SCHEDULED</span></td>
-            <td><code>2026-09-21</code></td>
+            <td><code>2026-09-22</code></td>
             <td><strong style="color:#94a3b8;">0 Live Orders</strong><br><small style="color:var(--text-muted);">(Capital 100% Preserved)</small></td>
             <td style="max-width: 330px; white-space: normal; font-size: 0.83rem; line-height: 1.4;">
-                Scheduled (Recurring) for 21-Sep-2026 16:00 IST.
+                Event-driven sync scheduled for 22-Sep-2026 08:45 IST (Post-Screen) and 15:40 IST (EOD Final).
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-21 16:00:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 08:45:00 IST</span>
             </td>
         </tr>
         
@@ -559,23 +585,23 @@
 
                 <div style="background: rgba(120, 53, 15, 0.4); border: 1px solid #f59e0b; border-radius: 8px; padding: 1rem;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-                        <span class="badge-caution">15:45 PM IST</span>
-                        <span style="font-size: 0.75rem; color: #fde047; font-weight: 700;">EVENING AUDIT</span>
+                        <span class="badge-caution">15:32 PM IST</span>
+                        <span style="font-size: 0.75rem; color: #fde047; font-weight: 700;">POST-CLOSE AUDIT</span>
                     </div>
                     <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">5. Reliance Reconciler</h4>
                     <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
-                        Post-market audit reconciling live fills vs theoretical backtest, quantifying execution slippage, and scoring contention blocker accuracy.
+                        Post-market audit reconciling live fills vs theoretical backtest, quantifying execution slippage, and scoring contention blocker accuracy immediately after 15:30 close.
                     </p>
                 </div>
 
                 <div style="background: rgba(46, 16, 101, 0.45); border: 1px solid #8b5cf6; border-radius: 8px; padding: 1rem;">
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.4rem;">
-                        <span class="badge-swing">18:30 PM IST</span>
-                        <span style="font-size: 0.75rem; color: #c084fc; font-weight: 700;">EVENING / NIGHT</span>
+                        <span class="badge-swing">15:35 – 15:40 IST</span>
+                        <span style="font-size: 0.75rem; color: #c084fc; font-weight: 700;">EOD CLOSE &amp; PUBLISH</span>
                     </div>
-                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">6. Backtesting &amp; ML</h4>
+                    <h4 style="color: #f8fafc; font-size: 0.95rem; margin-bottom: 0.3rem;">6. EOD Backtesting &amp; Site Publish</h4>
                     <p style="font-size: 0.78rem; color: #94a3b8; line-height: 1.4;">
-                        Runs 43-stock Bollinger study, refines 24-fold Walk-Forward ML sweep, computes always-profitable intervals, and updates matrix.
+                        Runs 43-stock Bollinger study, refines 24-fold Walk-Forward ML sweep at 15:35, then compiles dashboard &amp; pushes to GitHub at 15:40. System sleeps overnight.
                     </p>
                 </div>
             </div>
@@ -657,8 +683,8 @@
                 <strong>Post-Market Reliance Reconciliation & Contention Audit</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_postmarket_assessment.xml</small>
             </td>
-            <td><span class="badge-caution">EVENING (15:45)</span></td>
-            <td><strong>Daily at 15:45 PM IST (Mon-Fri)</strong></td>
+            <td><span class="badge-caution">POST-CLOSE (15:32)</span></td>
+            <td><strong>Daily at 15:32 PM IST (Mon-Fri - Post-Close)</strong></td>
             <td>
                 <code>2026-09-21 15:45:01 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 0.0s</small>
@@ -669,7 +695,7 @@
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">reliance_audit_2026-09-21.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 15:45:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 15:32:00 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_postmarket_assessment.py</code>
@@ -678,14 +704,14 @@
         
         <tr style="background: rgba(6, 78, 59, 0.12);">
             <td>
-                <strong>Multi-Horizon Quantitative Backtester & ML Calibrator</strong><br>
+                <strong>End-of-Day (EOD) Quantitative Backtester & ML Calibrator</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_nightly_backtests.xml</small>
             </td>
-            <td><span class="badge-swing">EVENING (18:30)</span></td>
-            <td><strong>Daily at 18:30 PM IST (Mon-Fri / Weekend)</strong></td>
+            <td><span class="badge-swing">EOD CLOSE (15:35)</span></td>
+            <td><strong>Daily at 15:35 PM IST (Mon-Fri - Market Close)</strong></td>
             <td>
-                <code>2026-09-21 18:30:04 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 4.0s</small>
+                <code>2026-09-22 08:12:57 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 6.5s</small>
             </td>
             <td><span class="badge-saved">SUCCESS</span></td>
             <td style="max-width: 320px; white-space: normal;">
@@ -693,7 +719,7 @@
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">triangular_bb_results.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">ml_oos_sweep_results.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 18:30:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 08:42:57 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_backtests.py</code>
@@ -705,19 +731,19 @@
                 <strong>Quant Platform Web Dashboard & Pages Synchronizer</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_dashboard_sync.xml</small>
             </td>
-            <td><span class="badge-cumulative">RECURRING (30m)</span></td>
-            <td><strong>Recurring Every 30 Minutes (09:00 - 19:00 IST)</strong></td>
+            <td><span class="badge-cumulative">MILESTONES (08:45 & 15:40)</span></td>
+            <td><strong>Milestone Triggers: Post-Screen (08:45 IST) & EOD Final (15:40 IST)</strong></td>
             <td>
-                <code>2026-09-21 23:30:10 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 8.5s</small>
+                <code>2026-09-22 00:00:08 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 6.6s</small>
             </td>
             <td><span class="badge-saved">SUCCESS</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 8.5s. Pages synchronized with live system status.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 6.6s. Pages synchronized with live system status.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">index.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">capital.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">predictions.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">backtests.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">assessments.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">sectors.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">operations.html</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 00:00:10 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-22 08:45:00 IST</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_dashboard_sync.py</code>

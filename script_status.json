@@ -82,61 +82,61 @@
   "postmarket_assessment": {
     "script_id": "postmarket_assessment",
     "name": "Post-Market Reliance Reconciliation & Contention Audit",
-    "category": "Post-Market Assessment (15:45 IST)",
+    "category": "Post-Market Assessment (15:32 IST)",
     "execution_mode": "SCHEDULED",
     "operational_state": "SCHEDULED",
-    "run_for_day": "2026-09-21",
+    "run_for_day": "2026-09-22",
     "live_orders_placed": 0,
     "paper_trades_executed": 0,
     "realized_pnl_live_rs": 0.0,
     "realized_pnl_paper_rs": 0.0,
-    "last_completed_at": "2026-09-19 22:00:36 IST",
-    "next_scheduled_run": "2026-09-21 15:45:00 IST",
+    "last_completed_at": "2026-09-21 15:45:01 IST",
+    "next_scheduled_run": "2026-09-22 15:32:00 IST",
     "display_badge": {
       "text": "SCHEDULED",
       "class": "badge-caution",
       "color": "#f59e0b"
     },
-    "status_text": "Scheduled for today 21-Sep-2026 15:45 IST."
+    "status_text": "Scheduled for today 22-Sep-2026 15:32 IST (immediately post-close)."
   },
   "nightly_backtests": {
     "script_id": "nightly_backtests",
-    "name": "Multi-Horizon Quantitative Backtester & ML Calibrator",
-    "category": "Evening Calibration (18:30 IST)",
+    "name": "End-of-Day (EOD) Quantitative Backtester & ML Calibrator",
+    "category": "End-of-Day Calibration (15:35 IST)",
     "execution_mode": "SCHEDULED",
     "operational_state": "SCHEDULED",
-    "run_for_day": "2026-09-21",
+    "run_for_day": "2026-09-22",
     "live_orders_placed": 0,
     "paper_trades_executed": 0,
     "realized_pnl_live_rs": 0.0,
     "realized_pnl_paper_rs": 0.0,
-    "last_completed_at": "2026-09-19 22:00:44 IST",
-    "next_scheduled_run": "2026-09-21 18:30:00 IST",
+    "last_completed_at": "2026-09-22 00:01:33 IST",
+    "next_scheduled_run": "2026-09-22 15:35:00 IST",
     "display_badge": {
       "text": "SCHEDULED",
       "class": "badge-swing",
       "color": "#a855f7"
     },
-    "status_text": "Scheduled for today 21-Sep-2026 18:30 IST."
+    "status_text": "Scheduled to run at end of trading day 22-Sep-2026 15:35 IST (immediately at market close)."
   },
   "dashboard_sync": {
     "script_id": "dashboard_sync",
     "name": "Quant Platform Web Dashboard & Pages Synchronizer",
-    "category": "Continuous Synchronization (Every 30m)",
+    "category": "Event-Driven Milestone Publishing",
     "execution_mode": "SCHEDULED",
     "operational_state": "SCHEDULED",
-    "run_for_day": "2026-09-21",
+    "run_for_day": "2026-09-22",
     "live_orders_placed": 0,
     "paper_trades_executed": 0,
     "realized_pnl_live_rs": 0.0,
     "realized_pnl_paper_rs": 0.0,
-    "last_completed_at": "2026-09-21 15:30:06 IST",
-    "next_scheduled_run": "2026-09-21 16:00:00 IST",
+    "last_completed_at": "2026-09-22 00:00:08 IST",
+    "next_scheduled_run": "2026-09-22 08:45:00 IST",
     "display_badge": {
       "text": "SCHEDULED",
       "class": "badge-cumulative",
       "color": "#38bdf8"
     },
-    "status_text": "Scheduled (Recurring) for 21-Sep-2026 16:00 IST."
+    "status_text": "Event-driven sync scheduled for 22-Sep-2026 08:45 IST (Post-Screen) and 15:40 IST (EOD Final)."
   }
 }
