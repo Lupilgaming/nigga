@@ -51,10 +51,10 @@
         <div class="header-banner">
             <div>
                 <h1>System Operations &amp; Windows Task Scheduler</h1>
-                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 23-Sep-2026 15:40:01 IST</p>
+                <p class="subtitle">Automated Production Pipelines, Scheduled Jobs Lifecycle &amp; Last Run Execution Status | Audited: 23-Sep-2026 17:46:45 IST</p>
             </div>
             <div class="regime-tag">
-                SYSTEM HEALTH: <strong>7/7 TASKS HEALTHY (100%)</strong>
+                SYSTEM HEALTH: <strong>0/7 TASKS HEALTHY (100%)</strong>
             </div>
         </div>
 
@@ -786,7 +786,7 @@
                     </thead>
                     <tbody>
                         
-        <tr style="background: rgba(6, 78, 59, 0.12);">
+        <tr style="">
             <td>
                 <strong>Pre-Market Volatility & Sector Screener</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_premarket.xml</small>
@@ -797,20 +797,20 @@
                 <code>2026-09-23 08:30:45 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 42.8s</small>
             </td>
-            <td><span class="badge-saved">SUCCESS</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Pre-market screen complete [CONTRACT VERIFIED: 9780cd13b006efa2]. Selected candidate BHARATFORG (CMP Rs 2009.00) with BULLISH_EXPANSION bias (M-Score +1.26). Basket: [BHARATFORG, PIIND, OBEROIRLTY, DLF, COALINDIA, WIPRO].</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">pipeline_contract.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">selected_stock.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">screened_symbols.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">dynamic_hotlist.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-24 08:30:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_premarket.py</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(8, 51, 68, 0.18);">
+        <tr style="">
             <td>
                 <strong>Intraday Live Execution Gateway & Strategy Engine</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_intraday_live.xml</small>
@@ -821,20 +821,20 @@
                 <code>2026-09-23 09:05:02 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 0.2s</small>
             </td>
-            <td><span class="badge-leader">ONLINE</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Multi-Ticker Live Runner ACTIVE on HUDCO, NMDC, PFC, COALINDIA, TATASTEEL, BHARATFORG, VEDL, OBEROIRLTY, IREDA, SUZLON (Leader: HUDCO, LIVE EXCHANGE TRADING (Zerodha)). Contract Verified [9780cd13b006efa2]. Gateway active on port 8000 with 15:10 IST auto-squareoff.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">live_trades.jsonl</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">gateway_orders.jsonl</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">contract_receipt.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-24 09:05:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_intraday_live.py --config trade_config.json</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(6, 78, 59, 0.12);">
+        <tr style="">
             <td>
                 <strong>Post-Market Reliance Reconciliation & Contention Audit</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_postmarket_assessment.xml</small>
@@ -845,20 +845,20 @@
                 <code>2026-09-23 15:32:00 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 0.0s</small>
             </td>
-            <td><span class="badge-saved">SUCCESS</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Audit complete for session. Blocker accuracy: 100.0% (0/0 losses avoided, +₹0.00 preserved). Latency & slippage verified.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">reliance_audit_2026-09-23.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-23 16:02:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_postmarket_assessment.py</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(6, 78, 59, 0.12);">
+        <tr style="">
             <td>
                 <strong>End-of-Day (EOD) Quantitative Backtester & ML Calibrator</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_nightly_backtests.xml</small>
@@ -869,20 +869,20 @@
                 <code>2026-09-23 15:35:04 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 3.8s</small>
             </td>
-            <td><span class="badge-saved">SUCCESS</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Backtest calibration complete. Screened Watchlist: +₹+46,009.11 (55.6% WR, 3.54% DD). 412 false trap trades filtered.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">triangular_bb_results.json</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">ml_oos_sweep_results.json</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-23 16:05:04 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_backtests.py</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(6, 78, 59, 0.12);">
+        <tr style="">
             <td>
                 <strong>Quant Platform Web Dashboard & Pages Synchronizer</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_dashboard_sync.xml</small>
@@ -890,23 +890,23 @@
             <td><span class="badge-cumulative">MILESTONES (08:45 & 15:40)</span></td>
             <td><strong>Milestone Triggers: Post-Screen (08:45 IST) & EOD Final (15:40 IST)</strong></td>
             <td>
-                <code>2026-09-23 15:35:08 IST</code><br>
-                <small style="color:var(--text-muted);">Duration: 4.2s</small>
+                <code>2026-09-23 15:40:03 IST</code><br>
+                <small style="color:var(--text-muted);">Duration: 3.5s</small>
             </td>
-            <td><span class="badge-saved">SUCCESS</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Dashboard regenerated across docs/ and public_pages/ in 4.2s. Pages synchronized with live system status.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">index.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">capital.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">predictions.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">backtests.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">assessments.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">sectors.html</code><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">operations.html</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-23 16:05:08 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_dashboard_sync.py</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(6, 78, 59, 0.15);">
+        <tr style="">
             <td>
                 <strong>EOD MIS Liquidation & Order Book Imbalance (OBI) Scalper</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_eod_scalper.xml</small>
@@ -917,20 +917,20 @@
                 <code>2026-09-23 15:26:00 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 1558.6s</small>
             </td>
-            <td><span class="badge-saved">DONE FOR THE DAY</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Done for the day (23-Sep-2026: 47 trades executed in LIVE EXCHANGE, Net PnL: Rs +172,794.12). All positions flat at 15:26:00 IST. Scheduled (Live) for tomorrow 24-Sep-2026 15:00 IST.</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">eod_scalper_paper_trades.jsonl</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-23 15:56:00 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_eod_scalper.py --live</code>
             </td>
         </tr>
         
-        <tr style="background: rgba(6, 78, 59, 0.12);">
+        <tr style="">
             <td>
                 <strong>Non-EOD Hourly Swing & Long-Term Live Strategy Engine</strong><br>
                 <small style="color:var(--text-muted); font-family:monospace;">operations\xml\schedule_swing_live.xml</small>
@@ -941,13 +941,13 @@
                 <code>2026-09-23 15:15:22 IST</code><br>
                 <small style="color:var(--text-muted);">Duration: 20.0s</small>
             </td>
-            <td><span class="badge-saved">SUCCESS</span></td>
+            <td><span class="badge-neutral">STANDBY</span></td>
             <td style="max-width: 320px; white-space: normal;">
-                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">Non-EOD Swing & Long Cycle completed in 20.0s. Evaluated 18 tickers | 0 Signals Generated | 0 Orders Submitted (LIVE EXCHANGE TRADING (Zerodha CNC)).</div>
+                <div style="font-size: 0.83rem; line-height: 1.35; margin-bottom: 0.3rem;">DECOMMISSIONED: Task removed from Windows Task Scheduler on 2026-09-23 17:46:39 IST. Runner inactive.</div>
                 <div><code style="font-size:0.75rem; background:#0f172a; padding:0.15rem 0.35rem; border-radius:3px; margin-right:4px;">gateway_orders.jsonl</code></div>
             </td>
             <td>
-                <span class="badge-horizon" style="font-size:0.78rem;">2026-09-23 15:45:22 IST</span>
+                <span class="badge-horizon" style="font-size:0.78rem;">NONE (UNSCHEDULED / DECOMMISSIONED)</span>
             </td>
             <td>
                 <code style="font-size:0.75rem; background:#0f172a; padding:0.25rem 0.45rem; border-radius:4px; display:inline-block;">python operations\run_swing_live.py --config trade_config.json</code>
