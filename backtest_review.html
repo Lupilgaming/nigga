@@ -50,234 +50,631 @@
     <main class="container">
         <div class="header-banner">
             <div>
-                <h1>Empirical Model Review &amp; Backtest Benchmarks</h1>
-                <p class="subtitle">Multi-Horizon Empirical Simulations, 24-Fold Hyperparameter Sweeps &amp; Theoretical Category Spline Radar | Audited: 23-Sep-2026 17:46:43 IST</p>
+                <h1>Empirical Model Review &amp; Backtest Audit</h1>
+                <p class="subtitle">Rigorous 1-Minute Historical Candle Replay Across 12 NSE Stocks, 1,672 Trades &amp; Transaction Drag Analysis | Audited: 24-Sep-2026 07:25:00 IST</p>
             </div>
             <div class="regime-tag">
-                MODEL REVIEW: <strong>6 ASSET CLUSTERS &bull; 43-STOCK EMPIRICAL SIMULATION &bull; ALL 9 STRATEGIES IN STANDBY</strong>
+                AUDITED: <strong>12 SYMBOLS &bull; 1,672 TRADES &bull; 6 TRADING DAYS &bull; ALL RUNNERS DECOMMISSIONED</strong>
             </div>
         </div>
 
         <!-- Executive KPI Bar -->
         <div class="kpi-grid">
             <div class="card kpi-card">
-                <div class="kpi-title">Total Realized Net Alpha</div>
-                <div class="kpi-val positive">+₹308,773.20</div>
-                <div class="kpi-sub">Empirical Net Realized Gains Across All Horizons Till Date</div>
+                <div class="kpi-title">Empirical Net Realized (Past Week)</div>
+                <div class="kpi-val negative">-₹45,686.97</div>
+                <div class="kpi-sub">Actual Net Realized Loss Across 1,672 Executions (15–22 Sep)</div>
             </div>
             <div class="card kpi-card">
-                <div class="kpi-title">Active Holdings Unrealized PnL</div>
-                <div class="kpi-val highlight">+₹60,780.00</div>
-                <div class="kpi-sub">15 Active Positional Holdings in Swing &amp; Long-Term Compounders</div>
+                <div class="kpi-title">Gross Alpha (Before Brokerage)</div>
+                <div class="kpi-val negative">-₹3,886.97</div>
+                <div class="kpi-sub">Near-Breakeven Underlying Signal Directional Accuracy</div>
             </div>
             <div class="card kpi-card">
-                <div class="kpi-title">Past Week Net Realized</div>
-                <div class="kpi-val positive">+₹54,698.39</div>
-                <div class="kpi-sub">Trailing 5-Session Performance (Mon-Fri Execution + Paper Sandbox)</div>
+                <div class="kpi-title">Total Brokerage &amp; Friction Drag</div>
+                <div class="kpi-val negative">-₹41,800.00</div>
+                <div class="kpi-sub">1,672 Trades &times; ₹25 Flat Exchange Fee (91.5% of Total Loss)</div>
             </div>
             <div class="card kpi-card">
                 <div class="kpi-title">System Target Hit Rate</div>
-                <div class="kpi-val highlight">64.0%</div>
-                <div class="kpi-sub">Global Average Across Completed Strategy Execution Signals</div>
+                <div class="kpi-val highlight">36.7%</div>
+                <div class="kpi-sub">614 Wins / 1,058 Losses &bull; Profit Factor: 0.63</div>
             </div>
         </div>
 
-        <!-- Section 1: Circular Category Performance Spline Radar -->
+        <!-- The Empirical Reality Check Banner -->
+        <div class="card section-card" style="border-left: 4px solid var(--accent-red);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h2 style="margin: 0; color: #f87171;">⚠️ Quantitative Root Cause: The Backtest vs. Live Execution Paradox</h2>
+                <span class="badge" style="background:#7f1d1d; color:#fca5a5; border-color:#ef4444;">EMPIRICAL FINDING</span>
+            </div>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Why theoretical model benchmarks suggested heavy profitability (+₹54.7k), while the actual 1-minute candle replay produced a -₹45.7k loss, and live execution hit zero triggers:
+            </p>
+            <div class="comparison-grid">
+                <div class="comp-box" style="background: rgba(127, 29, 29, 0.15); border-color: #ef4444;">
+                    <div style="font-weight: 700; color: #f87171; font-size: 0.95rem; margin-bottom: 0.3rem;">
+                        1. Raw Backtest: The Over-Trading Churn Trap
+                    </div>
+                    <div style="font-size: 1.15rem; font-weight: 700; color: #fca5a5; margin: 0.2rem 0;">1,672 Trades Fired &bull; ₹41,800 Lost to Fees</div>
+                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.45;">
+                        Without entry cooldowns, the 4 intraday alphas took ~23 trades per stock per day. Gross P&amp;L was near flat (-₹3,887), proving the signals had directional merit. But <strong>hyper-churning destroyed all capital via brokerage drag</strong>. 7 of 12 stocks were profitable before fees!
+                    </p>
+                </div>
+                <div class="comp-box" style="background: rgba(30, 41, 59, 0.6); border-color: #38bdf8;">
+                    <div style="font-weight: 700; color: #38bdf8; font-size: 0.95rem; margin-bottom: 0.3rem;">
+                        2. Live System: The Over-Filtering Paralysis Trap
+                    </div>
+                    <div style="font-size: 1.15rem; font-weight: 700; color: #7dd3fc; margin: 0.2rem 0;">P(A ∩ B ∩ C ∩ D) &lt; 0.4% &bull; Zero Trades Placed</div>
+                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.45;">
+                        To eliminate the 1,672-trade churn, surgical filters were stacked (BB width &le; Q25, EMA9 slope &gt; 0, 15m cooldown, candle reversal). In choppy markets, all conditions never coincided on the same 1m bar. <em>However:</em> On 22-Sep, this filter <strong>saved ₹10,773.56</strong> by refusing to trade a choppy down-day.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 1: Empirical Alpha Breakdown -->
         <div class="card section-card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h2 style="margin: 0;">1. Category Performance Spline Radar (Spikes, Troughs &amp; Unrealized PnL)</h2>
-                <span class="badge-saved">6 CORE ASSET &amp; STRATEGY CLUSTERS</span>
+                <h2 style="margin: 0;">1. Empirical Strategy Alpha Breakdown (15–22 Sep 2026)</h2>
+                <span class="badge-saved">6 TRADING SESSIONS &bull; 1-MINUTE TICKS</span>
+            </div>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Performance across all 4 simulated intraday alphas with Gross vs. Net fees explicitly separated:
+            </p>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Strategy Alpha</th>
+                            <th>Volume</th>
+                            <th>Win Rate</th>
+                            <th>Gross P&amp;L</th>
+                            <th>Brokerage (₹25/tr)</th>
+                            <th>Real Net P&amp;L</th>
+                            <th>PF</th>
+                            <th>Diagnostic Diagnosis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td>
+                <strong>Squeeze Momentum Breakout</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;">Code: <code>SQUEEZE</code></div>
+            </td>
+            <td>
+                <strong>722</strong>
+                <div style="font-size:0.72rem; color:#94a3b8;">43.2% of volume</div>
+            </td>
+            <td><strong>25.3%</strong></td>
+            <td class="negative"><strong>-₹9,829.14</strong></td>
+            <td style="color:#ef4444;">-₹18,050.00</td>
+            <td class="negative"><strong>-₹27,879.14</strong></td>
+            <td><code>0.52</code></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Rolling max BB width triggered entries on every bar post-breakout (10-20 trades/day/stock). Destroyed by churn.
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>VWAP Trend Continuation (VTC)</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;">Code: <code>VTC</code></div>
+            </td>
+            <td>
+                <strong>598</strong>
+                <div style="font-size:0.72rem; color:#94a3b8;">35.8% of volume</div>
+            </td>
+            <td><strong>56.5%</strong></td>
+            <td class="positive"><strong>+₹543.03</strong></td>
+            <td style="color:#ef4444;">-₹14,950.00</td>
+            <td class="negative"><strong>-₹14,406.97</strong></td>
+            <td><code>0.68</code></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                High win rate (56.5%) and gross profitable (+₹543), but winners cut early by trailing stops while losers hit full 0.8x ATR.
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Adaptive ATR VWAP Mean-Reversion</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;">Code: <code>VWAP_MR</code></div>
+            </td>
+            <td>
+                <strong>292</strong>
+                <div style="font-size:0.72rem; color:#94a3b8;">17.5% of volume</div>
+            </td>
+            <td><strong>23.3%</strong></td>
+            <td class="positive"><strong>+₹4,466.70</strong></td>
+            <td style="color:#ef4444;">-₹7,300.00</td>
+            <td class="negative"><strong>-₹2,833.30</strong></td>
+            <td><code>0.76</code></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Strong gross positive edge (+₹4,467)! But 4 trades/stock/day incurred ₹7.3k in fees. Needs a 20-bar cooldown.
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Opening Range Breakout (ORB)</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;">Code: <code>ORB</code></div>
+            </td>
+            <td>
+                <strong>60</strong>
+                <div style="font-size:0.72rem; color:#94a3b8;">3.6% of volume</div>
+            </td>
+            <td><strong>41.7%</strong></td>
+            <td class="positive"><strong>+₹932.44</strong></td>
+            <td style="color:#ef4444;">-₹1,500.00</td>
+            <td class="negative"><strong>-₹567.56</strong></td>
+            <td><code>0.88</code></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Cleanest intraday alpha on platform. Naturally rate-limited to morning (~1 trade/symbol/day). Near breakeven even with fees.
+            </td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 2: Daily Session-by-Session Breakdown -->
+        <div class="card section-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h2 style="margin: 0;">2. Daily Session-by-Session Breakdown (15–22 Sep 2026)</h2>
+                <span class="badge-saved">1 GREEN / 5 RED SESSIONS</span>
+            </div>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Day-by-day trajectory showing that only trending sessions (Mon 15-Sep) survived transaction friction:
+            </p>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Day</th>
+                            <th>Trades</th>
+                            <th>Win Rate</th>
+                            <th>Gross P&amp;L</th>
+                            <th>Brokerage</th>
+                            <th>Net P&amp;L</th>
+                            <th>Market Regime &amp; Diagnostic Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td><code>2026-09-15</code></td>
+            <td><strong>Monday</strong></td>
+            <td>208 trades</td>
+            <td><strong>52.4%</strong></td>
+            <td class="positive">+₹10,388.36</td>
+            <td style="color:#ef4444;">-₹5,200.00</td>
+            <td class="positive"><strong>+₹5,188.36</strong></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Strong trend expansion; breakouts fired cleanly across high-beta names.
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-16</code></td>
+            <td><strong>Tuesday</strong></td>
+            <td>318 trades</td>
+            <td><strong>34.0%</strong></td>
+            <td class="negative">-₹5,330.89</td>
+            <td style="color:#ef4444;">-₹7,950.00</td>
+            <td class="negative"><strong>-₹13,280.89</strong></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Worst session; choppy reversal whipsaws on 1m bars without sustained continuation.
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-17</code></td>
+            <td><strong>Wednesday</strong></td>
+            <td>286 trades</td>
+            <td><strong>34.6%</strong></td>
+            <td class="negative">-₹2,005.06</td>
+            <td style="color:#ef4444;">-₹7,150.00</td>
+            <td class="negative"><strong>-₹9,155.06</strong></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Range-bound stagnation; high false entries near Bollinger extremes.
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-18</code></td>
+            <td><strong>Thursday</strong></td>
+            <td>276 trades</td>
+            <td><strong>35.1%</strong></td>
+            <td class="negative">-₹2,084.36</td>
+            <td style="color:#ef4444;">-₹6,900.00</td>
+            <td class="negative"><strong>-₹8,984.36</strong></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Sideways chop; false touches on lower Bollinger bands.
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-21</code></td>
+            <td><strong>Monday</strong></td>
+            <td>267 trades</td>
+            <td><strong>33.3%</strong></td>
+            <td class="negative">-₹2,006.46</td>
+            <td style="color:#ef4444;">-₹6,675.00</td>
+            <td class="negative"><strong>-₹8,681.46</strong></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Tight intraday range decay; fees exceeded gross movement.
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>2026-09-22</code></td>
+            <td><strong>Tuesday</strong></td>
+            <td>317 trades</td>
+            <td><strong>35.3%</strong></td>
+            <td class="negative">-₹2,848.56</td>
+            <td style="color:#ef4444;">-₹7,925.00</td>
+            <td class="negative"><strong>-₹10,773.56</strong></td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Live engine stayed flat via LONG_ONLY; successfully avoided this -₹10.7k loss.
+            </td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: Universe Performance (All 12 Liquid NSE Stocks) -->
+        <div class="card section-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h2 style="margin: 0;">3. Universe Stock Performance (Ranked Best to Worst Net P&amp;L)</h2>
+                <span class="badge-saved">7 OF 12 STOCKS GROSS PROFITABLE</span>
+            </div>
+            <p class="subtitle" style="margin-bottom: 1rem;">
+                Individual asset breakdown across 1,672 trades: 7 stocks had positive gross edge, but high churn created net losses on all except Bharat Forge:
+            </p>
+            <div class="table-responsive">
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Symbol</th>
+                            <th>Trades</th>
+                            <th>Win Rate</th>
+                            <th>Gross P&amp;L</th>
+                            <th>Brokerage</th>
+                            <th>Net P&amp;L</th>
+                            <th>PF</th>
+                            <th>Asset Character &amp; Failure Mode</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+        <tr>
+            <td><strong>BHARATFORG</strong></td>
+            <td>177</td>
+            <td><strong>33.9%</strong></td>
+            <td class="positive">+₹4,457.21</td>
+            <td style="color:#ef4444;">-₹4,425.00</td>
+            <td class="positive"><strong>+₹32.21</strong></td>
+            <td><code>1.00</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Breakeven Leader (Mid-Cap Volatility)</td>
+        </tr>
+        
+        <tr>
+            <td><strong>NMDC</strong></td>
+            <td>99</td>
+            <td><strong>44.4%</strong></td>
+            <td class="positive">+₹371.28</td>
+            <td style="color:#ef4444;">-₹2,475.00</td>
+            <td class="negative"><strong>-₹2,103.72</strong></td>
+            <td><code>0.68</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Gross Positive (+₹371), Eaten by Fees</td>
+        </tr>
+        
+        <tr>
+            <td><strong>TATASTEEL</strong></td>
+            <td>142</td>
+            <td><strong>47.9%</strong></td>
+            <td class="positive">+₹1,189.25</td>
+            <td style="color:#ef4444;">-₹3,550.00</td>
+            <td class="negative"><strong>-₹2,360.75</strong></td>
+            <td><code>0.78</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Gross Positive (+₹1,189), Eaten by Fees</td>
+        </tr>
+        
+        <tr>
+            <td><strong>ITC</strong></td>
+            <td>110</td>
+            <td><strong>46.4%</strong></td>
+            <td class="positive">+₹348.48</td>
+            <td style="color:#ef4444;">-₹2,750.00</td>
+            <td class="negative"><strong>-₹2,401.52</strong></td>
+            <td><code>0.64</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Low Beta; Insufficient Intraday Range</td>
+        </tr>
+        
+        <tr>
+            <td><strong>OBEROIRLTY</strong></td>
+            <td>159</td>
+            <td><strong>28.9%</strong></td>
+            <td class="positive">+₹1,503.44</td>
+            <td style="color:#ef4444;">-₹3,975.00</td>
+            <td class="negative"><strong>-₹2,471.56</strong></td>
+            <td><code>0.81</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Gross Positive (+₹1,503), Eaten by Fees</td>
+        </tr>
+        
+        <tr>
+            <td><strong>HUDCO</strong></td>
+            <td>127</td>
+            <td><strong>44.1%</strong></td>
+            <td class="positive">+₹684.47</td>
+            <td style="color:#ef4444;">-₹3,175.00</td>
+            <td class="negative"><strong>-₹2,490.53</strong></td>
+            <td><code>0.79</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Gross Positive (+₹684), Eaten by Fees</td>
+        </tr>
+        
+        <tr>
+            <td><strong>COALINDIA</strong></td>
+            <td>153</td>
+            <td><strong>45.1%</strong></td>
+            <td class="positive">+₹1,104.16</td>
+            <td style="color:#ef4444;">-₹3,825.00</td>
+            <td class="negative"><strong>-₹2,720.84</strong></td>
+            <td><code>0.72</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Gross Positive (+₹1,104), Eaten by Fees</td>
+        </tr>
+        
+        <tr>
+            <td><strong>VEDL</strong></td>
+            <td>105</td>
+            <td><strong>34.3%</strong></td>
+            <td class="negative">-₹2,550.99</td>
+            <td style="color:#ef4444;">-₹2,625.00</td>
+            <td class="negative"><strong>-₹5,175.99</strong></td>
+            <td><code>0.38</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Commodity Whip; Trailing Stops Hit</td>
+        </tr>
+        
+        <tr>
+            <td><strong>INDIGO</strong></td>
+            <td>163</td>
+            <td><strong>25.2%</strong></td>
+            <td class="negative">-₹1,356.21</td>
+            <td style="color:#ef4444;">-₹4,075.00</td>
+            <td class="negative"><strong>-₹5,431.21</strong></td>
+            <td><code>0.45</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Low Range Churn Trap</td>
+        </tr>
+        
+        <tr>
+            <td><strong>HDFCBANK</strong></td>
+            <td>150</td>
+            <td><strong>32.0%</strong></td>
+            <td class="negative">-₹1,708.77</td>
+            <td style="color:#ef4444;">-₹3,750.00</td>
+            <td class="negative"><strong>-₹5,458.77</strong></td>
+            <td><code>0.48</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Large Cap Heavyweight; Incompatible with 1m Squeeze</td>
+        </tr>
+        
+        <tr>
+            <td><strong>PFC</strong></td>
+            <td>132</td>
+            <td><strong>39.4%</strong></td>
+            <td class="negative">-₹2,631.09</td>
+            <td style="color:#ef4444;">-₹3,300.00</td>
+            <td class="negative"><strong>-₹5,931.09</strong></td>
+            <td><code>0.43</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">False Breakouts on Morning Spikes</td>
+        </tr>
+        
+        <tr>
+            <td><strong>DEEPAKNTR</strong></td>
+            <td>155</td>
+            <td><strong>27.7%</strong></td>
+            <td class="negative">-₹5,298.20</td>
+            <td style="color:#ef4444;">-₹3,875.00</td>
+            <td class="negative"><strong>-₹9,173.20</strong></td>
+            <td><code>0.39</code></td>
+            <td style="font-size:0.78rem; color:#cbd5e1;">Worst Performer; Severe Mean Reversion Drag</td>
+        </tr>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 4: Calibrated Category Spline Radar -->
+        <div class="card section-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+                <h2 style="margin: 0;">4. Calibrated Spline Radar (Visualizing the Churn Troughs)</h2>
+                <span class="badge-saved">REAL NET YIELDS</span>
             </div>
             <p class="subtitle" style="margin-bottom: 1.25rem;">
-                Polar coordinate spline plotted on top of a baseline circle ($R_0=100\text{px}$). Top-performing categories spike outward into peaks, while lagging ones dip into troughs. Long &amp; Swing categories incorporate active <strong>unrealized PnL (+₹60,780.00 total)</strong>:
+                Polar coordinate spline calibrated to empirical yields. Intraday strategies plunge inward below the baseline circle ($R_0=100	ext{px}$) due to fee drag, while Multi-Month macro models reflect historical sweeps:
             </p>
 
             <div style="display: grid; grid-template-columns: minmax(320px, 560px) 1fr; gap: 1.5rem; align-items: center;">
-                <!-- SVG Spline Radar Graph -->
                 <div style="background: #0f172a; border: 1px solid #334155; border-radius: 8px; padding: 1rem; text-align: center;">
                     <svg viewBox="0 0 560 520" style="width: 100%; max-width: 540px; height: auto; display: inline-block;" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <radialGradient id="radarGrad" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
                                 <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
                                 <stop offset="50%" stop-color="#818cf8" stop-opacity="0.25"/>
-                                <stop offset="100%" stop-color="#10b981" stop-opacity="0.10"/>
+                                <stop offset="100%" stop-color="#ef4444" stop-opacity="0.10"/>
                             </radialGradient>
                             <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
                                 <feGaussianBlur stdDeviation="3" result="blur" />
                                 <feComposite in="SourceGraphic" in2="blur" operator="over" />
                             </filter>
                         </defs>
-
                         <circle cx="280" cy="260" r="60" fill="none" stroke="#334155" stroke-dasharray="3,3" opacity="0.2"/>
 <circle cx="280" cy="260" r="100" fill="none" stroke="#64748b" stroke-dasharray="6,4" stroke="#64748b" stroke-width="1.8" opacity="0.6"/>
 <text x="292" y="174" fill="#94a3b8" font-size="9" font-weight="600">Base Circle (R0=100)</text>
 <circle cx="280" cy="260" r="140" fill="none" stroke="#334155" stroke-dasharray="3,3" opacity="0.2"/>
 <circle cx="280" cy="260" r="180" fill="none" stroke="#334155" stroke-dasharray="3,3" opacity="0.2"/>
-<circle cx="280" cy="260" r="220" fill="none" stroke="#334155" stroke-dasharray="3,3" opacity="0.2"/>
 <line x1="280" y1="260" x2="280.0" y2="35.0" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
 <line x1="280" y1="260" x2="474.9" y2="147.5" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
 <line x1="280" y1="260" x2="474.9" y2="372.5" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
 <line x1="280" y1="260" x2="280.0" y2="485.0" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
 <line x1="280" y1="260" x2="85.1" y2="372.5" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
 <line x1="280" y1="260" x2="85.1" y2="147.5" stroke="#334155" stroke-width="1" stroke-dasharray="2,2"/>
-<path d="M 280.0 85.0 C 324.0 89.6, 363.7 154.2, 388.3 197.5 C 412.8 240.8, 445.3 308.8, 427.2 345.0 C 409.2 381.2, 334.8 411.7, 280.0 415.0 C 225.2 418.3, 124.1 405.8, 98.1 365.0 C 72.2 324.2, 93.8 216.7, 124.1 170.0 C 154.4 123.3, 236.0 80.4, 280.0 85.0 Z" fill="url(#radarGrad)" stroke="#38bdf8" stroke-width="2.5" filter="url(#glow)"/>
-<circle cx="280.0" cy="85.0" r="6" fill="#38bdf8" stroke="#0f172a" stroke-width="2"/>
-<circle cx="280.0" cy="85.0" r="10" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
-<text x="280.0" y="59.0" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">Intraday Scalp & Momentum</text>
-<text x="280.0" y="72.0" fill="#cbd5e1" font-size="9" text-anchor="middle">Hit: 81.4%</text>
-<circle cx="388.3" cy="197.5" r="6" fill="#fbbf24" stroke="#0f172a" stroke-width="2"/>
-<circle cx="388.3" cy="197.5" r="10" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.6"/>
-<text x="410.8" y="184.5" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="start">Intraday Mean-Reversion</text>
-<text x="410.8" y="197.5" fill="#cbd5e1" font-size="9" text-anchor="start">Hit: 71.4%</text>
-<circle cx="427.2" cy="345.0" r="6" fill="#c084fc" stroke="#0f172a" stroke-width="2"/>
-<circle cx="427.2" cy="345.0" r="10" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.6"/>
-<text x="449.7" y="358.0" fill="#c084fc" font-size="10" font-weight="700" text-anchor="start">Swing Volatility (BB + RSI)</text>
-<text x="449.7" y="371.0" fill="#cbd5e1" font-size="9" text-anchor="start">Hit: 76.0% | Unr: +Rs 3,820</text>
-<circle cx="280.0" cy="415.0" r="6" fill="#818cf8" stroke="#0f172a" stroke-width="2"/>
-<circle cx="280.0" cy="415.0" r="10" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.6"/>
-<text x="280.0" y="441.0" fill="#818cf8" font-size="10" font-weight="700" text-anchor="middle">Swing Stat-Arb & ML</text>
-<text x="280.0" y="454.0" fill="#cbd5e1" font-size="9" text-anchor="middle">Hit: 73.5% | Unr: +Rs 2,140</text>
-<circle cx="98.1" cy="365.0" r="6" fill="#4ade80" stroke="#0f172a" stroke-width="2"/>
-<circle cx="98.1" cy="365.0" r="10" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.6"/>
-<text x="75.6" y="378.0" fill="#4ade80" font-size="10" font-weight="700" text-anchor="end">Long Core & GARP Value</text>
-<text x="75.6" y="391.0" fill="#cbd5e1" font-size="9" text-anchor="end">Hit: 83.7% | Unr: +Rs 33,570</text>
-<circle cx="124.1" cy="170.0" r="6" fill="#34d399" stroke="#0f172a" stroke-width="2"/>
-<circle cx="124.1" cy="170.0" r="10" fill="none" stroke="#34d399" stroke-width="1" opacity="0.6"/>
-<text x="101.6" y="157.0" fill="#34d399" font-size="10" font-weight="700" text-anchor="end">Long Momentum & Breakout</text>
-<text x="101.6" y="170.0" fill="#cbd5e1" font-size="9" text-anchor="end">Hit: 76.3% | Unr: +Rs 21,250</text>
+<path d="M 280.0 200.0 C 309.6 204.6, 332.3 205.2, 345.0 222.5 C 357.7 239.8, 367.0 280.2, 356.2 304.0 C 345.4 327.8, 312.9 360.7, 280.0 365.0 C 247.1 369.3, 177.5 358.3, 158.8 330.0 C 140.0 301.7, 147.2 216.7, 167.4 195.0 C 187.6 173.3, 250.4 195.4, 280.0 200.0 Z" fill="url(#radarGrad)" stroke="#38bdf8" stroke-width="2.5" filter="url(#glow)"/>
+<circle cx="280.0" cy="200.0" r="6" fill="#ef4444" stroke="#0f172a" stroke-width="2"/>
+<circle cx="280.0" cy="200.0" r="10" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.6"/>
+<text x="280.0" y="174.0" fill="#ef4444" font-size="10" font-weight="700" text-anchor="middle">Squeeze Momentum</text>
+<text x="280.0" y="187.0" fill="#cbd5e1" font-size="9" text-anchor="middle">-₹27,879.14 (25.3%)</text>
+<circle cx="345.0" cy="222.5" r="6" fill="#f97316" stroke="#0f172a" stroke-width="2"/>
+<circle cx="345.0" cy="222.5" r="10" fill="none" stroke="#f97316" stroke-width="1" opacity="0.6"/>
+<text x="367.5" y="209.5" fill="#f97316" font-size="10" font-weight="700" text-anchor="start">VWAP Trend (VTC)</text>
+<text x="367.5" y="222.5" fill="#cbd5e1" font-size="9" text-anchor="start">-₹14,406.97 (56.5%)</text>
+<circle cx="356.2" cy="304.0" r="6" fill="#fbbf24" stroke="#0f172a" stroke-width="2"/>
+<circle cx="356.2" cy="304.0" r="10" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.6"/>
+<text x="378.7" y="317.0" fill="#fbbf24" font-size="10" font-weight="700" text-anchor="start">VWAP Mean-Reversion</text>
+<text x="378.7" y="330.0" fill="#cbd5e1" font-size="9" text-anchor="start">-₹2,833.30 (23.3%)</text>
+<circle cx="280.0" cy="365.0" r="6" fill="#38bdf8" stroke="#0f172a" stroke-width="2"/>
+<circle cx="280.0" cy="365.0" r="10" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6"/>
+<text x="280.0" y="391.0" fill="#38bdf8" font-size="10" font-weight="700" text-anchor="middle">ORB Breakout</text>
+<text x="280.0" y="404.0" fill="#cbd5e1" font-size="9" text-anchor="middle">-₹567.56 (41.7%)</text>
+<circle cx="158.8" cy="330.0" r="6" fill="#c084fc" stroke="#0f172a" stroke-width="2"/>
+<circle cx="158.8" cy="330.0" r="10" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.6"/>
+<text x="136.2" y="343.0" fill="#c084fc" font-size="10" font-weight="700" text-anchor="end">Triangular BB (Swing)</text>
+<text x="136.2" y="356.0" fill="#cbd5e1" font-size="9" text-anchor="end">+₹46,009.11 (55.6%)</text>
+<circle cx="167.4" cy="195.0" r="6" fill="#4ade80" stroke="#0f172a" stroke-width="2"/>
+<circle cx="167.4" cy="195.0" r="10" fill="none" stroke="#4ade80" stroke-width="1" opacity="0.6"/>
+<text x="144.9" y="182.0" fill="#4ade80" font-size="10" font-weight="700" text-anchor="end">GARP & Core Value</text>
+<text x="144.9" y="195.0" fill="#cbd5e1" font-size="9" text-anchor="end">N/A (0.0%)</text>
                     </svg>
                     <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 0.5rem;">
                         <span style="color: #64748b;">Dashed Circle: Baseline ($R_0=100$)</span> &bull; 
-                        <span style="color: #38bdf8;">Spline Boundary: Dynamic Performance + Unrealized Elevation</span>
+                        <span style="color: #ef4444;">Troughs &lt; 100: Fee Drag Depletions</span>
                     </div>
                 </div>
 
-                <!-- Category Breakdown Grid -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem;">
                     
-        <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #38bdf8;">
+        <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #ef4444;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="color: #38bdf8; font-weight: 700; font-size: 0.9rem;">Intraday Scalp & Momentum</span>
-                <span class="badge paper" style="font-size: 0.7rem;">Spike (+75px)</span>
+                <span style="color: #ef4444; font-weight: 700; font-size: 0.9rem;">Squeeze Momentum</span>
+                <span class="badge paper" style="font-size: 0.7rem;">Deep Trough (-40px)</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
                 <div>
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Realized PnL</div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399;">+₹32,318.39</div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Net PnL (Empirical)</div>
+                    <div style="font-size: 1.15rem; font-weight: 700;" class="negative">-₹27,879.14</div>
                 </div>
                 <div style="text-align: right;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Unrealized PnL</div>
-                    <div><span style="color:#64748b; font-size:0.75rem;">₹0.00 (Flat)</span></div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Hit Rate</div>
+                    <div style="font-weight: 700; color: #cbd5e1;">25.3%</div>
                 </div>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
-                <span>Target Hit: <strong>81.4%</strong></span>
-                <span style="color: #94a3b8;">Squeeze Momentum, EOD Scalper</span>
+                <span style="color: #94a3b8;">722 Trades (-₹18,050 Fees)</span>
+            </div>
+        </div>
+        
+        <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #f97316;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="color: #f97316; font-weight: 700; font-size: 0.9rem;">VWAP Trend (VTC)</span>
+                <span class="badge paper" style="font-size: 0.7rem;">Fee Churn (-25px)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
+                <div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Net PnL (Empirical)</div>
+                    <div style="font-size: 1.15rem; font-weight: 700;" class="negative">-₹14,406.97</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Hit Rate</div>
+                    <div style="font-weight: 700; color: #cbd5e1;">56.5%</div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
+                <span style="color: #94a3b8;">598 Trades (-₹14,950 Fees)</span>
             </div>
         </div>
         
         <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #fbbf24;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="color: #fbbf24; font-weight: 700; font-size: 0.9rem;">Intraday Mean-Reversion</span>
-                <span class="badge paper" style="font-size: 0.7rem;">Trough (+25px)</span>
+                <span style="color: #fbbf24; font-weight: 700; font-size: 0.9rem;">VWAP Mean-Reversion</span>
+                <span class="badge paper" style="font-size: 0.7rem;">Friction Drag (-12px)</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
                 <div>
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Realized PnL</div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399;">+₹9,340.00</div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Net PnL (Empirical)</div>
+                    <div style="font-size: 1.15rem; font-weight: 700;" class="negative">-₹2,833.30</div>
                 </div>
                 <div style="text-align: right;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Unrealized PnL</div>
-                    <div><span style="color:#64748b; font-size:0.75rem;">₹0.00 (Flat)</span></div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Hit Rate</div>
+                    <div style="font-weight: 700; color: #cbd5e1;">23.3%</div>
                 </div>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
-                <span>Target Hit: <strong>71.4%</strong></span>
-                <span style="color: #94a3b8;">Adaptive ATR VWAP</span>
+                <span style="color: #94a3b8;">292 Trades (Gross +₹4,467)</span>
+            </div>
+        </div>
+        
+        <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #38bdf8;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
+                <span style="color: #38bdf8; font-weight: 700; font-size: 0.9rem;">ORB Breakout</span>
+                <span class="badge paper" style="font-size: 0.7rem;">Cleanest Alpha (+5px)</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
+                <div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Net PnL (Empirical)</div>
+                    <div style="font-size: 1.15rem; font-weight: 700;" class="negative">-₹567.56</div>
+                </div>
+                <div style="text-align: right;">
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Hit Rate</div>
+                    <div style="font-weight: 700; color: #cbd5e1;">41.7%</div>
+                </div>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
+                <span style="color: #94a3b8;">60 Trades (Gross +₹932)</span>
             </div>
         </div>
         
         <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #c084fc;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="color: #c084fc; font-weight: 700; font-size: 0.9rem;">Swing Volatility (BB + RSI)</span>
-                <span class="badge paper" style="font-size: 0.7rem;">Spike (+70px)</span>
+                <span style="color: #c084fc; font-weight: 700; font-size: 0.9rem;">Triangular BB (Swing)</span>
+                <span class="badge paper" style="font-size: 0.7rem;">Macro Model (+40px)</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
                 <div>
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Realized PnL</div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399;">+₹41,074.81</div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Net PnL (Empirical)</div>
+                    <div style="font-size: 1.15rem; font-weight: 700;" class="positive">+₹46,009.11</div>
                 </div>
                 <div style="text-align: right;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Unrealized PnL</div>
-                    <div><span class="badge-saved" style="background:rgba(6,78,59,0.4); color:#4ade80; border:1px solid #059669; font-size:0.75rem;">+₹3,820.00 Unrealized</span></div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Hit Rate</div>
+                    <div style="font-weight: 700; color: #cbd5e1;">55.6%</div>
                 </div>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
-                <span>Target Hit: <strong>76.0%</strong></span>
-                <span style="color: #94a3b8;">Triangular Bollinger Swing</span>
-            </div>
-        </div>
-        
-        <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #818cf8;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="color: #818cf8; font-weight: 700; font-size: 0.9rem;">Swing Stat-Arb & ML</span>
-                <span class="badge paper" style="font-size: 0.7rem;">Plateau (+55px)</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
-                <div>
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Realized PnL</div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399;">+₹28,640.00</div>
-                </div>
-                <div style="text-align: right;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Unrealized PnL</div>
-                    <div><span class="badge-saved" style="background:rgba(6,78,59,0.4); color:#4ade80; border:1px solid #059669; font-size:0.75rem;">+₹2,140.00 Unrealized</span></div>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
-                <span>Target Hit: <strong>73.5%</strong></span>
-                <span style="color: #94a3b8;">Sector Z-Score Classifier</span>
+                <span style="color: #94a3b8;">Multi-Month Sweep (90 Trades)</span>
             </div>
         </div>
         
         <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #4ade80;">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="color: #4ade80; font-weight: 700; font-size: 0.9rem;">Long Core & GARP Value</span>
-                <span class="badge paper" style="font-size: 0.7rem;">Dominant Peak (+110px)</span>
+                <span style="color: #4ade80; font-weight: 700; font-size: 0.9rem;">GARP & Core Value</span>
+                <span class="badge paper" style="font-size: 0.7rem;">Macro Model (+30px)</span>
             </div>
             <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
                 <div>
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Realized PnL</div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399;">+₹114,300.00</div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Net PnL (Empirical)</div>
+                    <div style="font-size: 1.15rem; font-weight: 700;" class="highlight">₹0.00</div>
                 </div>
                 <div style="text-align: right;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Unrealized PnL</div>
-                    <div><span class="badge-saved" style="background:rgba(6,78,59,0.4); color:#4ade80; border:1px solid #059669; font-size:0.75rem;">+₹33,570.00 Unrealized</span></div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Hit Rate</div>
+                    <div style="font-weight: 700; color: #cbd5e1;">0.0%</div>
                 </div>
             </div>
             <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
-                <span>Target Hit: <strong>83.7%</strong></span>
-                <span style="color: #94a3b8;">GARP Value, Quality Compounder</span>
-            </div>
-        </div>
-        
-        <div class="comp-box" style="padding: 0.85rem; background: rgba(15, 23, 42, 0.7); border-color: #34d399;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                <span style="color: #34d399; font-weight: 700; font-size: 0.9rem;">Long Momentum & Breakout</span>
-                <span class="badge paper" style="font-size: 0.7rem;">Spike (+80px)</span>
-            </div>
-            <div style="display: flex; justify-content: space-between; align-items: baseline; margin: 0.3rem 0;">
-                <div>
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Realized PnL</div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399;">+₹83,100.00</div>
-                </div>
-                <div style="text-align: right;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase;">Unrealized PnL</div>
-                    <div><span class="badge-saved" style="background:rgba(6,78,59,0.4); color:#4ade80; border:1px solid #059669; font-size:0.75rem;">+₹21,250.00 Unrealized</span></div>
-                </div>
-            </div>
-            <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #cbd5e1; margin-top: 0.3rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.3rem;">
-                <span>Target Hit: <strong>76.3%</strong></span>
-                <span style="color: #94a3b8;">Dual Momentum, Stage-2 Breakout</span>
+                <span style="color: #94a3b8;">Multi-Month Fundamentals</span>
             </div>
         </div>
         
@@ -285,14 +682,14 @@
             </div>
         </div>
 
-        <!-- Section 2: Strategy Performance Summary Matrix -->
+        <!-- Section 5: Platform Strategy Status Matrix -->
         <div class="card section-card">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h2 style="margin: 0;">2. Comprehensive Strategy Performance &amp; Status Matrix</h2>
-                <span class="badge-saved">CAPITAL 100% PRESERVED &bull; ALL 9 STRATEGIES IN STANDBY</span>
+                <h2 style="margin: 0;">5. Comprehensive Strategy Status Matrix</h2>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46;">ALL RUNNERS DECOMMISSIONED</span>
             </div>
             <p class="subtitle" style="margin-bottom: 1rem;">
-                Every platform strategy tracked across total inception performance, past-week recency, projected monthly alpha, target hit rate, and active <strong>unrealized PnL</strong>:
+                Formal register of all 11 platform trading algorithms with verified empirical backtest metrics and decommissioned state:
             </p>
             <div class="table-responsive">
                 <table class="styled-table">
@@ -300,12 +697,10 @@
                         <tr>
                             <th>Strategy &amp; Horizon</th>
                             <th>Real-Time State</th>
-                            <th>Total Till Date</th>
-                            <th>Past Week</th>
-                            <th>Projected Month</th>
-                            <th>Target Hit %</th>
-                            <th>Unrealized PnL</th>
-                            <th>Recency &amp; Focus Note</th>
+                            <th>Total Inception PnL</th>
+                            <th>Past Week (15–22 Sep)</th>
+                            <th>Target Hit Rate</th>
+                            <th>Audited Operational Note</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -316,32 +711,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Intraday (1m - 5m) &bull; <code>MIS (5x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+14,820.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+14.8% on margin</div>
+            <td class="negative">
+                <strong>-₹27,879.14</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">-114.4% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+4,250.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+18,500.00</strong>
+            <td class="negative">
+                <strong>-₹27,879.14</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>78.6%</strong>
+                    <strong>25.3%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:78.6%;"></div>
+                    <div class="progress-bar-fill" style="width:25.3%;"></div>
                 </div>
             </td>
-            <td>
-                <span style="color:#64748b;">₹0.00</span>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Empirical 6-day backtest (15–22 Sep): 722 trades, 25.3% WR, -₹27,879.14 net (-₹18,050 brokerage). Over-churn identified.
             </td>
         </tr>
         
@@ -351,32 +739,81 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Intraday (1m - 5m) &bull; <code>MIS (5x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+9,340.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+9.3% on margin</div>
+            <td class="negative">
+                <strong>-₹2,833.30</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">-15.1% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+2,180.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+11,200.00</strong>
+            <td class="negative">
+                <strong>-₹2,833.30</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>71.4%</strong>
+                    <strong>23.3%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:71.4%;"></div>
+                    <div class="progress-bar-fill" style="width:23.3%;"></div>
                 </div>
             </td>
-            <td>
-                <span style="color:#64748b;">₹0.00</span>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Empirical 6-day backtest (15–22 Sep): 292 trades, 23.3% WR, gross profitable (+₹4,467) but -₹2,833.30 net after -₹7,300 brokerage.
             </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>Opening Range Breakout (ORB)</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;">Intraday (1m - 15m) &bull; <code>MIS (5x)</code></div>
+            </td>
+            <td>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
+            </td>
+            <td class="negative">
+                <strong>-₹567.56</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">-2.3% on margin</div>
+            </td>
+            <td class="negative">
+                <strong>-₹567.56</strong>
+            </td>
+            <td>
+                <div style="display:flex; align-items:center; gap:0.4rem;">
+                    <strong>41.7%</strong>
+                </div>
+                <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
+                    <div class="progress-bar-fill" style="width:41.7%;"></div>
+                </div>
+            </td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Empirical 6-day backtest (15–22 Sep): 60 trades, 41.7% WR, +₹932.44 gross, -₹567.56 net after -₹1,500 brokerage. Cleanest alpha.
+            </td>
+        </tr>
+        
+        <tr>
+            <td>
+                <strong>VWAP Trend Continuation (VTC)</strong>
+                <div style="font-size:0.75rem; color:#94a3b8;">Intraday (1m - 5m) &bull; <code>MIS (5x)</code></div>
+            </td>
+            <td>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
+            </td>
+            <td class="negative">
+                <strong>-₹14,406.97</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">-57.6% on margin</div>
+            </td>
+            <td class="negative">
+                <strong>-₹14,406.97</strong>
+            </td>
+            <td>
+                <div style="display:flex; align-items:center; gap:0.4rem;">
+                    <strong>56.5%</strong>
+                </div>
+                <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
+                    <div class="progress-bar-fill" style="width:56.5%;"></div>
+                </div>
+            </td>
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Empirical 6-day backtest (15–22 Sep): 598 trades, 56.5% WR, +₹543.03 gross, -₹14,406.97 net (-₹14,950 brokerage). Asymmetric stop loss.
             </td>
         </tr>
         
@@ -386,32 +823,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Intraday EOD (15:00 - 15:26) &bull; <code>MIS (5x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+17,498.39</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+17.5% on margin</div>
+            <td class="">
+                <strong>₹0.00</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+0.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+17,498.39</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+24,000.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>84.2%</strong>
+                    <strong>0.0%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:84.2%;"></div>
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
                 </div>
             </td>
-            <td>
-                <span style="color:#64748b;">₹0.00</span>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Decommissioned. Standby / sandbox evaluation.
             </td>
         </tr>
         
@@ -421,32 +851,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Swing (15m - 1h) &bull; <code>CNC (1x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
             <td class="positive">
-                <strong>₹+41,074.81</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+41.1% on margin</div>
+                <strong>+₹46,009.11</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+46.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+8,450.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+32,500.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>76.0%</strong>
+                    <strong>55.6%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:76.0%;"></div>
+                    <div class="progress-bar-fill" style="width:55.6%;"></div>
                 </div>
             </td>
-            <td>
-                <strong style="color:#4ade80;">+₹3,820.00</strong>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Multi-month backtest sweep: 90 screened trades, 55.6% WR, +₹46,009.11 net. 0 trades in 1-week intraday test.
             </td>
         </tr>
         
@@ -456,32 +879,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Swing (Daily) &bull; <code>CNC (1x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+28,640.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+28.6% on margin</div>
+            <td class="">
+                <strong>₹0.00</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+0.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+6,120.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+22,000.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>73.5%</strong>
+                    <strong>0.0%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:73.5%;"></div>
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
                 </div>
             </td>
-            <td>
-                <strong style="color:#4ade80;">+₹2,140.00</strong>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Decommissioned. 0 live or backtest executions in 15–22 Sep week.
             </td>
         </tr>
         
@@ -491,32 +907,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Long-Term (Monthly) &bull; <code>CNC (1x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+52,800.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+52.8% on margin</div>
+            <td class="">
+                <strong>₹0.00</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+0.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+3,400.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+15,000.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>81.0%</strong>
+                    <strong>0.0%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:81.0%;"></div>
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
                 </div>
             </td>
-            <td>
-                <strong style="color:#4ade80;">+₹14,650.00</strong>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Decommissioned. Long-term fundamental rebalance model.
             </td>
         </tr>
         
@@ -526,32 +935,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Long-Term (Bi-Weekly) &bull; <code>CNC (1x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+44,200.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+44.2% on margin</div>
+            <td class="">
+                <strong>₹0.00</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+0.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+4,800.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+16,500.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>77.5%</strong>
+                    <strong>0.0%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:77.5%;"></div>
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
                 </div>
             </td>
-            <td>
-                <strong style="color:#4ade80;">+₹11,820.00</strong>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Decommissioned. Bi-weekly momentum rebalance model.
             </td>
         </tr>
         
@@ -561,32 +963,25 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Long-Term (Weekly) &bull; <code>CNC (1x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+38,900.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+38.9% on margin</div>
+            <td class="">
+                <strong>₹0.00</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+0.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+5,100.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+18,000.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>75.0%</strong>
+                    <strong>0.0%</strong>
                 </div>
                 <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:75.0%;"></div>
+                    <div class="progress-bar-fill" style="width:0.0%;"></div>
                 </div>
             </td>
-            <td>
-                <strong style="color:#4ade80;">+₹9,430.00</strong>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Decommissioned. Weekly breakout scan model.
             </td>
         </tr>
         
@@ -596,53 +991,14 @@
                 <div style="font-size:0.75rem; color:#94a3b8;">Multi-Year Core &bull; <code>CNC (1x)</code></div>
             </td>
             <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
+                <span class="badge" style="background:#27272a; color:#a1a1aa; border-color:#3f3f46; font-size:0.72rem;">DECOMMISSIONED</span>
             </td>
-            <td class="positive">
-                <strong>₹+61,500.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+61.5% on margin</div>
+            <td class="">
+                <strong>₹0.00</strong>
+                <div style="font-size:0.73rem; color:#94a3b8;">+0.0% on margin</div>
             </td>
-            <td class="positive">
-                <strong>₹+2,900.00</strong>
-            </td>
-            <td class="positive">
-                <strong>₹+12,000.00</strong>
-            </td>
-            <td>
-                <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>86.4%</strong>
-                </div>
-                <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:86.4%;"></div>
-                </div>
-            </td>
-            <td>
-                <strong style="color:#4ade80;">+₹18,920.00</strong>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                <strong>strat_orb_breakout</strong>
-                <div style="font-size:0.75rem; color:#94a3b8;"> &bull; <code></code></div>
-            </td>
-            <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
-            </td>
-            <td class="negative">
-                <strong>₹+0.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+0.0% on margin</div>
-            </td>
-            <td class="negative">
-                <strong>₹+0.00</strong>
-            </td>
-            <td class="negative">
-                <strong>₹+0.00</strong>
+            <td class="">
+                <strong>₹0.00</strong>
             </td>
             <td>
                 <div style="display:flex; align-items:center; gap:0.4rem;">
@@ -652,197 +1008,13 @@
                     <div class="progress-bar-fill" style="width:0.0%;"></div>
                 </div>
             </td>
-            <td>
-                <span style="color:#64748b;">₹0.00</span>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
-            </td>
-        </tr>
-        
-        <tr>
-            <td>
-                <strong>strat_vwap_trend_continuation</strong>
-                <div style="font-size:0.75rem; color:#94a3b8;"> &bull; <code></code></div>
-            </td>
-            <td>
-                <span class="badge-neutral" style="font-size:0.75rem;">DECOMMISSIONED</span>
-                <div style="font-size:0.72rem; color:#94a3b8; margin-top:2px;">DECOMMISSIONED (RUNNERS TERMINATED)</div>
-            </td>
-            <td class="negative">
-                <strong>₹+0.00</strong>
-                <div style="font-size:0.73rem; color:#38bdf8;">+0.0% on margin</div>
-            </td>
-            <td class="negative">
-                <strong>₹+0.00</strong>
-            </td>
-            <td class="negative">
-                <strong>₹+0.00</strong>
-            </td>
-            <td>
-                <div style="display:flex; align-items:center; gap:0.4rem;">
-                    <strong>0.0%</strong>
-                </div>
-                <div class="progress-bar-container" style="height:6px; width:80px; margin-top:3px;">
-                    <div class="progress-bar-fill" style="width:0.0%;"></div>
-                </div>
-            </td>
-            <td>
-                <span style="color:#64748b;">₹0.00</span>
-            </td>
-            <td style="max-width:280px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
-                Strategy decommissioned and stopped on 2026-09-23 17:46:39 IST. Zero active positions.
+            <td style="max-width:320px; white-space:normal; font-size:0.78rem; color:#cbd5e1; line-height:1.35;">
+                Decommissioned. Multi-year quality core holding model.
             </td>
         </tr>
         
                     </tbody>
                 </table>
-            </div>
-        </div>
-
-        <!-- Section 3: Every Scanner / Screener Precision Audit -->
-        <div class="card section-card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h2 style="margin: 0;">3. Scanner &amp; Screener Precision Audit (Profit vs Misses)</h2>
-                <span class="badge-saved">84.0% OVERALL PREDICTION HIT RATE</span>
-            </div>
-            <p class="subtitle" style="margin-bottom: 1rem;">
-                Empirical correctness tracking for every screening engine: Profitable predictions highlight in <strong>Green</strong>, while incorrect / whipsaw calls explicitly flag in <strong>Red</strong> to audit filter leaks:
-            </p>
-
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 1rem;">
-                <!-- Scanner 1: Dynamic Universe Screener -->
-                <div class="comp-box" style="background: rgba(15, 23, 42, 0.7); border-color: #10b981;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                        <h4 style="color: #f8fafc; font-size: 0.95rem; margin: 0;">Pre-Market Dynamic Universe Screener</h4>
-                        <span class="badge-saved">87.5% WIN (7/8)</span>
-                    </div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #34d399; margin: 0.2rem 0;">+₹24,850.00 Cumulative Alpha Edge</div>
-                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4; margin-bottom: 0.5rem;">
-                        Scans 43 liquid NSE assets at 08:30 IST. Ranks opening momentum leader and sets intraday bias.
-                    </p>
-                    <div style="font-size: 0.75rem; display: flex; flex-direction: column; gap: 0.3rem;">
-                        <div>
-                            <span class="badge-saved" style="font-size:0.68rem;">21-SEP: HUDCO</span>
-                            <span style="color:#4ade80;">+2.85% Bullish Surge (Target ₹288.60 Hit) &bull; <strong>WIN (GREEN)</strong></span>
-                        </div>
-                        <div>
-                            <span class="badge-saved" style="font-size:0.68rem;">18-SEP: HUDCO</span>
-                            <span style="color:#4ade80;">+2.61% Squeeze Breakout (+₹1,605 Realized) &bull; <strong>WIN (GREEN)</strong></span>
-                        </div>
-                        <div>
-                            <span class="badge" style="background:#7f1d1d; color:#fca5a5; font-size:0.68rem; border:1px solid #ef4444;">12-SEP: TATAPOWER</span>
-                            <span style="color:#f87171;">False Breakout &bull; Stopped at -1.1% &bull; <strong>FAILED PREDICTION (RED)</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Scanner 2: Thematic Sector Rotation Finder -->
-                <div class="comp-box" style="background: rgba(15, 23, 42, 0.7); border-color: #38bdf8;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                        <h4 style="color: #f8fafc; font-size: 0.95rem; margin: 0;">Thematic Sector Rotation Screener</h4>
-                        <span class="badge-intraday">83.3% WIN (5/6)</span>
-                    </div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #38bdf8; margin: 0.2rem 0;">+3.42% Alpha vs Nifty 50 Benchmark</div>
-                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4; margin-bottom: 0.5rem;">
-                        Analyzes 8 industry clusters, institutional money flow, and Capex supercycles to isolate winning thematic baskets.
-                    </p>
-                    <div style="font-size: 0.75rem; display: flex; flex-direction: column; gap: 0.3rem;">
-                        <div>
-                            <span class="badge-saved" style="font-size:0.68rem;">21-SEP: POWER &amp; INFRA</span>
-                            <span style="color:#4ade80;">PFC, REC, HUDCO Outperformed Index (+2.4% vs +0.8%) &bull; <strong>WIN (GREEN)</strong></span>
-                        </div>
-                        <div>
-                            <span class="badge-saved" style="font-size:0.68rem;">16-SEP: PSU BANKS</span>
-                            <span style="color:#4ade80;">SBIN, PNB Rallied (+1.9% Alpha) &bull; <strong>WIN (GREEN)</strong></span>
-                        </div>
-                        <div>
-                            <span class="badge" style="background:#7f1d1d; color:#fca5a5; font-size:0.68rem; border:1px solid #ef4444;">05-SEP: IT ROTATION</span>
-                            <span style="color:#f87171;">Rotation Lagged Benchmark (-0.8%) &bull; <strong>FAILED PREDICTION (RED)</strong></span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Scanner 3: Intraday Trend Bias Classifier -->
-                <div class="comp-box" style="background: rgba(15, 23, 42, 0.7); border-color: #818cf8;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                        <h4 style="color: #f8fafc; font-size: 0.95rem; margin: 0;">Intraday Trend Bias Classifier</h4>
-                        <span class="badge-challenger">80.0% REGIME HIT (8/10)</span>
-                    </div>
-                    <div style="font-size: 1.15rem; font-weight: 700; color: #a5b4fc; margin: 0.2rem 0;">87% Drawdown Collapse via Filter</div>
-                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4; margin-bottom: 0.5rem;">
-                        Classifies market opening regime (BULLISH_EXPANSION vs CHOP_STAGNATION) to enforce monodirectional entries.
-                    </p>
-                    <div style="font-size: 0.75rem; display: flex; flex-direction: column; gap: 0.3rem;">
-                        <div>
-                            <span class="badge-saved" style="font-size:0.68rem;">21-SEP: BULLISH_EXPANSION</span>
-                            <span style="color:#4ade80;">Market rallied to close. Suppressed bad short entries &bull; <strong>CORRECT (GREEN)</strong></span>
-                        </div>
-                        <div>
-                            <span class="badge-saved" style="font-size:0.68rem;">18-SEP: BULLISH_EXPANSION</span>
-                            <span style="color:#4ade80;">Gap held; +₹1,605 profit captured &bull; <strong>CORRECT (GREEN)</strong></span>
-                        </div>
-                        <div>
-                            <span class="badge" style="background:#7f1d1d; color:#fca5a5; font-size:0.68rem; border:1px solid #ef4444;">11-SEP: CHOP WHIPSAW</span>
-                            <span style="color:#f87171;">False morning expansion reversed into chop &bull; <strong>WHIPSAW (RED)</strong></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Section 4: Global Handlers Performance & Telemetry -->
-        <div class="card section-card">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h2 style="margin: 0;">4. Global Handlers &amp; Risk Infrastructure Performance</h2>
-                <span class="badge-saved">100% EXECUTION INTEGRITY</span>
-            </div>
-            <p class="subtitle" style="margin-bottom: 1rem;">
-                Summarized telemetry across the 3 critical platform execution handlers: Contention Resolver, Hedging Vault, and Leaky Bucket Gateway:
-            </p>
-
-            <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-                <div class="comp-box" style="background: rgba(6, 78, 59, 0.35); border-color: #10b981;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                        <h4 style="color: #4ade80; margin: 0;">Contention &amp; Capital Lock Resolver</h4>
-                        <span class="badge-saved">100% ACCURACY</span>
-                    </div>
-                    <div style="font-size: 1.3rem; font-weight: 700; color: #4ade80; margin: 0.2rem 0;">+₹12,450.00 Capital Saved</div>
-                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4;">
-                        <strong>14 Conflicting Signals Intercepted:</strong> Blocks opposing strategy orders on same symbol. Routed secondary signals into paper trading. Zero self-canceling fees incurred.
-                    </p>
-                    <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.4rem;">
-                        Recency: 0 conflicts on Monday (0 live orders placed).
-                    </div>
-                </div>
-
-                <div class="comp-box" style="background: rgba(30, 27, 75, 0.4); border-color: #6366f1;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                        <h4 style="color: #a5b4fc; margin: 0;">Intraday Hedging Vault &amp; Profit Floor</h4>
-                        <span class="badge-challenger">8 SESSIONS LOCKED</span>
-                    </div>
-                    <div style="font-size: 1.3rem; font-weight: 700; color: #a5b4fc; margin: 0.2rem 0;">₹3,500 Drawdown Prevented</div>
-                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4;">
-                        <strong>Dynamic Ratchet Mechanism:</strong> Locks 50% of peak intraday gains once above +₹500. Triggered 3 Chilled-Out circuit breakers after reaching +₹1,500 target.
-                    </p>
-                    <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.4rem;">
-                        Recency: Profit floor primed at ₹0.00; ready for 09:15 market open.
-                    </div>
-                </div>
-
-                <div class="comp-box" style="background: rgba(8, 51, 68, 0.4); border-color: #0284c7;">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.3rem;">
-                        <h4 style="color: #38bdf8; margin: 0;">Central Gateway &amp; Leaky Bucket</h4>
-                        <span class="badge-intraday">1.8 ms LATENCY</span>
-                    </div>
-                    <div style="font-size: 1.3rem; font-weight: 700; color: #38bdf8; margin: 0.2rem 0;">0 Rate Limit Breaches</div>
-                    <p style="font-size: 0.8rem; color: #cbd5e1; line-height: 1.4;">
-                        <strong>2.8 req/s Token Bucket:</strong> Enforces broker API rate limit compliance across simultaneous strategy sockets. Fast loopback latency averaging 1.8 milliseconds.
-                    </p>
-                    <div style="font-size: 0.72rem; color: #94a3b8; margin-top: 0.4rem;">
-                        Recency: Port 8000 safely offline post-close; scheduled to launch at 08:30 IST.
-                    </div>
-                </div>
             </div>
         </div>
     </main>
