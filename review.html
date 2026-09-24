@@ -51,7 +51,7 @@
         <div class="header-banner">
             <div>
                 <h1>Live System Status &amp; Actual Execution Audit</h1>
-                <p class="subtitle">Strictly Verified Live Execution Telemetry &bull; Zero Backtested Fluff &bull; Real Broker Fills &bull; Audited: 24-Sep-2026 07:25:00 IST</p>
+                <p class="subtitle">Strictly Verified Live Execution Telemetry &bull; Zero Backtested Fluff &bull; Real Broker Fills &bull; Audited: 24-Sep-2026 07:50:31 IST</p>
             </div>
             <div class="regime-tag">
                 ACTUAL LIVE STATE: <strong>100% CASH PRESERVED &bull; ALL 9 STRATEGIES IN WAITING / STANDBY &bull; 0 OPEN POSITIONS</strong>
@@ -85,14 +85,14 @@
         <!-- Live Data Contract & Pipeline Handshake Verification -->
         
     <!-- Live Data Contract & Pipeline Handshake Verification -->
-    <div class="card section-card" style="border-left: 4px solid #22c55e; margin-bottom: 1.5rem;">
+    <div class="card section-card" style="border-left: 4px solid #94a3b8; margin-bottom: 1.5rem;">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
             <div style="display: flex; align-items: center; gap: 0.6rem;">
                 <span style="font-size: 1.25rem;">🛡️</span>
                 <h2 style="margin: 0; font-size: 1.15rem;">Data Contract &amp; Pipeline Handshake Verification</h2>
             </div>
-            <span class="badge" style="background: rgba(34, 197, 94, 0.12); color: #22c55e; border: 1px solid #22c55e; font-weight: 700; font-size: 0.75rem; padding: 0.3rem 0.6rem;">
-                ● VERIFIED VALID
+            <span class="badge" style="background: rgba(148, 163, 184, 0.12); color: #94a3b8; border: 1px solid #94a3b8; font-weight: 700; font-size: 0.75rem; padding: 0.3rem 0.6rem;">
+                ● DECOMMISSIONED (PIPELINE DORMANT)
             </span>
         </div>
         <p class="subtitle" style="margin-bottom: 1rem;">
@@ -102,22 +102,22 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 0.85rem; margin-bottom: 1rem;">
             <div class="comp-box" style="padding: 0.75rem;">
                 <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase;">SHA-256 Checksum</div>
-                <div style="font-family: monospace; font-size: 1rem; font-weight: 700; color: #22c55e; margin: 0.25rem 0;">9780cd13b006efa2</div>
+                <div style="font-family: monospace; font-size: 1rem; font-weight: 700; color: #94a3b8; margin: 0.25rem 0;">DECOMMISSIONED</div>
                 <div style="font-size: 0.7rem; color: var(--text-muted);">✓ Canonical Fingerprint Match</div>
             </div>
             <div class="comp-box" style="padding: 0.75rem;">
                 <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase;">Contract Freshness</div>
-                <div style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin: 0.25rem 0;">2026-09-23 (Session)</div>
+                <div style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin: 0.25rem 0;">2026-09-24 (Session)</div>
                 <div style="font-size: 0.7rem; color: #22c55e;">✓ Fresh for Current Trading Day</div>
             </div>
             <div class="comp-box" style="padding: 0.75rem;">
                 <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase;">Ingested Leader</div>
-                <div style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin: 0.25rem 0;">BHARATFORG (₹2,009.00)</div>
-                <div style="font-size: 0.7rem; color: var(--text-muted);">Target: ₹17.08 &bull; SL: ₹8.54 (BULLISH_EXPANSION)</div>
+                <div style="font-size: 1rem; font-weight: 700; color: var(--text-color); margin: 0.25rem 0;">NONE (₹0.00)</div>
+                <div style="font-size: 0.7rem; color: var(--text-muted);">Target: ₹0.00 &bull; SL: ₹0.00 (DORMANT)</div>
             </div>
             <div class="comp-box" style="padding: 0.75rem;">
-                <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase;">Active Basket (6 Symbols)</div>
-                <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-color); margin: 0.25rem 0; font-family: monospace;">BHARATFORG, PIIND, OBEROIRLTY, DLF, COALINDIA, WIPRO</div>
+                <div style="font-size: 0.68rem; color: var(--text-muted); text-transform: uppercase;">Active Basket (0 Symbols)</div>
+                <div style="font-size: 0.82rem; font-weight: 700; color: var(--text-color); margin: 0.25rem 0; font-family: monospace;"></div>
                 <div style="font-size: 0.7rem; color: #22c55e;">✓ Ingested by Intraday Engine &amp; Scalper</div>
             </div>
         </div>
@@ -125,12 +125,12 @@
         <div style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 6px; padding: 0.75rem; font-size: 0.76rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
             <div>
                 <strong>Pipeline Handshake:</strong>
-                <code style="color: #22c55e; font-size: 0.75rem; background: transparent; margin-left: 0.35rem;">
+                <code style="color: #94a3b8; font-size: 0.75rem; background: transparent; margin-left: 0.35rem;">
                     run_premarket.py ➔ pipeline_contract.json ➔ run_intraday_live.py ➔ Gateway (Port 8000) ➔ Strategies
                 </code>
             </div>
             <div style="color: var(--text-muted); font-size: 0.72rem;">
-                Verified at 2026-09-23 15:00:01 IST &bull; Consumer: <strong>eod_orderbook_scalper</strong> &bull; Zero Information Dropped
+                Verified at 2026-09-24 07:45:00 IST &bull; Consumer: <strong>NONE (RUNNERS TERMINATED)</strong> &bull; Zero Information Dropped
             </div>
         </div>
     </div>
@@ -373,7 +373,7 @@
             <td><strong>0</strong> (0.0%)</td>
             <td><code style="font-size:0.7rem;">strategies/status/strat_squeeze_momentum.status.json</code></td>
             <td style="max-width:260px; white-space:normal; font-size:0.75rem; color:var(--text-muted); line-height:1.35;">
-                Verified contract [9780cd13]. Primed on BHARATFORG (Target ₹17.08, SL ₹8.54). Scheduled for 09:05 AM IST.
+                Verified contract [DECOMMIS]. Primed on NONE (Target ₹0.00, SL ₹0.00). Scheduled for 09:05 AM IST.
             </td>
         </tr>
         
@@ -392,7 +392,7 @@
             <td><strong>0</strong> (0.0%)</td>
             <td><code style="font-size:0.7rem;">strategies/status/strat_vwap_mean_rev.status.json</code></td>
             <td style="max-width:260px; white-space:normal; font-size:0.75rem; color:var(--text-muted); line-height:1.35;">
-                Verified contract [9780cd13]. Streaming 6 instruments (BHARATFORG, PIIND, OBEROIRLTY, DLF). Scheduled for 09:05 AM IST.
+                Verified contract [DECOMMIS]. Streaming 0 instruments (). Scheduled for 09:05 AM IST.
             </td>
         </tr>
         
@@ -411,7 +411,7 @@
             <td><strong>0</strong> (Standby)</td>
             <td><code style="font-size:0.7rem;">strategies/status/strat_eod_orderbook_scalper.status.json</code></td>
             <td style="max-width:260px; white-space:normal; font-size:0.75rem; color:var(--text-muted); line-height:1.35;">
-                Verified contract [9780cd13]. Armed for 15:00-15:26 unwinding window across 6 symbols.
+                Verified contract [DECOMMIS]. Armed for 15:00-15:26 unwinding window across 0 symbols.
             </td>
         </tr>
         
